@@ -31,7 +31,9 @@ Or drop the folder anywhere static (Vercel/Netlify/`vite preview`).
 | `styles.css` | Full design system — dark canvas, electric-blue accent, Instrument Serif + Inter |
 | `chart-demo.js` | Animated "Autumn Leaves" mock that cycles through live states (head → double time → trade fours → living substitutions) |
 | `reveal.js` | Scroll-reveal via IntersectionObserver + sticky-header state |
-| `favicon.svg` | Blue play-triangle mark |
+| `assets/icon.png` | Brand icon (extracted from the source brand SVG; used in header, footer, og:image) |
+| `assets/logo.svg` | Full brand logo — grid backing + icon + wordmark + blue accent line (hero) |
+| `assets/favicon.svg` | Vector favicon in the brand palette (dark backing + blue accent) |
 
 ## Design tokens
 
