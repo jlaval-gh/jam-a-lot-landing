@@ -31,9 +31,8 @@ Or drop the folder anywhere static (Vercel/Netlify/`vite preview`).
 | `styles.css` | Full design system — dark canvas, electric-blue accent, Instrument Serif + Inter |
 | `chart-demo.js` | Animated "Autumn Leaves" mock that cycles through live states (head → double time → trade fours → living substitutions) |
 | `reveal.js` | Scroll-reveal via IntersectionObserver + sticky-header state |
-| `assets/icon.png` | Brand icon (extracted from the source brand SVG; used in header, footer, og:image) |
-| `assets/logo.svg` | Full brand logo — grid backing + icon + wordmark + blue accent line (hero) |
-| `assets/favicon.svg` | Vector favicon in the brand palette (dark backing + blue accent) |
+| `assets/icon.png` | Brand icon — a bassist (figure + upright bass) rendered from the app's own bandstand drawing code, in the blue palette; used in header, footer, og:image, apple-touch-icon |
+| `assets/favicon.png` | Simplified 32px-friendly variant of the icon (thicker outline, no frets) for the browser tab |
 
 ## Design tokens
 

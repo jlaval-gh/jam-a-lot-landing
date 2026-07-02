@@ -167,17 +167,17 @@ main { display: block; }
 }
 .site-header.scrolled { border-bottom-color: var(--border-soft); background: rgba(20, 22, 26, 0.88); }
 
-.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; letter-spacing: 0.2px; }
-/* Brand icon mark — the extracted PNG already carries its own dark backing,
-   so we just clip it into a rounded square. */
+.brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; font-size: 18px; letter-spacing: 0.2px; }
+/* Brand icon mark — the rendered bandstand bassist carries its own dark
+   backing, so we just clip it into a rounded square. */
 .brand-mark-icon {
-  width: 30px; height: 30px;
+  width: 40px; height: 40px;
   border-radius: var(--r-md);
   object-fit: cover;
   display: block;
   flex: none;
 }
-.brand-mark-icon.sm { width: 24px; height: 24px; border-radius: var(--r-sm); }
+.brand-mark-icon.sm { width: 30px; height: 30px; border-radius: var(--r-sm); }
 
 .site-nav { display: flex; gap: 22px; margin-left: auto; }
 .site-nav a {
@@ -245,16 +245,6 @@ main { display: block; }
 
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 16px; }
 .micro-note { color: var(--muted); font-size: 13px; opacity: 0.8; }
-
-/* ───────── Hero visual column (logo + chart) ───────── */
-.hero-visual { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.hero-logo { width: 100%; max-width: 360px; }
-.hero-logo img {
-  width: 100%; height: auto;
-  border-radius: var(--r-xl);
-  box-shadow: var(--shadow-card);
-  display: block;
-}
 
 /* ───────── Chart demo card ───────── */
 .chart-card {
