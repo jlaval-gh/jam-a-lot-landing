@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jam-a-Lot — Your practice band, in the browser</title>
+  <meta name="description" content="Jam along with every open-source tune, in any style. Then shape the performance live — double time, trade bars with the drummer, live substitutions. A rhythm section that follows you." />
+  <meta property="og:title" content="Jam-a-Lot — Your practice band, in the browser" />
+  <meta property="og:description" content="Every open-source tune, any style. Shape the performance live — double time, trading fours, living substitutions." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient blue glow behind the hero -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- ───────────────────────── Sticky header ───────────────────────── -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22"><polygon points="6,4 20,12 6,20" /></svg>
+      </span>
+      <span class="brand-name">Jam-a-Lot</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#library">Library</a>
+      <a href="#live">Live performance</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <a class="btn btn-accent btn-sm launch-cta" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">
+      Launch the app
+    </a>
+  </header>
+
+  <main>
+    <!-- ───────────────────────── Hero ───────────────────────── -->
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill"><span class="pulse-dot" aria-hidden="true"></span> Open-source practice band</span>
+        <h1 class="hero-title font-serif">
+          Every tune. <span class="text-gradient">Any style.</span><br />
+          A band that <em>follows you.</em>
+        </h1>
+        <p class="lede">
+          Jam-a-Lot pulls from every open-source chord collection — jazz standards, pop
+          changes, bossa, blues, whatever you play. Set the feel, hit play, and then
+          drive the band <em>live</em>: double time the next chorus, trade fours with
+          the drummer, let living substitutions reharmonize the changes in real time.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-accent glow-accent-sm" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">▶ Launch the app</a>
+          <a class="btn btn-ghost" href="#live">See the live controls</a>
+        </div>
+        <p class="micro-note">No signup · No download · Plays in your browser</p>
+      </div>
+
+      <!-- Animated chord-chart mock -->
+      <div class="chart-card reveal" aria-hidden="true">
+        <div class="chart-card-head">
+          <span class="chart-title font-serif">Autumn Leaves</span>
+          <span class="chart-meta">Gm · 4/4 · Swing · ♩ = 150 · <span class="meta-tag">Living changes on</span></span>
+        </div>
+        <div class="chart-grid" id="chart-demo"></div>
+        <div class="chart-card-foot">
+          <span class="playing-dot" aria-hidden="true"></span>
+          <span>Playing — bar <span id="bar-num">1</span> of 8 · chorus <span id="chorus-num">1</span></span>
+          <span class="foot-spacer"></span>
+          <span class="meta-tag live-tag" id="live-state">head</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Library / breadth ───────────────────────── -->
+    <section id="library" class="section">
+      <header class="section-head">
+        <span class="eyebrow">The library</span>
+        <h2 class="font-serif">One app, every open source.</h2>
+        <p>
+          Why hunt across five tabs of chord sites? Jam-a-Lot aggregates the open-source
+          chord collections — the jazz-standards corpus, the big academic chord datasets,
+          community lead-sheet archives, and public-domain imports. If it's open, it's
+          here. Standard, contrafact, pop change, bossa, blues — search once, play.
+        </p>
+      </header>
+
+      <div class="source-grid">
+        <article class="source reveal">
+          <div class="source-icon" aria-hidden="true">🎷</div>
+          <h3>Jazz standards</h3>
+          <p>Thousands of open jazz standards — bebop, modal, swing, ballads, bossa, latin, waltz, and the American Songbook.</p>
+        </article>
+        <article class="source reveal">
+          <div class="source-icon" aria-hidden="true">🎸</div>
+          <h3>Pop &amp; rock changes</h3>
+          <p>Tens of thousands of chord progressions from open academic datasets — practice over the songs you actually know.</p>
+        </article>
+        <article class="source reveal">
+          <div class="source-icon" aria-hidden="true">🎻</div>
+          <h3>Lead sheets &amp; scores</h3>
+          <p>Public-domain and Creative Commons lead sheets import straight in. Bring your own MusicXML or text chart too.</p>
+        </article>
+        <article class="source reveal">
+          <div class="source-icon" aria-hidden="true">➕</div>
+          <h3>Your own tunes</h3>
+          <p>Paste a chord chart, edit it bar by bar, or write one from scratch. Your edits stay in your browser, never the cloud.</p>
+        </article>
+      </div>
+
+      <p class="big-number reveal">
+        <span class="bn-label">Every open chord source, side by side.</span>
+      </p>
+    </section>
+
+    <!-- ───────────────────────── LIVE PERFORMANCE (the differentiator) ───────────────────────── -->
+    <section id="live" class="section section-alt">
+      <header class="section-head">
+        <span class="eyebrow">This is the difference</span>
+        <h2 class="font-serif">Static tracks play the same thing.<br />A band responds.</h2>
+        <p>
+          Other tools play a fixed backing track on loop. Jam-a-Lot's band is generated
+          on the fly, bar by bar — which means you can shape the performance while you
+          play. This is what practicing with a real rhythm section feels like.
+        </p>
+      </header>
+
+      <div class="live-grid">
+        <article class="live-card reveal">
+          <div class="live-num">01</div>
+          <h3>Live dynamics, chorus to chorus</h3>
+          <p>
+            Change the shape of the next chorus without stopping. Drop to a sparse
+            two-feel for the bass solo, <strong>double time</strong> into the out head,
+            push the drummer to full intensity for the climax. One tap, takes effect at
+            the next phrase boundary.
+          </p>
+          <ul class="live-bullets">
+            <li><span class="kbd">Next chorus:</span> double time / half time / drop section</li>
+            <li><span class="kbd">Drummer intensity:</span> 1–5 density profiles, live</li>
+            <li><span class="kbd">Solo order:</span> head → trade → out, planned or improvised</li>
+          </ul>
+        </article>
+
+        <article class="live-card reveal">
+          <div class="live-num">02</div>
+          <h3>Trade bars with the drummer</h3>
+          <p>
+            Press trade and the band hands off — fours, eights, or choruses — aligned to
+            phrase boundaries. You play your line, the drummer answers. It's the single
+            best way to build vocabulary under pressure, and it's the thing a backing
+            track can never do.
+          </p>
+          <ul class="live-bullets">
+            <li><span class="kbd">Trade 4s / 8s / choruses</span>, phrase-locked</li>
+            <li>Drummer solos with comping behind you, and vice versa</li>
+            <li>Seamless handoff kicks and splash at the swap</li>
+          </ul>
+        </article>
+
+        <article class="live-card reveal">
+          <div class="live-num">03</div>
+          <h3>Living changes — reharmonize on the fly</h3>
+          <p>
+            Turn on <em>Living changes</em> and the harmony evolves as you play: common
+            substitutions, tritone swaps, back-door turns, turnaround variants — applied
+            tastefully over recognized forms (blues, rhythm changes, minor blues, and
+            more). Same chart, fresh changes every chorus. Off by a tap; never written
+            to your tune.
+          </p>
+          <ul class="live-bullets">
+            <li>Blues, minor blues, rhythm changes, turnarounds</li>
+            <li>Substitutions show in the chart and the bass line, in real time</li>
+            <li>100% runtime — your stored chart is never mutated</li>
+          </ul>
+        </article>
+
+        <article class="live-card reveal">
+          <div class="live-num">04</div>
+          <h3>Feels, transposition, loops — instantly</h3>
+          <p>
+            Switch feel mid-tune (swing to bossa for the bridge), transpose &plusmn;1
+            semitone without re-clicking, loop a section until it's under your fingers.
+            Everything is computed from absolute beat positions, so changes land clean
+            with no drift, no glitch.
+          </p>
+          <ul class="live-bullets">
+            <li>Seven feels: swing, ballad, two-feel, bossa, latin, waltz, soul-jazz</li>
+            <li>Section loop with correct repeated-section resolution</li>
+            <li>Transpose in semitones; key updates and auto-saves</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Features ───────────────────────── -->
+    <section id="features" class="section">
+      <header class="section-head">
+        <span class="eyebrow">Everything else</span>
+        <h2 class="font-serif">A complete practice studio.</h2>
+        <p>Beyond the live controls, everything you need to woodshed a tune — in one tab.</p>
+      </header>
+
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🎼</div>
+          <h3>Editable chord chart</h3>
+          <p>In-place editing with a root × quality × extension picker, section and form control, bar-count transforms, endings, and a roadmap strip.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🎸</div>
+          <h3>Generated rhythm section</h3>
+          <p>Walking bass, feel-aware drums, and comping piano — derived deterministically from the chart with seeded humanization that actually grooves.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🎚️</div>
+          <h3>Rhythm Style Lab</h3>
+          <p>Design and audition your own accompaniment styles — drum voices, comping triggers, per-beat grids. Saved locally, never to the cloud.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🎛️</div>
+          <h3>Featured drum mixer</h3>
+          <p>Ride-forward kit mixer with per-voice samples, levels, and mutes. Cross-stick, brushes, latin percussion, kit families — all swappable.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🎙️</div>
+          <h3>Recording studio</h3>
+          <p>Capture multitrack stems, export WAVs, and render bandstand video — all generated accompaniment, all in the browser.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🎼</div>
+          <h3>Live notation</h3>
+          <p>The generated bass line renders as a real lead sheet you can read, print, or export to MusicXML. Stays put after Stop for review.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🎭</div>
+          <h3>Bandstand visualizer</h3>
+          <p>An animated rhythm section — drummer and bassist move with the music, derived from the actual scheduled events.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🎧</div>
+          <h3>Reference listening</h3>
+          <p>Save Spotify and YouTube links to any tune for context. Provider metadata never touches your chart data.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── How it works ───────────────────────── -->
+    <section class="section section-alt">
+      <header class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2 class="font-serif">Three clicks to a chorus.</h2>
+        <p>No install. No account. Open the app and play.</p>
+      </header>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num">1</span>
+          <h3>Pick a tune</h3>
+          <p>Search across every open source, or open one you've saved. The chart renders instantly with section colors.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">2</span>
+          <h3>Set tempo &amp; feel</h3>
+          <p>Transpose, dial a tempo, pick a feel, shape the drum mix. Living changes are on by default.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">3</span>
+          <h3>Play — then drive the band</h3>
+          <p>Hit play, count in, jam. When the chorus ends, change the dynamics, trade bars, or swap feel. It follows.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ───────────────────────── Pricing ───────────────────────── -->
+    <section id="pricing" class="section">
+      <header class="section-head">
+        <span class="eyebrow">Pricing</span>
+        <h2 class="font-serif">Simple pricing.</h2>
+        <p>Start free. Upgrade when you're ready. Cancel anytime.</p>
+      </header>
+
+      <div class="pricing-grid">
+        <!-- Free -->
+        <article class="price-card reveal">
+          <header class="price-head">
+            <h3>Free</h3>
+            <div class="price-amount"><span class="currency">$</span><span class="amount">0</span><span class="per">/month</span></div>
+            <p class="price-tag">Everything you need to start jamming.</p>
+          </header>
+          <a class="btn btn-ghost btn-block" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">Start free</a>
+          <ul class="price-features">
+            <li>✓ Full chord chart &amp; editor</li>
+            <li>✓ Generated bass + drums + piano</li>
+            <li>✓ All seven feels</li>
+            <li>✓ Transposition &amp; section loop</li>
+            <li>✓ Section-colored chart with active bar</li>
+            <li class="muted">— Limited catalog search</li>
+            <li class="muted">— No live dynamics / trading</li>
+            <li class="muted">— No stem exports</li>
+          </ul>
+        </article>
+
+        <!-- Pro (highlighted) -->
+        <article class="price-card price-featured reveal">
+          <span class="price-badge">Most popular</span>
+          <header class="price-head">
+            <h3>Pro</h3>
+            <div class="price-amount"><span class="currency">$</span><span class="amount">5</span><span class="per">/month</span></div>
+            <p class="price-tag">For the working practitioner.</p>
+          </header>
+          <a class="btn btn-accent glow-accent-sm btn-block" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">Get Pro</a>
+          <ul class="price-features">
+            <li>✓ Everything in Free</li>
+            <li>✓ <strong>Full open-source catalog</strong> search</li>
+            <li>✓ <strong>Live dynamics</strong> — double time, intensity, drop sections</li>
+            <li>✓ <strong>Trading fours / eights</strong> with the drummer</li>
+            <li>✓ <strong>Living changes</strong> — live substitutions</li>
+            <li>✓ Rhythm Style Lab</li>
+            <li>✓ Bandstand visualizer</li>
+            <li class="muted">— Stem &amp; video export on Max</li>
+          </ul>
+        </article>
+
+        <!-- Max -->
+        <article class="price-card reveal">
+          <header class="price-head">
+            <h3>Max</h3>
+            <div class="price-amount"><span class="currency">$</span><span class="amount">20</span><span class="per">/month</span></div>
+            <p class="price-tag">The full studio. For serious shedders.</p>
+          </header>
+          <a class="btn btn-ghost btn-block" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">Get Max</a>
+          <ul class="price-features">
+            <li>✓ Everything in Pro</li>
+            <li>✓ Recording studio: multitrack stems</li>
+            <li>✓ WAV &amp; bandstand video export</li>
+            <li>✓ Live notation &amp; MusicXML export</li>
+            <li>✓ Cloud backup of your library</li>
+            <li>✓ Priority new features</li>
+            <li>✓ Support development</li>
+          </ul>
+        </article>
+      </div>
+      <p class="pricing-foot">
+        Prices shown are placeholders for now. Jam-a-Lot only ever stores chord symbols
+        and song form — never melody, never lyrics.
+      </p>
+    </section>
+
+    <!-- ───────────────────────── Final CTA ───────────────────────── -->
+    <section class="cta-band">
+      <div class="cta-inner">
+        <h2 class="font-serif">Ready to shed?</h2>
+        <p>Pick a tune. Shape the band. Play.</p>
+        <a class="btn btn-accent btn-lg glow-accent" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">▶ Launch Jam-a-Lot</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───────────────────────── Footer ───────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark sm" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18"><polygon points="6,4 20,12 6,20" /></svg>
+        </span>
+        <span>Jam-a-Lot</span>
+      </div>
+      <p class="footer-note">
+        Browser-based practice band · Built with TypeScript, React &amp; Tone.js.
+      </p>
+      <p class="footer-ip">
+        Aggregates open-source chord collections. Stores only chord symbols and song
+        form — never melody, never lyrics, never proprietary formats.
+      </p>
+    </div>
+  </footer>
+
+  <script src="chart-demo.js"></script>
+  <script src="reveal.js"></script>
+</body>
+</html>
