@@ -40,6 +40,7 @@
 
   <main>
     <!-- ───────────────────────── Hero ───────────────────────── -->
+    <div class="hero-wrap">
     <section class="hero">
       <div class="hero-copy">
         <span class="pill"><span class="pulse-dot" aria-hidden="true"></span> Free Beta — no charge, ever, during beta</span>
@@ -64,21 +65,44 @@
         </p>
       </div>
 
-      <!-- Animated chord-chart mock -->
-      <div class="chart-card reveal" aria-hidden="true">
-        <div class="chart-card-head">
-          <span class="chart-title font-serif">Autumn Leaves</span>
-          <span class="chart-meta">Gm · 4/4 · Swing · ♩ = 150 · <span class="meta-tag">Live Changes on</span></span>
+      <!-- Real screenshots of the app -->
+      <div class="shots reveal" id="shots" aria-roledescription="carousel" aria-label="Screenshots of Jam-a-Lot">
+        <div class="shots-frame">
+          <div class="shots-track" id="shots-track">
+            <figure class="shot" role="group" aria-roledescription="slide" aria-label="1 of 5">
+              <img src="assets/shots/01-play.webp" width="1200" height="857"
+                   alt="The Jam-a-Lot app playing Au Privave: the animated bandstand above a chord chart, with the current bar highlighted and reharmonized chords shown in green." />
+              <figcaption><strong>Play any tune.</strong> The band follows the chart bar by bar — and Live Changes reharmonizes as you go.</figcaption>
+            </figure>
+            <figure class="shot" role="group" aria-roledescription="slide" aria-label="2 of 5">
+              <img src="assets/shots/02-fullscreen.webp" width="1200" height="857" loading="lazy"
+                   alt="Jam-a-Lot's full-screen performance view: a large, uncluttered chord chart with the current bar boxed and the transport at the bottom." />
+              <figcaption><strong>Full-screen for the music stand.</strong> Just the chart, the bar you're on, and the transport.</figcaption>
+            </figure>
+            <figure class="shot" role="group" aria-roledescription="slide" aria-label="3 of 5">
+              <img src="assets/shots/03-mixer.webp" width="1200" height="857" loading="lazy"
+                   alt="The Live Mixer: one row per voice with a sound picker, a level in decibels, a stereo pan position and a mute." />
+              <figcaption><strong>A real mixer.</strong> Levels in decibels, a sound per instrument, and a pan position that puts each player on the stage.</figcaption>
+            </figure>
+            <figure class="shot" role="group" aria-roledescription="slide" aria-label="4 of 5">
+              <img src="assets/shots/04-listening.webp" width="1200" height="857" loading="lazy"
+                   alt="The Listening Band panel: input, intensity, density and register meters, speaker calibration, and sliders for how strongly the band responds." />
+              <figcaption><strong>The band listens.</strong> Meters for what it hears, and sliders for how hard it reacts to you.</figcaption>
+            </figure>
+            <figure class="shot" role="group" aria-roledescription="slide" aria-label="5 of 5">
+              <img src="assets/shots/05-plan.webp" width="1200" height="857" loading="lazy"
+                   alt="The Performance Plan panel: intro, head, solo round, bass solo, piano solo, trading fours, last head and ending, each with a chorus count." />
+              <figcaption><strong>Plan the whole performance.</strong> Head, solos, trading fours, out head — or reroll it and see what happens.</figcaption>
+            </figure>
+          </div>
         </div>
-        <div class="chart-grid" id="chart-demo"></div>
-        <div class="chart-card-foot">
-          <span class="playing-dot" aria-hidden="true"></span>
-          <span>Playing — bar <span id="bar-num">1</span> of 8 · chorus <span id="chorus-num">1</span></span>
-          <span class="foot-spacer"></span>
-          <span class="meta-tag live-tag" id="live-state">head</span>
-        </div>
+
+        <button class="shots-nav prev" id="shots-prev" type="button" aria-label="Previous screenshot">‹</button>
+        <button class="shots-nav next" id="shots-next" type="button" aria-label="Next screenshot">›</button>
+        <div class="shots-dots" id="shots-dots" role="tablist" aria-label="Choose a screenshot"></div>
       </div>
     </section>
+    </div>
 
     <!-- ───────────────────────── Library / breadth ───────────────────────── -->
     <section id="library" class="section">
@@ -466,7 +490,7 @@
     </div>
   </footer>
 
-  <script src="chart-demo.js"></script>
+  <script src="carousel.js"></script>
   <script src="reveal.js"></script>
 </body>
 </html>

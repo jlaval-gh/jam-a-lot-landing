@@ -193,6 +193,36 @@ main { display: block; }
 .launch-cta { margin-left: 8px; }
 
 /* ───────── Hero ───────── */
+/* Wrapper exists only to carry the backdrop full-bleed while the hero
+   grid itself stays inside --maxw. */
+.hero-wrap { position: relative; isolation: isolate; }
+.hero-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -140px 0 0;          /* run up behind the sticky header */
+  z-index: -1;
+  background-image: url("assets/hero-bg.webp");
+  background-size: cover;
+  background-position: 50% 35%;
+  opacity: 0.75;
+  /* Fade out at the bottom so the backdrop never collides with the first
+     section's own border — a hard edge here reads as a broken image. */
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 58%, transparent 100%);
+          mask-image: linear-gradient(180deg, #000 0%, #000 58%, transparent 100%);
+  pointer-events: none;
+}
+/* Scrim: keeps the headline at full contrast over the busiest part of
+   the image. Without it the lede sits on bokeh and gets hard to read. */
+.hero-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -140px 0 0;
+  z-index: -1;
+  background:
+    linear-gradient(100deg, rgba(20, 22, 26, 0.94) 0%, rgba(20, 22, 26, 0.72) 42%, rgba(20, 22, 26, 0.30) 70%, rgba(20, 22, 26, 0.55) 100%);
+  pointer-events: none;
+}
+
 .hero {
   max-width: var(--maxw);
   margin: 0 auto;
@@ -248,89 +278,101 @@ main { display: block; }
 .micro-strong { color: var(--accent-2); font-weight: 600; }
 .cta-ctas { justify-content: center; margin-bottom: 0; }
 
-/* ───────── Chart demo card ───────── */
-.chart-card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-card);
-  padding: 22px;
+/* ───────── Hero screenshot carousel ───────── */
+.shots {
+  position: relative;
+  outline: none;
+}
+.shots:focus-visible { box-shadow: 0 0 0 2px var(--accent); border-radius: var(--r-lg); }
+
+.shots-frame {
   position: relative;
   overflow: hidden;
-}
-.chart-card::before {
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(80% 60% at 80% 0%, rgba(59, 130, 246, 0.10), transparent 70%);
-  pointer-events: none;
-}
-.chart-card-head { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; }
-.chart-title { font-size: 24px; color: var(--text); }
-.chart-meta { color: var(--muted); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
-.meta-tag {
-  display: inline-block;
-  padding: 1px 8px;
-  border-radius: var(--r-pill);
-  background: rgba(59, 130, 246, 0.14);
-  border: 1px solid rgba(59, 130, 246, 0.30);
-  color: var(--accent-2);
-  font-weight: 600;
-  text-transform: none;
-  letter-spacing: 0.02em;
-}
-.live-tag { transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease; }
-.live-tag.trade { background: rgba(244, 114, 182, 0.16); border-color: rgba(244, 114, 182, 0.4); color: #f9a8d4; }
-.live-tag.doubled { background: rgba(250, 204, 21, 0.14); border-color: rgba(250, 204, 21, 0.4); color: #fde68a; }
-.live-tag.subbed { background: rgba(74, 222, 128, 0.14); border-color: rgba(74, 222, 128, 0.4); color: #86efac; }
-
-.chart-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  margin-bottom: 14px;
-}
-.chart-cell {
-  position: relative;
-  aspect-ratio: 16 / 10;
-  border-radius: var(--r-sm);
   border: 1px solid var(--border);
-  background: #16181d;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 15px; font-weight: 600;
-  color: var(--text);
-  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+  border-radius: var(--r-lg);
+  background: var(--panel);
+  box-shadow: var(--shadow-card);
 }
-.chart-cell.tint-a { background: var(--tint-a); border-color: rgba(147, 197, 253, 0.22); }
-.chart-cell.tint-b { background: var(--tint-b); border-color: rgba(110, 231, 183, 0.22); }
-.chart-cell.active {
-  background: rgba(59, 130, 246, 0.20) !important;
-  border-color: var(--accent) !important;
-  box-shadow: 0 0 18px rgba(59, 130, 246, 0.35);
-}
-/* Living-changes substitution flash: chord text swaps + green tint */
-.chart-cell.subbed {
-  background: rgba(74, 222, 128, 0.10) !important;
-  border-color: rgba(74, 222, 128, 0.45) !important;
-}
-.chart-cell.section-start::before {
-  content: attr(data-section);
-  position: absolute; top: 4px; left: 6px;
-  font-size: 9px; font-weight: 700; letter-spacing: 0.05em;
-  color: var(--muted);
+/* Same cool wash the chart card used to carry, so the hero keeps its depth */
+.shots-frame::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(80% 60% at 80% 0%, rgba(59, 130, 246, 0.10), transparent 70%);
 }
 
-.chart-card-foot {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 13px; color: var(--muted);
+.shots-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.shot {
+  flex: 0 0 100%;
+  margin: 0;
+  min-width: 0;
+}
+.shot img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 857;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+  background: #14161a;
+}
+.shot figcaption {
+  padding: 14px 18px 16px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
   border-top: 1px solid var(--border-soft);
-  padding-top: 12px;
+  background: rgba(20, 22, 26, 0.6);
+  min-height: 5.4em;
 }
-.foot-spacer { flex: 1; }
-.playing-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--accent-2);
-  animation: blink 1.2s ease-in-out infinite;
+.shot figcaption strong { color: var(--text); font-weight: 600; }
+
+/* Arrows sit on the image, not beside it — the hero column is narrow */
+.shots-nav {
+  position: absolute;
+  top: calc(50% - 2.7em);
+  transform: translateY(-50%);
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(20, 22, 26, 0.82);
+  backdrop-filter: blur(6px);
+  color: var(--text);
+  font-size: 22px; line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+.shots-nav.prev { left: 10px; }
+.shots-nav.next { right: 10px; }
+.shots:hover .shots-nav,
+.shots:focus-within .shots-nav { opacity: 1; }
+.shots-nav:hover { background: rgba(30, 34, 41, 0.95); border-color: #3a4049; }
+.shots-nav:focus-visible { opacity: 1; outline: 2px solid var(--accent); outline-offset: 2px; }
+/* Touch devices have no hover, so never hide the arrows there */
+@media (hover: none) {
+  .shots-nav { opacity: 1; }
+}
+
+.shots-dots {
+  display: flex; justify-content: center; gap: 8px;
+  margin-top: 16px;
+}
+.shots-dot {
+  width: 7px; height: 7px; padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: #3a4049;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.shots-dot:hover { background: #4d5460; }
+.shots-dot.active { background: var(--accent-2); transform: scale(1.35); }
+.shots-dot:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* ───────── Source grid (library section) ───────── */
 .source-grid {
@@ -561,6 +603,12 @@ main { display: block; }
 /* ───────── Responsive ───────── */
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 56px; }
+  /* Stacked hero: the scrim has to run top-to-bottom, not left-to-right,
+     or the copy ends up on the bright side of a sideways gradient. */
+  .hero-wrap::after {
+    background: linear-gradient(180deg, rgba(20, 22, 26, 0.92) 0%, rgba(20, 22, 26, 0.80) 45%, rgba(20, 22, 26, 0.55) 100%);
+  }
+  .shot figcaption { min-height: 0; }
   .feature-grid, .source-grid { grid-template-columns: repeat(2, 1fr); }
   .live-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
