@@ -112,4 +112,4 @@ this page previously got wrong by drifting:
   advertised here until the capture path is rebuilt.
 
 All "Launch the app" CTAs point to the live deployment:
-<https://jamalong.vercel.app/>
+<https://jamalot.vercel.app/>

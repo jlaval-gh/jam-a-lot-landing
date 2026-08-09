@@ -3,8 +3,8 @@
 > Jam-a-Lot is a browser-based jazz practice application. It plays synthesized acoustic drums, double bass, and electric piano accompaniment over jazz standard chord charts while displaying interactive lead sheets.
 
 ## Documentation & AI Access
-- [User Manual](https://jamalong.vercel.app/manual.html): Complete user manual detailing playback controls, performance planning, chord charts, instrument mixer, custom rhythm styles, soloist AI, and microphone listening band.
-- [Raw Markdown Manual](https://jamalong.vercel.app/llms-full.txt): Complete unformatted Markdown text of the user manual for raw LLM ingestion.
+- [User Manual](https://jamalot.vercel.app/manual.html): Complete user manual detailing playback controls, performance planning, chord charts, instrument mixer, custom rhythm styles, soloist AI, and microphone listening band.
+- [Raw Markdown Manual](https://jamalot.vercel.app/llms-full.txt): Complete unformatted Markdown text of the user manual for raw LLM ingestion.
 
 ## Key Capabilities & Features
 - **Generated Rhythm Section**: Seeded pure-function generators for walking basslines, comping piano, and dynamic drums across 12+ jazz feels (Swing, Ballad, Gypsy Jazz, Bossa Nova, Salsa, Soul-Jazz, Funk, EDM, Waltz).
