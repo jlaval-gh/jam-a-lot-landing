@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jam-a-Lot — Your practice band, in the browser</title>
-  <meta name="description" content="Jam along with every open-source tune, in any style. Then shape the performance live — double time, trade bars with the drummer, live substitutions. A rhythm section that follows you." />
+  <meta name="description" content="A real-time rhythm section over 1,382 jazz standards. It listens to you play and follows. Try 3 tunes free as a guest, or join the free Beta — the whole app, no charge, in exchange for your feedback." />
   <meta property="og:title" content="Jam-a-Lot — Your practice band, in the browser" />
-  <meta property="og:description" content="Every open-source tune, any style. Shape the performance live — double time, trading fours, living substitutions." />
+  <meta property="og:description" content="1,382 tunes, twelve feels, a band that listens through your mic and follows. Free Beta — the whole app in exchange for your feedback. Or try 3 tunes as a guest." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/icon.png" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
@@ -29,11 +29,12 @@
     <nav class="site-nav" aria-label="Primary">
       <a href="#library">Library</a>
       <a href="#live">Live performance</a>
+      <a href="#listens">It listens</a>
       <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#beta">Free Beta</a>
     </nav>
     <a class="btn btn-accent btn-sm launch-cta" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">
-      Join Free Beta
+      Join the Free Beta
     </a>
   </header>
 
@@ -41,21 +42,26 @@
     <!-- ───────────────────────── Hero ───────────────────────── -->
     <section class="hero">
       <div class="hero-copy">
-        <span class="pill"><span class="pulse-dot" aria-hidden="true"></span> Free Beta Program</span>
+        <span class="pill"><span class="pulse-dot" aria-hidden="true"></span> Free Beta — no charge, ever, during beta</span>
         <h1 class="hero-title font-serif">
-          1,000+ tunes. <span class="text-gradient">Any style.</span><br />
-          A band that <em>follows you.</em>
+          1,382 tunes. <span class="text-gradient">Twelve feels.</span><br />
+          A band that <em>listens to you.</em>
         </h1>
         <p class="lede">
-          Jam-a-Lot gives you a real-time practice band over 1,000+ open-source jazz standards,
-          bossa nova, and blues changes. Explore in Guest Mode with 3 free demo tunes, or join
-          our <strong>free Beta Program</strong> to unlock full chart editing, cloud sync, and the entire 1,000+ song library in exchange for your feedback!
+          Jam-a-Lot generates a real-time rhythm section — walking bass, comping piano,
+          a drummer who reads the form — over 1,382 open-source jazz standards. It hears
+          you through your mic and follows your dynamics, your phrasing, even a figure
+          you repeat.
         </p>
         <div class="hero-ctas">
-          <a class="btn btn-accent glow-accent-sm" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">▶ Join Free Beta (1,000+ Songs)</a>
-          <a class="btn btn-ghost" href="#live">See the live controls</a>
+          <a class="btn btn-accent glow-accent-sm" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">▶ Join the Free Beta</a>
+          <a class="btn btn-ghost" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">Or try 3 tunes as a guest</a>
         </div>
-        <p class="micro-note">Guest Mode (3 Demo Songs) · Free Beta Access for Feedback · Browser-Based</p>
+        <p class="micro-note">
+          <strong class="micro-strong">The Beta is free and always will be during beta</strong> — the whole
+          app, in exchange for telling us what's working and what isn't. No card, no trial clock.
+          Prefer to look around first? Guest mode plays 3 demo tunes with the full band, no sign-up.
+        </p>
       </div>
 
       <!-- Animated chord-chart mock -->
@@ -81,9 +87,9 @@
         <h2 class="font-serif">One app, every open source.</h2>
         <p>
           Why hunt across five tabs of chord sites? Jam-a-Lot aggregates the open-source
-          chord collections — the jazz-standards corpus, the big academic chord datasets,
-          community lead-sheet archives, and public-domain imports. If it's open, it's
-          here. Standard, contrafact, pop change, bossa, blues — search once, play.
+          chord collections — a 1,382-tune jazz-standards corpus, the big academic chord
+          datasets, community lead-sheet archives, and public-domain imports. If it's
+          open, it's here. Standard, contrafact, pop change, bossa, blues — search once, play.
         </p>
       </header>
 
@@ -106,7 +112,7 @@
         <article class="source reveal">
           <div class="source-icon" aria-hidden="true">➕</div>
           <h3>Your own tunes</h3>
-          <p>Paste a chord chart, edit it bar by bar, or write one from scratch. Your edits stay in your browser, never the cloud.</p>
+          <p>Paste a text chart (<span class="kbd">| Cm7 | F7 | Bb^ | x4</span>), edit bar by bar, or start from a blues / rhythm-changes / AABA sketch. Beta members only.</p>
         </article>
       </div>
 
@@ -187,9 +193,87 @@
             with no drift, no glitch.
           </p>
           <ul class="live-bullets">
-            <li>Seven feels: swing, ballad, two-feel, bossa, latin, waltz, soul-jazz</li>
+            <li>Twelve feels: swing, ballad, bossa, latin, waltz, soul-jazz, gypsy jazz, funk, blues shuffle, R&amp;B, rock, EDM</li>
+            <li>Per-chorus feel plan: swing the head, bossa the solos, swing the out</li>
             <li>Section loop with correct repeated-section resolution</li>
             <li>Transpose in semitones; key updates and auto-saves</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── The listening band ───────────────────────── -->
+    <section id="listens" class="section">
+      <header class="section-head">
+        <span class="eyebrow">And this is the new part</span>
+        <h2 class="font-serif">Turn on your mic.<br />The band starts listening.</h2>
+        <p>
+          Open the Listening panel and Jam-a-Lot hears you play. It subtracts its own
+          sound from what comes back through the mic — per frequency band, not with a
+          crude gate — so what's left is you. Then the band responds to it, in real time.
+        </p>
+      </header>
+
+      <div class="live-grid">
+        <article class="live-card reveal">
+          <div class="live-num">01</div>
+          <h3>It follows your energy</h3>
+          <p>
+            Play softer and the band comes down with you — sparser drums, thinner
+            comping. Build and it builds. The response time is yours to set: half a
+            chorus by default, so it reacts like a player rather than a compressor.
+          </p>
+          <ul class="live-bullets">
+            <li>Intensity, density and register meters, live</li>
+            <li>Speaker calibration for playing without headphones</li>
+            <li>Every response strength is a slider — or off</li>
+          </ul>
+        </article>
+
+        <article class="live-card reveal">
+          <div class="live-num">02</div>
+          <h3>It answers your phrases</h3>
+          <p>
+            Leave a gap at the end of a line and the band fills it. Question and answer,
+            the way a rhythm section actually converses with a soloist — not a fill on a
+            timer.
+          </p>
+          <ul class="live-bullets">
+            <li>Phrase-gap detection from your onsets, not the clock</li>
+            <li>The piano's voicing register follows how high you're playing</li>
+            <li>Your comping density drives the piano's</li>
+          </ul>
+        </article>
+
+        <article class="live-card reveal">
+          <div class="live-num">03</div>
+          <h3>It catches a figure you repeat</h3>
+          <p>
+            Play the same rhythmic figure twice and the drummer locks onto it, plays it
+            with you with growing commitment through the rest of the section, and hands
+            it back into the fill at the section end. The panel shows you when a figure
+            is locked.
+          </p>
+          <ul class="live-bullets">
+            <li>Quantized on the feel's own grid — swung eighths stay swung</li>
+            <li>Locks on one-bar or two-bar figures</li>
+            <li>Resolves into the section fill, never on top of it</li>
+          </ul>
+        </article>
+
+        <article class="live-card reveal">
+          <div class="live-num">04</div>
+          <h3>It tells you where you are</h3>
+          <p>
+            You shouldn't have to count bars. A section change is announced twice — a
+            fill into it and a cymbal on its downbeat — and a new chorus is deliberately
+            louder than a new section, so "we went around" and "we hit the bridge" don't
+            sound alike.
+          </p>
+          <ul class="live-bullets">
+            <li>Every drum trade lands on the "and of 4" before the band returns</li>
+            <li>The whole band states the re-entry downbeat together</li>
+            <li>Latin styles mark arrivals with a timbale, not a borrowed kick</li>
           </ul>
         </article>
       </div>
@@ -207,27 +291,32 @@
         <article class="feature reveal">
           <div class="feature-icon" aria-hidden="true">🎼</div>
           <h3>Editable chord chart</h3>
-          <p>In-place editing with a root × quality × extension picker, section and form control, bar-count transforms, endings, and a roadmap strip.</p>
+          <p>In-place editing with a root × quality × extension picker, section and form control, bar-count transforms, numbered endings, and a roadmap strip. Or paste a whole chart as text and let it parse.</p>
         </article>
         <article class="feature reveal">
           <div class="feature-icon" aria-hidden="true">🎸</div>
           <h3>Generated rhythm section</h3>
-          <p>Walking bass, feel-aware drums, and comping piano — derived deterministically from the chart with seeded humanization that actually grooves.</p>
+          <p>Walking bass, feel-aware drums, and comping piano — derived deterministically from the chart with seeded humanization that actually grooves. The piano comps from a real vocabulary of cells, not a loop.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🎛️</div>
+          <h3>Live mixer with a stage plot</h3>
+          <p>Levels in real decibels, per-voice mutes, and a <strong>Pan</strong> column that puts each player somewhere on the stage — piano left, bass right, hats and ride where a drummer sits. The reverb follows the position.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">🥁</div>
+          <h3>Three kits, and a sound designer</h3>
+          <p>An acoustic jazz kit, a Latin percussion section, and a <strong>groovebox synth</strong> you can shape yourself — kick tune and punch, snare snap, hat tone. Levels are remembered per kit.</p>
         </article>
         <article class="feature reveal">
           <div class="feature-icon" aria-hidden="true">🎚️</div>
           <h3>Rhythm Style Lab</h3>
-          <p>Design and audition your own accompaniment styles — drum voices, comping triggers, per-beat grids. Saved locally, never to the cloud.</p>
+          <p>Design and audition your own accompaniment styles — drum voices, comping triggers, per-beat grids, per-event inspector. Saved locally, never to the cloud.</p>
         </article>
         <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">🎛️</div>
-          <h3>Featured drum mixer</h3>
-          <p>Ride-forward kit mixer with per-voice samples, levels, and mutes. Cross-stick, brushes, latin percussion, kit families — all swappable.</p>
-        </article>
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">🎙️</div>
-          <h3>Recording studio</h3>
-          <p>Capture multitrack stems, export WAVs, and render bandstand video — all generated accompaniment, all in the browser.</p>
+          <div class="feature-icon" aria-hidden="true">🎹</div>
+          <h3>Pick your instruments</h3>
+          <p>Steinway, Rhodes or drawbar organ; upright or electric bass. Every sound is loudness-matched to the others, so switching timbre never changes the balance you dialled.</p>
         </article>
         <article class="feature reveal">
           <div class="feature-icon" aria-hidden="true">🎼</div>
@@ -237,12 +326,27 @@
         <article class="feature reveal">
           <div class="feature-icon" aria-hidden="true">🎭</div>
           <h3>Bandstand visualizer</h3>
-          <p>An animated rhythm section — drummer and bassist move with the music, derived from the actual scheduled events.</p>
+          <p>An animated rhythm section — drummer and bassist move with the music, derived from the actual scheduled events. Full-screen theater mode for the stage or the chart.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">✍️</div>
+          <h3>Write your own</h3>
+          <p>Start from a blues, rhythm-changes, AABA or modal sketch, get per-bar reharm suggestions, add rehearsal marks, repeats and band punch figures. Lyrics and melody, for your own compositions only.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">📚</div>
+          <h3>Built-in knowledge base</h3>
+          <p>An in-app wiki on the rhythm styles and what each one is doing — read the bossa clave or the la pompe while you're auditioning it.</p>
         </article>
         <article class="feature reveal">
           <div class="feature-icon" aria-hidden="true">🎧</div>
           <h3>Reference listening</h3>
           <p>Save Spotify and YouTube links to any tune for context. Provider metadata never touches your chart data.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon" aria-hidden="true">☁️</div>
+          <h3>Cloud sync</h3>
+          <p>Your custom charts, arrangements and preferences follow you between browsers and devices. Beta members only — guests keep everything in the one browser.</p>
         </article>
       </div>
     </section>
@@ -252,14 +356,14 @@
       <header class="section-head">
         <span class="eyebrow">How it works</span>
         <h2 class="font-serif">Three clicks to a chorus.</h2>
-        <p>No install. No account. Open the app and play.</p>
+        <p>Nothing to install, nothing to download. Open it in a tab and play.</p>
       </header>
 
       <ol class="steps">
         <li class="step reveal">
           <span class="step-num">1</span>
           <h3>Pick a tune</h3>
-          <p>Search across every open source, or open one you've saved. The chart renders instantly with section colors.</p>
+          <p>Three demo tunes are open to everyone; the other 1,379 open with a free Beta account. The chart renders instantly with section colors.</p>
         </li>
         <li class="step reveal">
           <span class="step-num">2</span>
@@ -275,36 +379,60 @@
     </section>
 
     <!-- ───────────────────────── Pricing / Beta Access ───────────────────────── -->
-    <section id="pricing" class="section">
+    <section id="beta" class="section">
       <header class="section-head">
-        <span class="eyebrow">Beta Program</span>
-        <h2 class="font-serif">100% Free during Beta.</h2>
-        <p>Get full access to 1,000+ jazz standards, live rhythm section controls, and chart editing in exchange for your feedback!</p>
+        <span class="eyebrow">Two ways in</span>
+        <h2 class="font-serif">Free during Beta.<br />Not free-for-now — free, in exchange for feedback.</h2>
+        <p>
+          Jam-a-Lot is in open beta and there is nothing to pay. What we want instead is
+          what you think: what felt wrong, what you reached for and couldn't find, which
+          tune came out sounding off. That's the whole deal. If you'd rather just hear it
+          first, guest mode is right there, no sign-up.
+        </p>
       </header>
 
-      <div class="pricing-grid" style="max-width: 600px; margin: 0 auto;">
-        <!-- Beta Tester (highlighted) -->
-        <article class="price-card price-featured reveal" style="width: 100%;">
-          <span class="price-badge">Free Beta Program</span>
+      <div class="pricing-grid pricing-grid-two">
+        <!-- Guest -->
+        <article class="price-card reveal">
           <header class="price-head">
-            <h3>Beta Tester Access</h3>
-            <div class="price-amount"><span class="currency">$</span><span class="amount">0</span><span class="per">/month (Free)</span></div>
-            <p class="price-tag">Full app capabilities in exchange for your feedback.</p>
+            <h3>Guest</h3>
+            <div class="price-amount"><span class="amount">3</span><span class="per">tunes · no sign-up</span></div>
+            <p class="price-tag">Hear the band before you decide anything.</p>
           </header>
-          <a class="btn btn-accent glow-accent-sm btn-block" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">▶ Join Free Beta Now</a>
+          <a class="btn btn-ghost btn-block" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">Try 3 tunes now</a>
           <ul class="price-features">
-            <li>✓ <strong>1,000+ jazz standards</strong> &amp; open chord database</li>
-            <li>✓ <strong>Full chord chart editor</strong> &amp; custom tune creation</li>
-            <li>✓ <strong>Generated backing band</strong> — bass, drums, and piano</li>
-            <li>✓ <strong>Live dynamics &amp; trading</strong> — double time, intensity, trading 4s</li>
-            <li>✓ <strong>Living changes</strong> — real-time harmonic substitutions</li>
-            <li>✓ <strong>Cloud backup &amp; sync</strong> across all your devices</li>
-            <li>✓ <strong>Rhythm Style Lab &amp; Bandstand visualizer</strong></li>
+            <li>✓ <strong>Blues in F, Oleo, Mr. P.C.</strong> — the full generated band, nothing held back</li>
+            <li>✓ Every feel, tempo, transposition and mixer control</li>
+            <li>✓ Live dynamics, trading, Live Changes, the listening band</li>
+            <li class="muted">— The other 1,379 tunes are locked</li>
+            <li class="muted">— No chart editing, no custom tunes, no imports</li>
+            <li class="muted">— Nothing syncs; it lives in this one browser</li>
+          </ul>
+        </article>
+
+        <!-- Beta (highlighted) -->
+        <article class="price-card price-featured reveal">
+          <span class="price-badge">Free · feedback for access</span>
+          <header class="price-head">
+            <h3>Beta Member</h3>
+            <div class="price-amount"><span class="currency">$</span><span class="amount">0</span><span class="per">everything, no card</span></div>
+            <p class="price-tag">The entire app. All we ask for in return is your honest feedback.</p>
+          </header>
+          <a class="btn btn-accent glow-accent-sm btn-block" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">▶ Join the Free Beta</a>
+          <ul class="price-features">
+            <li>✓ <strong>All 1,382 jazz standards</strong> &amp; the open chord database</li>
+            <li>✓ <strong>Full chart editor</strong> — write your own, paste text charts, import</li>
+            <li>✓ <strong>Rhythm Style Lab</strong> — build and save your own grooves</li>
+            <li>✓ <strong>Cloud sync</strong> across every browser and device you use</li>
+            <li>✓ Saved arrangements and per-tune performance defaults</li>
+            <li>✓ Everything in Guest, on every tune</li>
           </ul>
         </article>
       </div>
       <p class="pricing-foot">
-        Jam-a-Lot stores only chord symbols and song form — never melody, lyrics, or proprietary formats.
+        Sign up with Google or an email address — it takes about fifteen seconds.
+        Jam-a-Lot stores only chord symbols and song form; never melody, never lyrics,
+        never a proprietary format.
       </p>
     </section>
 
@@ -312,8 +440,11 @@
     <section class="cta-band">
       <div class="cta-inner">
         <h2 class="font-serif">Ready to shed?</h2>
-        <p>Pick a tune. Shape the band. Play.</p>
-        <a class="btn btn-accent btn-lg glow-accent" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">▶ Launch Jam-a-Lot</a>
+        <p>Pick a tune. Shape the band. Play. Then tell us how it went.</p>
+        <div class="hero-ctas cta-ctas">
+          <a class="btn btn-accent btn-lg glow-accent" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">▶ Join the Free Beta</a>
+          <a class="btn btn-ghost btn-lg" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">Try 3 tunes as a guest</a>
+        </div>
       </div>
     </section>
   </main>
