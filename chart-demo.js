@@ -51,7 +51,7 @@
     { label: "head",          chorus: 1, stepMs: BASE_MS,       useSubs: false },
     { label: "double time",   chorus: 2, stepMs: BASE_MS / 2,   useSubs: false, cls: "doubled" },
     { label: "trade 4s",      chorus: 3, stepMs: BASE_MS,       useSubs: false, cls: "trade"  },
-    { label: "living changes",chorus: 4, stepMs: BASE_MS,       useSubs: true,  cls: "subbed" }
+    { label: "live changes",chorus: 4, stepMs: BASE_MS,       useSubs: true,  cls: "subbed" }
   ];
 
   function applyState(state) {
