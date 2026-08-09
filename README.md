@@ -30,33 +30,30 @@ Or drop the folder anywhere static (Vercel/Netlify/`vite preview`).
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Structure: header, hero + screenshot carousel, library, **live performance**, **it listens**, features, how-it-works, beta, CTA, footer |
+| `index.html` | Structure: header, hero + screenshot carousel, **comparison block**, library, **live performance**, **it listens**, features, how-it-works, **FAQ**, beta, CTA, footer |
 | `styles.css` | Full design system — dark canvas, electric-blue accent, Instrument Serif + Inter |
 | `carousel.js` | Hero screenshot carousel (see below) |
 | `reveal.js` | Scroll-reveal via IntersectionObserver + sticky-header state |
 | `chart-demo.js` | **Retired.** The animated chord-chart mock the carousel replaced. No longer referenced by `index.html`; safe to delete |
-| `assets/hero-bg.webp` | Generated club-bokeh backdrop for the hero (our own artwork — no stock licence to track) |
-| `assets/shots/*.webp` | Real app screenshots, 1200×857, ~280 KB for all five |
+| `assets/hero-bg.webp` | Custom 1920×1080 jazz trio artwork behind the hero (dark canvas #14161a, cobalt #3b82f6 / cyan #22d3ee lighting) |
+| `assets/shots/*.webp` | Real app screenshots, 1200×857, ~470 KB total for all five |
 | `assets/icon.png` | Brand icon — a bassist (figure + upright bass) rendered from the app's own bandstand drawing code, in the blue palette; used in header, footer, og:image, apple-touch-icon |
 | `assets/favicon.png` | Simplified 32px-friendly variant of the icon (thicker outline, no frets) for the browser tab |
 
 ## The hero carousel
 
-Five real screenshots, shot from the app running on `localhost:5173` (**not**
+Five real screenshots, shot from the app running locally (**not**
 the Vercel deploy — that lags the working tree). Slides, in order:
 
 | File | Shows |
 |---|---|
-| `01-play.webp` | Play view — bandstand, chart, transport, Live Changes substitutions in green |
+| `01-play.webp` | Play view — bandstand, chart, transport, Live Changes substitutions in green, Song Info panel |
 | `02-fullscreen.webp` | Full-screen performance view |
-| `03-mixer.webp` | Live Mixer — dB levels, sound pickers, pan positions |
+| `03-mixer.webp` | Live Mixer — dB levels, sound pickers, pan positions, Song Info panel |
 | `04-listening.webp` | Listening Band panel — meters, calibration, response sliders |
-| `05-plan.webp` | Performance Plan — head, solos, trading, out head |
+| `05-plan.webp` | Performance Plan — head, solos, trading, out head, Song Info panel |
 
-Re-shooting: capture at ≥1440px wide, crop the guest-mode banner off the top,
-then normalise to 1200×857 (ratio 1.40) letterboxed on the shot's own
-background colour. Slides must share a ratio — `.shots-frame` has no per-slide
-sizing, so an odd one out changes the frame height mid-transition.
+Re-shooting: captured at 1500×1071 @2x via headless Chrome CDP with dark color scheme and 2D stage, normalized to 1200×857 (ratio 1.40) letterboxed on `#14161a`. Slides share a ratio so `.shots-frame` stays stable.
 
 `carousel.js` is dependency-free. Autoplay (5.5 s) pauses on hover, on focus
 within, and on a hidden tab, and **stops permanently after the first manual
