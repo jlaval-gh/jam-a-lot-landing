@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jam-a-Lot User Manual — AI-Friendly Documentation</title>
+  <meta name="description" content="Complete user manual and documentation for Jam-a-Lot, the browser-based jazz practice companion. Comprehensive guides on playback, performance planning, chord charts, instrument mixer, rhythm styles, and microphone listening band.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Jam-a-Lot User Manual">
+  <meta property="og:description" content="Official user manual for Jam-a-Lot jazz practice app. Features, controls, and AI agent documentation.">
+  <meta property="og:url" content="https://jamalong.app/manual.html">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg:           #14161a;
+      --panel:        #1d2026;
+      --sidebar:      #181b20;
+      --border:       #2a2e36;
+      --border-soft:  rgba(42, 46, 54, 0.6);
+      --text:         #e8e8ea;
+      --muted:        #9aa0a8;
+      --accent:       #3b82f6;
+      --accent-2:     #22d3ee;
+      --accent-dim:   rgba(59, 130, 246, 0.20);
+      --font-body:    "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --font-serif:   "Instrument Serif", Georgia, serif;
+      --font-code:    "JetBrains Mono", monospace;
+      --r-md:         8px;
+      --r-lg:         12px;
+      --r-pill:       9999px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navbar */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      padding: 0 24px;
+      background: rgba(20, 22, 26, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fff;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: var(--r-pill);
+      background: var(--accent-dim);
+      color: var(--accent-2);
+      border: 1px solid rgba(34, 211, 238, 0.3);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #fff; }
+    .btn-app {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border-radius: var(--r-md);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-app:hover { background: #2563eb; }
+
+    /* Layout */
+    .doc-layout {
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+      min-height: calc(100vh - 64px);
+    }
+
+    /* Sidebar Table of Contents */
+    .doc-sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 64px;
+      height: calc(100vh - 64px);
+      overflow-y: auto;
+      padding: 24px 16px;
+      background: var(--sidebar);
+      border-right: 1px solid var(--border);
+    }
+    .search-box {
+      margin-bottom: 20px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 8px 12px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      color: var(--text);
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .search-input:focus { border-color: var(--accent); }
+
+    .toc-group { margin-bottom: 20px; }
+    .toc-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .toc-list { list-style: none; padding: 0; margin: 0; }
+    .toc-item { margin-bottom: 4px; }
+    .toc-link {
+      display: block;
+      padding: 5px 8px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      border-radius: 4px;
+      transition: all 0.15s;
+    }
+    .toc-link:hover, .toc-link.active {
+      color: var(--accent-2);
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    /* Main Content */
+    .doc-content {
+      flex: 1;
+      max-width: 920px;
+      padding: 40px 48px;
+    }
+
+    .doc-header {
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-header h1 {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 400;
+      margin: 0 0 12px;
+      color: #fff;
+    }
+    .doc-lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .ai-badge-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    .ai-badge-bar a {
+      color: var(--accent-2);
+      text-decoration: underline;
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 80px;
+    }
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-weight: 400;
+      color: #fff;
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 8px;
+      margin-top: 36px;
+      margin-bottom: 16px;
+    }
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--accent-2);
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+    p, li { color: #d1d5db; font-size: 0.975rem; }
+    ul, ol { padding-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 6px; }
+
+    /* Custom Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: var(--panel);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-soft);
+      font-size: 0.9rem;
+    }
+    th {
+      background: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      font-weight: 600;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    code {
+      font-family: var(--font-code);
+      font-size: 0.85em;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--accent-2);
+    }
+    kbd {
+      font-family: var(--font-code);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 0 rgba(0,0,0,0.4);
+      padding: 2px 6px;
+      font-size: 0.8em;
+      border-radius: 4px;
+    }
+    .note-box {
+      padding: 16px;
+      background: var(--accent-dim);
+      border-left: 4px solid var(--accent-2);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      margin: 20px 0;
+      font-size: 0.925rem;
+    }
+
+    @media (max-width: 900px) {
+      .doc-sidebar { display: none; }
+      .doc-content { padding: 24px; }
+    }
+  </style>
+
+  <!-- Schema.org Technical Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Jam-a-Lot User Manual",
+    "description": "Comprehensive user guide and technical manual for Jam-a-Lot browser-based jazz practice companion.",
+    "articleBody": "Jam-a-Lot plays synthesized acoustic drums, double bass, and electric piano accompaniment over jazz standard chord charts...",
+    "author": {
+      "@type": "Organization",
+      "name": "Jam-a-Lot"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <a href="index.html" class="brand">
+      <span class="brand-title">Jam-a-Lot</span>
+      <span class="badge">User Manual</span>
+    </a>
+    <div class="nav-actions">
+      <a href="llms.txt" class="nav-link" target="_blank">llms.txt</a>
+      <a href="https://jamalong.vercel.app" class="btn-app" target="_blank">Launch App ↗</a>
+    </div>
+  </header>
+
+  <div class="doc-layout">
+    <!-- Sidebar Table of Contents -->
+    <aside class="doc-sidebar">
+      <div class="search-box">
+        <input type="text" id="manual-search" class="search-input" placeholder="Search documentation...">
+      </div>
+      <nav>
+        <div class="toc-group">
+          <div class="toc-title">Table of Contents</div>
+          <ul class="toc-list" id="toc-nav">
+            <li class="toc-item"><a href="#playback-controls" class="toc-link">1. Playback & Performance</a></li>
+            <li class="toc-item"><a href="#chord-chart-views" class="toc-link">2. Chord Chart Views</a></li>
+            <li class="toc-item"><a href="#instrument-mixer" class="toc-link">3. Instrument Mixer</a></li>
+            <li class="toc-item"><a href="#rhythm-styles" class="toc-link">4. Rhythm Styles & Lab</a></li>
+            <li class="toc-item"><a href="#drummer-avatars" class="toc-link">5. Drummer & Bass Avatars</a></li>
+            <li class="toc-item"><a href="#library-sidebar" class="toc-link">6. Library Sidebar</a></li>
+            <li class="toc-item"><a href="#creating-editing-songs" class="toc-link">7. Creating & Editing Songs</a></li>
+            <li class="toc-item"><a href="#listening-band" class="toc-link">8. The Listening Band</a></li>
+            <li class="toc-item"><a href="#screen-layout" class="toc-link">9. Screen Layout</a></li>
+            <li class="toc-item"><a href="#background-audio" class="toc-link">10. Background Audio</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="doc-content">
+      <header class="doc-header">
+        <h1>Jam-a-Lot User Manual</h1>
+        <p class="doc-lead">Welcome to <strong>Jam-a-Lot</strong>, your browser-based jazz practice companion. Jam-a-Lot plays synthesized acoustic drums, double bass, and electric piano accompaniment over a jazz standard's chord changes while displaying a clean lead-sheet style chart.</p>
+        <div class="ai-badge-bar">
+          🤖 <strong>AI Agent Friendly:</strong> Browsing with Chrome Gemini or Copilot? This document contains semantic anchors & raw Markdown access via <a href="llms.txt" target="_blank">llms.txt</a> and <a href="llms-full.txt" target="_blank">llms-full.txt</a>.
+        </div>
+      </header>
+
+      <!-- 1. Playback & Live Performance Controls -->
+      <section id="playback-controls">
+        <h2>1. Playback & Live Performance Controls</h2>
+
+        <h3 id="transport-controls">Transport Controls</h3>
+        <p>Located at the top of the interface:</p>
+        <ul>
+          <li><strong>Play / Stop / Pause</strong>: Controls the playback state.</li>
+          <li><strong>Count-in</strong>: Select between 1 or 2 bars of count-in.</li>
+          <li><strong>Metronome</strong>: Toggle a metronome click on or off.</li>
+          <li><strong>User Menu</strong>: Sign in via Google OAuth or Email/Password, manage cloud library sync, give feedback via the Feedback modal, and view active user preferences.</li>
+        </ul>
+
+        <h3 id="user-account">User Account & Preferences Menu</h3>
+        <ul>
+          <li><strong>Join Beta Program / Account Button</strong>: Labeled "Join Beta Program" (with sparkles icon) when signed out. Toggles user profile menu when signed in.</li>
+          <li><strong>Guest Mode Notice Banner</strong>: Persistent notification explaining Guest Mode (3 demo tunes: <em>Blues in F</em>, <em>Oleo</em>, & <em>Mr. P.C.</em>).</li>
+          <li><strong>Cloud Library Sync</strong>: Back up custom charts and preferences to your personal Supabase account across browsers and devices.</li>
+          <li><strong>Give Feedback</strong>: Submit bug reports, feature requests, sound quality feedback, or general comments with interactive star ratings.</li>
+        </ul>
+
+        <h3 id="bandstand-stage">Bandstand Stage</h3>
+        <p>The animated band graphic above transport controls allows screen theater mode expansion. Hotspot labels (bassist, drummer, comping style, room) cycle settings on click.</p>
+
+        <h3 id="performance-panel">Performance Panel</h3>
+        <p>Located directly below the transport. Split into four core tabs:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Tab</th>
+              <th>What's in it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Structure</strong></td>
+              <td>Chorus plan — head choruses, soloists count, bass/piano features, trading, last head, energy ramps.</td>
+            </tr>
+            <tr>
+              <td><strong>Rhythm</strong></td>
+              <td>Feel pickers for First chorus, Solo choruses, Out-head, and per-section style overrides.</td>
+            </tr>
+            <tr>
+              <td><strong>Intro & Ending</strong></td>
+              <td>Intro/ending style pickers including Tonic Splash (land on tonic with single cymbal splash).</td>
+            </tr>
+            <tr>
+              <td><strong>Arrangements</strong></td>
+              <td>Save and recall complete performance plans under custom names.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="solo-rhythm">Solo Rhythm — Following the Form or Opening Up</h3>
+        <p>Under solos, choose whether the rhythm section follows the written form or switches to a single style (e.g. Swing) after N choruses:</p>
+        <ul>
+          <li><strong>Follow written form</strong>: Every solo chorus plays section rhythms as written.</li>
+          <li><strong>Switch to [Feel] after N choruses</strong>: Plays written form for N choruses, then switches to selected feel for remaining solo choruses.</li>
+        </ul>
+      </section>
+
+      <!-- 2. Chord Chart Views -->
+      <section id="chord-chart-views">
+        <h2>2. Chord Chart Views</h2>
+        <p>Jam-a-Lot offers multiple layout modes to suit your practice setup:</p>
+        <ul>
+          <li><strong>Standard Grid</strong>: Classic 4-column layout mapping bars evenly.</li>
+          <li><strong>Compact View</strong>: Authentic real-book lead sheet notation replacing grid lines with traditional bar markings.</li>
+          <li><strong>Repeat View</strong>: Collapses repeating sections using standard musical repeat brackets (<code>|:</code> and <code>:|</code>). First and second ending brackets light up dynamically as playback enters each pass.</li>
+          <li><strong>Vintage View</strong>: Amber monospace layout displaying full form without repeat folding.</li>
+        </ul>
+
+        <h3 id="section-color-coding">Section Color-Coding</h3>
+        <ul>
+          <li><strong>Section A</strong>: Sky-blue</li>
+          <li><strong>Section B</strong>: Mint-green</li>
+          <li><strong>Section C</strong>: Soft-violet</li>
+          <li><strong>Section D</strong>: Warm-amber</li>
+          <li><strong>Section E+</strong>: Dusty-rose</li>
+        </ul>
+      </section>
+
+      <!-- 3. Instrument Mixer -->
+      <section id="instrument-mixer">
+        <h2>3. Instrument Mixer & Quick Controls</h2>
+        <p>Out of the box, all three instruments play at a calibrated level (expressed in decibels <code>dB</code>).unity <code>0.0 dB</code> represents the calibrated baseline.</p>
+
+        <h3 id="stage-panning">Stage Plot & Stereo Panning</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Voice</th>
+              <th>Position</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Piano</td><td><code>L35</code></td><td>Busiest sustained voice gets left side</td></tr>
+            <tr><td>Bass</td><td><code>R35</code></td><td>Right of centre, clear of kick drum</td></tr>
+            <tr><td>Kick / Snare</td><td><code>C / L3</code></td><td>Anchor of the beat holds middle</td></tr>
+            <tr><td>Hi-hat / Ride</td><td><code>L32 / R30</code></td><td>Spread across drummer's seat perspective</td></tr>
+            <tr><td>Toms</td><td><code>R18</code></td><td>Sweeping across as pitch descends</td></tr>
+            <tr><td>Crash / Splash</td><td><code>L42 / R38</code></td><td>Wide accents for clear event separation</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="sfz-import">Importing Custom Piano Samples (SFZ)</h3>
+        <ol>
+          <li>In Piano card, click <strong>Import samples…</strong>.</li>
+          <li>Select both your <code>.sfz</code> file and referenced <code>.wav</code> files together.</li>
+          <li>Audition C4 and click <strong>Import Kit</strong>. Saved to browser IndexedDB automatically.</li>
+        </ol>
+      </section>
+
+      <!-- 4. Rhythm Styles & Lab -->
+      <section id="rhythm-styles">
+        <h2>4. Rhythm Styles & Bossa Nova Fine-Tuning</h2>
+        <p>Jam-a-Lot separates feel, rhythm style, and mixer sound. Accompaniment families include <em>Swing</em>, <em>Ballad</em>, <em>Gypsy Jazz</em>, <em>Bossa Nova</em>, <em>Latin</em>, <em>Waltz</em>, <em>Soul-Jazz</em>, <em>Funk</em>, <em>Blues Shuffle</em>, <em>R&B / Neo-Soul</em>, <em>Rock</em>, and <em>EDM</em>.</p>
+        
+        <div class="note-box">
+          ⚡ <strong>EDM Styles:</strong> Feature half-time grooves (Neon Riviera, Basalt, Sunroom, Late Orbit). Set twice the target pulse on the tempo slider (e.g., 224 for a 112 BPM pulse).
+        </div>
+      </section>
+
+      <!-- 5. Drummer & Bass Avatars -->
+      <section id="drummer-avatars">
+        <h2>5. Drummer Avatars & Human Feel</h2>
+        <p>Select preset drummer profiles under <strong>Settings → Feel & Variation</strong>:</p>
+        <ul>
+          <li><strong>Philly Joe</strong>: Swing-forward, traditional timing, and natural feel.</li>
+          <li><strong>Elvin</strong>: Loose timing, heavy syncopations, high comping intensity.</li>
+          <li><strong>Tony</strong>: Driving feel, ride-focused, razor-sharp timing.</li>
+          <li><strong>Max</strong>: Balanced swing, structured snare fills, melodic flow.</li>
+        </ul>
+        <h3>Bassist Avatars</h3>
+        <p>Includes <em>Standard Walk</em>, <em>Jaco</em>, <em>Eddie Gomez</em>, <em>Ray</em>, <em>Paul</em>, and <em>Ron</em> profiles.</p>
+      </section>
+
+      <!-- 6. Library Sidebar -->
+      <section id="library-sidebar">
+        <h2>6. Library Sidebar</h2>
+        <p>Locate standards by title, composer, tempo, or feel with instant search and A-Z jump indexing.</p>
+      </section>
+
+      <!-- 7. Creating & Editing Songs -->
+      <section id="creating-editing-songs">
+        <h2>7. Creating & Editing Songs</h2>
+        <h3 id="text-mode-editor">Text Mode Editor Shorthand</h3>
+        <p>The Chord Editor opens in text mode by default. Universal lead-sheet syntax:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol / Syntax</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>|</code></td><td>Single barline</td><td><code>| Cmaj7 | Dm7 G7 |</code></td></tr>
+            <tr><td><code>||</code></td><td>Double section barline</td><td><code>| Cmaj7 | G7 ||</code></td></tr>
+            <tr><td><code>|: ... :|</code></td><td>Repeat section</td><td><code>|: Cmaj7 | Am7 | Dm7 | G7 :|</code></td></tr>
+            <tr><td><code>: | xN</code></td><td>Repeat N times</td><td><code>|: C | G7 :| x3</code></td></tr>
+            <tr><td><code>[Section]</code></td><td>Section label</td><td><code>[A]</code> or <code>[Bridge]</code></td></tr>
+            <tr><td><code>/</code> or <code>%</code></td><td>Hold previous bar chord</td><td><code>| Cmaj7 | / |</code></td></tr>
+            <tr><td><code>N.C.</code></td><td>No Chord (silent bar)</td><td><code>| Cmaj7 | N.C. |</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 8. The Listening Band -->
+      <section id="listening-band">
+        <h2>8. The Listening Band (Microphone Input)</h2>
+        <p>Open <strong>Listening</strong> in the header row to arm the microphone. The band listens in real time and adapts to your performance.</p>
+        <ul>
+          <li><strong>Follows Energy</strong>: Adjusts band dynamics bar by bar based on your input level.</li>
+          <li><strong>Phrase Answering</strong>: Fills gaps when you pause your solo line.</li>
+          <li><strong>Figure Catching</strong>: Locks onto repeated 1-bar or 2-bar rhythmic figures played into the mic.</li>
+          <li><strong>FFT Leakage Subtraction</strong>: Subtracts the band's audio from mic input bin-by-bin for clean speaker operation.</li>
+        </ul>
+      </section>
+
+      <!-- 9. Screen Layout & Full Screen -->
+      <section id="screen-layout">
+        <h2>9. Screen Layout & Full Screen</h2>
+        <p>Supports full-screen performance view (<kbd>Esc</kbd> to exit), dynamic chord resizing, and auto-scrolling to keep active bars in view.</p>
+      </section>
+
+      <!-- 10. Background Audio Support -->
+      <section id="background-audio">
+        <h2>10. Background Audio Support</h2>
+        <p>Jam-a-Lot keeps playing smoothly when you lock your screen or switch browser tabs, using Web Audio Web Worker timers for precision lookahead scheduling.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Live Search Filter for Manual Sections
+    const searchInput = document.getElementById('manual-search');
+    const sections = document.querySelectorAll('main section');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      sections.forEach(sec => {
+        const text = sec.innerText.toLowerCase();
+        if (!term || text.includes(term)) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    });
+
+    // Highlight Active TOC link on scroll
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 100;
+        if (window.scrollY >= top) {
+          current = sec.getAttribute('id');
+        }
+      });
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
