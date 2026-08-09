@@ -204,7 +204,7 @@ main { display: block; }
   background-image: url("assets/hero-bg.webp");
   background-size: cover;
   background-position: 50% 35%;
-  opacity: 0.75;
+  opacity: 0.95;
   /* Fade out at the bottom so the backdrop never collides with the first
      section's own border — a hard edge here reads as a broken image. */
   -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 58%, transparent 100%);
@@ -219,7 +219,7 @@ main { display: block; }
   inset: -140px 0 0;
   z-index: -1;
   background:
-    linear-gradient(100deg, rgba(20, 22, 26, 0.94) 0%, rgba(20, 22, 26, 0.72) 42%, rgba(20, 22, 26, 0.30) 70%, rgba(20, 22, 26, 0.55) 100%);
+    linear-gradient(100deg, rgba(20, 22, 26, 0.93) 0%, rgba(20, 22, 26, 0.70) 40%, rgba(20, 22, 26, 0.18) 68%, rgba(20, 22, 26, 0.38) 100%);
   pointer-events: none;
 }
 
@@ -258,10 +258,15 @@ main { display: block; }
 }
 
 .hero-title {
-  font-size: clamp(40px, 6vw, 68px);
-  line-height: 1.05;
+  /* Sized to the hero's own column, not the viewport. --maxw caps the hero
+     at 1140px, so the copy column stops growing at ~500px however wide the
+     screen gets — a 6vw headline kept growing past it and broke to four
+     lines on any large monitor. */
+  font-size: clamp(34px, 3.4vw, 54px);
+  line-height: 1.08;
   margin-bottom: 22px;
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 .hero-title em { font-style: italic; color: var(--text); }
 .text-gradient {
