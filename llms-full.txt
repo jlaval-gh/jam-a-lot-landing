@@ -1,0 +1,70 @@
+# Jam-a-Lot User Manual
+
+Welcome to **Jam-a-Lot**, your browser-based jazz practice companion. Jam-a-Lot plays synthesized acoustic drums, double bass, and electric piano accompaniment over a jazz standard's chord changes while displaying a clean lead-sheet style chart. 
+
+---
+
+## 1. Playback & Live Performance Controls
+
+### Transport Controls
+Located at the top of the interface:
+- **Play / Stop / Pause**: Controls the playback state.
+- **Count-in**: Select between 1 or 2 bars of count-in.
+- **Metronome**: Toggle a metronome click on or off.
+- **User Menu**: Sign in via Google OAuth or Email/Password, manage cloud library sync, give feedback via the Feedback modal, and view active user preferences.
+
+### User Account & Preferences Menu
+Located on the far right of the top navigation bar:
+- **Join Beta Program / Account Button**: Labeled **"Join Beta Program"** (with sparkles icon) when signed out to encourage joining the free Beta program. Toggles the user profile menu when signed in.
+- **Guest Mode Notice Banner**: Displays a persistent top notification for unauthenticated users explaining Guest Mode capabilities (access to 3 demo tunes: *Blues in F*, *Oleo*, & *Mr. P.C.*) and inviting users to join the free Beta Program.
+- **Guest Restrictions**: Guests can play the 3 demo songs with full generated audio. All other catalog tunes (1,000+ songs), chart editing, song creation, JSON/text importing, and cloud backup require free Beta sign-up.
+- **Email Sign In & Sign Up**: Create or log into an account using email and password. Includes a password recovery link feature ("Forgot password?").
+- **Cloud Library Sync**: Click "Sync Library to Cloud" to back up your custom charts and preferences to your personal Supabase account across browsers and devices. Click "Restore Cloud Library" to restore backed-up tunes.
+- **Give Feedback**: Click "Give Feedback" in the User Menu to open a sleek feedback modal. Submit bug reports, feature requests, sound quality feedback, or general comments with optional contact email and interactive star ratings. Feedback is saved to Supabase and cached locally in `localStorage`.
+- **Preferences Overview**: Displays current drum kit selection, humanization toggle status, and swing ratio.
+
+### Bandstand Stage
+The animated band graphic above the transport has one icon button in its top-right corner:
+- **Expand** — Screen Theater Mode: the stage fills the screen. Esc or the compress button returns to normal.
+
+The hotspot labels (bassist, bass sound, drummer, room, comping style, audience) show on their own and come back whenever you hover the stage; click one to cycle that setting.
+
+### Performance Panel
+Directly below the transport. **Use plan**, **Reroll Session**, and **Save default / Reset** sit at the top and apply everywhere; the rest is split into four tabs so you only see what you're working on.
+
+| Tab | What's in it |
+| --- | --- |
+| **Structure** | The chorus plan — head choruses, how many soloists and how many choruses each, bass/piano features, trading, last head. Plus **Ramp solo intensity** and **Choruses to full**, with a preview of the energy the band will play each chorus (`1 → 2 → 3 → 4 → 5 → …`). |
+| **Rhythm** | What the band plays: dropdown feel pickers for **First chorus**, **Solo choruses**, and **Out-head**, plus per-section feels under **First chorus sections** and per-section style overrides under **Remaining chorus sections**. |
+| **Intro & Ending** | The intro and ending style pickers, including **Tonic Splash** — land on the tonic and mark it with a single cymbal splash, no tag and no held chord. |
+| **Arrangements** | Save the whole plan (structure, feels, tempo, rhythm style, solo rhythm) under a name, and load it back later. |
+
+---
+
+## 2. Chord Chart Views
+
+Jam-a-Lot offers multiple layout modes to suit your practicing style:
+- **Standard Grid**: A classic 4-column layout mapping bars evenly.
+- **Compact View**: An authentic real-book lead sheet style notation that replaces boxy grid lines with thin, traditional bar markings and section dividers.
+- **Repeat View**: Collapses repeating sections using standard musical repeat brackets (e.g., `|:` and `:|`). Active bar highlighting is mapped to the first occurrence of repeating sections so your eyes stay aligned with the chart.
+- **Vintage View**: The same chords in an amber, terminal-style monospace layout — full form written out, no repeat folding.
+
+---
+
+## 3. Instrument Mixer & Quick Controls
+
+Directly below the chord chart, you can adjust levels and sounds on the fly.
+All three instruments play at a calibrated level in decibels (`dB`), where `0.0 dB` represents unity.
+
+### Panning Positions
+- Piano: `L35`
+- Bass: `R35`
+- Kick / Snare: `C / L3`
+- Hi-hat / Ride: `L32 / R30`
+- Toms: `R18`
+- Crash / Splash: `L42 / R38`
+
+---
+
+## 4. The Listening Band
+Open **Listening** in the header row to arm the microphone. The band listens in real time and adapts to your performance using frequency-bin audio subtraction.
