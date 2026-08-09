@@ -30,12 +30,45 @@ Or drop the folder anywhere static (Vercel/Netlify/`vite preview`).
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Structure: header, hero, library, **live performance** (the differentiator), features, how-it-works, pricing, CTA, footer |
+| `index.html` | Structure: header, hero + screenshot carousel, library, **live performance**, **it listens**, features, how-it-works, beta, CTA, footer |
 | `styles.css` | Full design system — dark canvas, electric-blue accent, Instrument Serif + Inter |
-| `chart-demo.js` | Animated "Autumn Leaves" mock that cycles through live states (head → double time → trade fours → living substitutions) |
+| `carousel.js` | Hero screenshot carousel (see below) |
 | `reveal.js` | Scroll-reveal via IntersectionObserver + sticky-header state |
+| `chart-demo.js` | **Retired.** The animated chord-chart mock the carousel replaced. No longer referenced by `index.html`; safe to delete |
+| `assets/hero-bg.webp` | Generated club-bokeh backdrop for the hero (our own artwork — no stock licence to track) |
+| `assets/shots/*.webp` | Real app screenshots, 1200×857, ~280 KB for all five |
 | `assets/icon.png` | Brand icon — a bassist (figure + upright bass) rendered from the app's own bandstand drawing code, in the blue palette; used in header, footer, og:image, apple-touch-icon |
 | `assets/favicon.png` | Simplified 32px-friendly variant of the icon (thicker outline, no frets) for the browser tab |
+
+## The hero carousel
+
+Five real screenshots, shot from the app running on `localhost:5173` (**not**
+the Vercel deploy — that lags the working tree). Slides, in order:
+
+| File | Shows |
+|---|---|
+| `01-play.webp` | Play view — bandstand, chart, transport, Live Changes substitutions in green |
+| `02-fullscreen.webp` | Full-screen performance view |
+| `03-mixer.webp` | Live Mixer — dB levels, sound pickers, pan positions |
+| `04-listening.webp` | Listening Band panel — meters, calibration, response sliders |
+| `05-plan.webp` | Performance Plan — head, solos, trading, out head |
+
+Re-shooting: capture at ≥1440px wide, crop the guest-mode banner off the top,
+then normalise to 1200×857 (ratio 1.40) letterboxed on the shot's own
+background colour. Slides must share a ratio — `.shots-frame` has no per-slide
+sizing, so an odd one out changes the frame height mid-transition.
+
+`carousel.js` is dependency-free. Autoplay (5.5 s) pauses on hover, on focus
+within, and on a hidden tab, and **stops permanently after the first manual
+interaction** — advancing under someone's finger is what makes a carousel
+irritating. Arrow keys work once it has focus; horizontal swipe works on touch
+and deliberately ignores gestures that are more vertical than horizontal, so it
+never hijacks page scroll. `prefers-reduced-motion` disables the autoplay *and*
+the transition.
+
+Known limitation: the mixer and plan slides are dense desktop UI, so their
+text is decorative rather than readable on a phone. The captions carry the
+message; don't add slides that depend on reading small type.
 
 ## Design tokens
 
