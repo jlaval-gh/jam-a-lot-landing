@@ -67,15 +67,30 @@ img, svg { display: block; max-width: 100%; }
 
 .font-serif { font-family: var(--font-serif); font-weight: 400; letter-spacing: 0; }
 
-/* ───────── Ambient glow (cool blue, echoes app body::before) ───────── */
+/* ───────── Full-window static backdrop image ───────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: url("assets/hero-bg.webp");
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  opacity: 0.40;
+  pointer-events: none;
+}
+
+/* ───────── Ambient glow (cool blue overlay) ───────── */
 .ambient-glow {
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(60% 50% at 50% 28%, rgba(59, 130, 246, 0.10), transparent 70%),
-    radial-gradient(40% 35% at 85% 12%, rgba(34, 211, 238, 0.07), transparent 70%);
+    radial-gradient(70% 50% at 50% 25%, rgba(59, 130, 246, 0.16), transparent 75%),
+    radial-gradient(50% 40% at 85% 15%, rgba(34, 211, 238, 0.10), transparent 75%),
+    linear-gradient(180deg, rgba(20, 22, 26, 0.45) 0%, rgba(20, 22, 26, 0.75) 100%);
 }
 
 /* ───────── Layout helpers ───────── */
@@ -87,7 +102,7 @@ main { display: block; }
 }
 .section-alt {
   max-width: none;
-  background: linear-gradient(180deg, transparent, rgba(29, 32, 38, 0.5), transparent);
+  background: linear-gradient(180deg, transparent, rgba(29, 32, 38, 0.55), transparent);
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
 }
@@ -168,8 +183,6 @@ main { display: block; }
 .site-header.scrolled { border-bottom-color: var(--border-soft); background: rgba(20, 22, 26, 0.88); }
 
 .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; font-size: 18px; letter-spacing: 0.2px; }
-/* Brand icon mark — the rendered bandstand bassist carries its own dark
-   backing, so we just clip it into a rounded square. */
 .brand-mark-icon {
   width: 40px; height: 40px;
   border-radius: var(--r-md);
@@ -193,33 +206,14 @@ main { display: block; }
 .launch-cta { margin-left: 8px; }
 
 /* ───────── Hero ───────── */
-/* Wrapper exists only to carry the backdrop full-bleed while the hero
-   grid itself stays inside --maxw. */
 .hero-wrap { position: relative; isolation: isolate; }
-.hero-wrap::before {
-  content: "";
-  position: absolute;
-  inset: -140px 0 0;          /* run up behind the sticky header */
-  z-index: -1;
-  background-image: url("assets/hero-bg.webp");
-  background-size: cover;
-  background-position: 50% 35%;
-  opacity: 0.95;
-  /* Fade out at the bottom so the backdrop never collides with the first
-     section's own border — a hard edge here reads as a broken image. */
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 58%, transparent 100%);
-          mask-image: linear-gradient(180deg, #000 0%, #000 58%, transparent 100%);
-  pointer-events: none;
-}
-/* Scrim: keeps the headline at full contrast over the busiest part of
-   the image. Without it the lede sits on bokeh and gets hard to read. */
 .hero-wrap::after {
   content: "";
   position: absolute;
   inset: -140px 0 0;
   z-index: -1;
   background:
-    linear-gradient(100deg, rgba(20, 22, 26, 0.93) 0%, rgba(20, 22, 26, 0.70) 40%, rgba(20, 22, 26, 0.18) 68%, rgba(20, 22, 26, 0.38) 100%);
+    linear-gradient(100deg, rgba(20, 22, 26, 0.85) 0%, rgba(20, 22, 26, 0.50) 40%, rgba(20, 22, 26, 0.10) 68%, rgba(20, 22, 26, 0.30) 100%);
   pointer-events: none;
 }
 

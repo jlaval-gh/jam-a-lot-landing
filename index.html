@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Ambient blue glow behind the hero -->
+  <!-- Ambient glow and static backdrop behind the app -->
   <div class="ambient-glow" aria-hidden="true"></div>
 
   <!-- ───────────────────────── Sticky header ───────────────────────── -->
@@ -28,9 +28,9 @@
     </a>
     <nav class="site-nav" aria-label="Primary">
       <a href="#compare">Why Jam-a-Lot</a>
+      <a href="#listens">It listens</a>
       <a href="#library">Library</a>
       <a href="#live">Live performance</a>
-      <a href="#listens">It listens</a>
       <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
       <a href="#beta">Free Beta</a>
@@ -169,109 +169,7 @@
       </div>
     </section>
 
-    <!-- ───────────────────────── Library / breadth ───────────────────────── -->
-    <section id="library" class="section section-alt">
-      <header class="section-head">
-        <span class="eyebrow">The library</span>
-        <h2 class="font-serif">One app, every open source.</h2>
-        <p>
-          Jam-a-Lot aggregates open-source chord collections — a 1,382-tune jazz-standards
-          corpus, academic chord datasets, community lead-sheet archives, and public-domain imports.
-          Search once, play immediately.
-        </p>
-      </header>
-
-      <div class="source-grid">
-        <article class="source reveal">
-          <div class="source-icon" aria-hidden="true">🎷</div>
-          <h3>Jazz standards</h3>
-          <p>1,382 jazz standards — bebop, modal, swing, ballads, bossa, latin, waltz, and songbook classics.</p>
-        </article>
-        <article class="source reveal">
-          <div class="source-icon" aria-hidden="true">🎸</div>
-          <h3>Pop &amp; rock changes</h3>
-          <p>Open academic chord datasets — practice over familiar progressions and popular tunes.</p>
-        </article>
-        <article class="source reveal">
-          <div class="source-icon" aria-hidden="true">🎻</div>
-          <h3>Lead sheets &amp; scores</h3>
-          <p>Public-domain lead sheets import straight in, with full MusicXML and text chart support.</p>
-        </article>
-        <article class="source reveal">
-          <div class="source-icon" aria-hidden="true">➕</div>
-          <h3>Your own tunes</h3>
-          <p>Paste a text chart, edit bar by bar, or build from a blues, rhythm-changes, AABA or modal sketch.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ───────────────────────── LIVE PERFORMANCE (the differentiator) ───────────────────────── -->
-    <section id="live" class="section">
-      <header class="section-head">
-        <span class="eyebrow">Shape the band</span>
-        <h2 class="font-serif">Static tracks play on loop.<br />A band responds live.</h2>
-        <p>
-          Generated on the fly bar by bar — giving you real-time control over chorus dynamics,
-          trading, feel switches, and reharmonization while you play.
-        </p>
-      </header>
-
-      <div class="live-grid">
-        <article class="live-card reveal">
-          <div class="live-num">01</div>
-          <h3>Live dynamics &amp; chorus control</h3>
-          <p>
-            Shape the next chorus without stopping. Double time into the out-head, drop to half-time
-            for the bass solo, or dial drummer intensity (1–5) at phrase boundaries.
-          </p>
-          <ul class="live-bullets">
-            <li><span class="kbd">Next chorus:</span> double time, half time, or feel switch</li>
-            <li><span class="kbd">Drummer intensity:</span> 1–5 density profiles on the fly</li>
-          </ul>
-        </article>
-
-        <article class="live-card reveal">
-          <div class="live-num">02</div>
-          <h3>Trade bars with the drummer</h3>
-          <p>
-            Press trade to exchange fours, eights, or full choruses. The drummer solos with comping
-            behind you and hands off with phrase-locked cymbal splashes.
-          </p>
-          <ul class="live-bullets">
-            <li><span class="kbd">Trade 4s / 8s / choruses</span> with phrase alignment</li>
-            <li>Seamless re-entry kicks and downbeat markers</li>
-          </ul>
-        </article>
-
-        <article class="live-card reveal">
-          <div class="live-num">03</div>
-          <h3>Live Changes reharmonization</h3>
-          <p>
-            Tasteful real-time substitutions (tritone swaps, back-door turns, turnaround variants)
-            over recognized forms like blues and rhythm changes without mutating stored charts.
-          </p>
-          <ul class="live-bullets">
-            <li>Substitutions display live on chart &amp; bass line</li>
-            <li>100% session-only — original chart stays untouched</li>
-          </ul>
-        </article>
-
-        <article class="live-card reveal">
-          <div class="live-num">04</div>
-          <h3>12 Feels &amp; instant transposition</h3>
-          <p>
-            Switch feels mid-performance, transpose &plusmn;1 semitone instantly, or loop sections
-            until clean. Computed from absolute beat clocks with zero timing drift.
-          </p>
-          <ul class="live-bullets">
-            <li>Swing, bossa, latin, gypsy jazz, soul-jazz, funk, blues shuffle, rock, EDM...</li>
-            <li>Instant semitone transposition &amp; clean section looping</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ───────────────────────── The listening band ───────────────────────── -->
+    <!-- ───────────────────────── The listening band (mic interaction right after Why Jam-a-Lot) ───────────────────────── -->
     <section id="listens" class="section section-alt">
       <header class="section-head">
         <span class="eyebrow">Mic interaction</span>
@@ -332,6 +230,108 @@
           <ul class="live-bullets">
             <li>Phrase-locked trade re-entries on the "and of 4"</li>
             <li>Distinct chorus vs section downbeat emphasis</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Library / breadth ───────────────────────── -->
+    <section id="library" class="section">
+      <header class="section-head">
+        <span class="eyebrow">The library</span>
+        <h2 class="font-serif">One app, every open source.</h2>
+        <p>
+          Jam-a-Lot aggregates open-source chord collections — a 1,382-tune jazz-standards
+          corpus, academic chord datasets, community lead-sheet archives, and public-domain imports.
+          Search once, play immediately.
+        </p>
+      </header>
+
+      <div class="source-grid">
+        <article class="source reveal">
+          <div class="source-icon" aria-hidden="true">🎷</div>
+          <h3>Jazz standards</h3>
+          <p>1,382 jazz standards — bebop, modal, swing, ballads, bossa, latin, waltz, and songbook classics.</p>
+        </article>
+        <article class="source reveal">
+          <div class="source-icon" aria-hidden="true">🎸</div>
+          <h3>Pop &amp; rock changes</h3>
+          <p>Open academic chord datasets — practice over familiar progressions and popular tunes.</p>
+        </article>
+        <article class="source reveal">
+          <div class="source-icon" aria-hidden="true">🎻</div>
+          <h3>Lead sheets &amp; scores</h3>
+          <p>Public-domain lead sheets import straight in, with full MusicXML and text chart support.</p>
+        </article>
+        <article class="source reveal">
+          <div class="source-icon" aria-hidden="true">➕</div>
+          <h3>Your own tunes</h3>
+          <p>Paste a text chart, edit bar by bar, or build from a blues, rhythm-changes, AABA or modal sketch.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── LIVE PERFORMANCE (the differentiator) ───────────────────────── -->
+    <section id="live" class="section section-alt">
+      <header class="section-head">
+        <span class="eyebrow">Shape the band</span>
+        <h2 class="font-serif">Static tracks play on loop.<br />A band responds live.</h2>
+        <p>
+          Generated on the fly bar by bar — giving you real-time control over chorus dynamics,
+          trading, feel switches, and reharmonization while you play.
+        </p>
+      </header>
+
+      <div class="live-grid">
+        <article class="live-card reveal">
+          <div class="live-num">01</div>
+          <h3>Live dynamics &amp; chorus control</h3>
+          <p>
+            Shape the next chorus without stopping. Double time into the out-head, drop to half-time
+            for the bass solo, or dial drummer intensity (1–5) at phrase boundaries.
+          </p>
+          <ul class="live-bullets">
+            <li><span class="kbd">Next chorus:</span> double time, half time, or feel switch</li>
+            <li><span class="kbd">Drummer intensity:</span> 1–5 density profiles on the fly</li>
+          </ul>
+        </article>
+
+        <article class="live-card reveal">
+          <div class="live-num">02</div>
+          <h3>Trade bars with the drummer</h3>
+          <p>
+            Press trade to exchange fours, eights, or full choruses. The drummer solos with comping
+            behind you and hands off with phrase-locked cymbal splashes.
+          </p>
+          <ul class="live-bullets">
+            <li><span class="kbd">Trade 4s / 8s / choruses</span> with phrase alignment</li>
+            <li>Seamless re-entry kicks and downbeat markers</li>
+          </ul>
+        </article>
+
+        <article class="live-card reveal">
+          <div class="live-num">03</div>
+          <h3>Live Changes reharmonization</h3>
+          <p>
+            Tasteful real-time substitutions (tritone swaps, back-door turns, turnaround variants)
+            over recognized forms like blues and rhythm changes without mutating stored charts.
+          </p>
+          <ul class="live-bullets">
+            <li>Substitutions display live on chart &amp; bass line</li>
+            <li>100% session-only — original chart stays untouched</li>
+          </ul>
+        </article>
+
+        <article class="live-card reveal">
+          <div class="live-num">04</div>
+          <h3>12 Feels &amp; instant transposition</h3>
+          <p>
+            Switch feels mid-performance, transpose &plusmn;1 semitone instantly, or loop sections
+            until clean. Computed from absolute beat clocks with zero timing drift.
+          </p>
+          <ul class="live-bullets">
+            <li>Swing, bossa, latin, gypsy jazz, soul-jazz, funk, blues shuffle, rock, EDM...</li>
+            <li>Instant semitone transposition &amp; clean section looping</li>
           </ul>
         </article>
       </div>
@@ -461,7 +461,7 @@
         <article class="price-card reveal">
           <header class="price-head">
             <h3>Guest</h3>
-            <div class="price-amount"><span class="amount">3</span><span class="per">tunes · no sign-up</span></div>
+            <div class="price-amount"><span class="currency">$</span><span class="amount">0</span><span class="per">3 tunes · no sign-up</span></div>
             <p class="price-tag">Hear the band before you decide anything.</p>
           </header>
           <a class="btn btn-ghost btn-block" href="https://jamalong.vercel.app/" target="_blank" rel="noopener">Try 3 tunes now</a>
