@@ -18,10 +18,17 @@ Located on the far right of the top navigation bar:
 - **Join Beta Program / Account Button**: Labeled **"Join Beta Program"** (with sparkles icon) when signed out to encourage joining the free Beta program. Toggles the user profile menu when signed in.
 - **Guest Mode Notice Banner**: Displays a persistent top notification for unauthenticated users explaining Guest Mode capabilities (access to 3 demo tunes: *Blues in F*, *Oleo*, & *Mr. P.C.*) and inviting users to join the free Beta Program.
 - **Guest Restrictions**: Guests can play the 3 demo songs with full generated audio. All other catalog tunes (1,000+ songs), chart editing, song creation, JSON/text importing, and cloud backup require free Beta sign-up.
-- **Email Sign In & Sign Up**: Create or log into an account using email and password. Includes a password recovery link feature ("Forgot password?").
-- **Cloud Library Sync**: Click "Sync Library to Cloud" to back up your custom charts and preferences to your personal Supabase account across browsers and devices. Click "Restore Cloud Library" to restore backed-up tunes.
-- **Give Feedback**: Click "Give Feedback" in the User Menu to open a sleek feedback modal. Submit bug reports, feature requests, sound quality feedback, or general comments with optional contact email and interactive star ratings. Feedback is saved to Supabase and cached locally in `localStorage`.
+- **Email Sign In & Sign Up**: Create or log into an account using email and password. Includes password recovery ("Forgot password?").
+- **User Handles & Profiles**: Set up a unique username handle (e.g. `@jazzbassist`) in the User Menu for direct tune sharing and user discovery.
+- **Cloud Library Sync**: Automatically syncs user compositions, catalog standard edits, performance arrangements, and custom settings across all your devices in real time.
+- **Give Feedback**: Click "Give Feedback" in the User Menu to open a sleek feedback modal. Submit bug reports, feature requests, sound quality feedback, or general comments with optional contact email and interactive star ratings.
 - **Preferences Overview**: Displays current drum kit selection, humanization toggle status, and swing ratio.
+
+### User Tunes, Fork-on-Edit & Tune Sharing
+- **User Tunes Collection**: Personal original compositions (`source: 'user'`), imported lead sheets, and custom versions live in the dedicated **User Tunes** collection tab in the Library.
+- **Fork-on-Edit**: Modifying any built-in catalog standard automatically creates a personal user fork, keeping the original catalog standard pristine.
+- **Tune Sharing**: Click the **Share** button on any active tune to send directly to a user's `@handle`, copy a shareable link (`#share=code`), or display a scannable QR code. Incoming shares land in your top-bar **Inbox**.
+- **IP Safety Enforcement**: User-original compositions retain custom lyrics and melody annotations. Catalog standards automatically strip all lyrics and melody data before generating share payloads.
 
 ### Bandstand Stage
 The animated band graphic above the transport has one icon button in its top-right corner:

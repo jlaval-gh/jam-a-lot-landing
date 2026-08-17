@@ -11,4 +11,6 @@
 - **Living Changes**: Dynamic live reharmonization system applying tritone substitutions, passing diminished chords, and minor ii-V-I turnarounds.
 - **The Listening Band**: Real-time microphone listening engine using Web Audio FFT bin subtraction to follow soloist energy, density, and register without speaker feedback bleed.
 - **Instrument Mixer**: dB-calibrated mixer with pan positioning, custom SFZ sample import, per-kit fader memory, and synthetic drum voice design.
-- **Chord Chart Editors**: Visual grid editor and live text-mode editor supporting universal lead-sheet shorthand (`|:`, `:|`, `N.C.`, `x4`, section labels).
+- **Chord Chart Editors & User Tunes**: Visual grid editor and live text-mode editor supporting universal lead-sheet shorthand (`|:`, `:|`, `N.C.`, `x4`, section labels). Modifying catalog standards automatically forks a personal user tune.
+- **Tune Sharing & Cloud Sync**: Send charts directly to `@handle`, share via links (`#share=code`) or QR code, manage an incoming Shared Tunes Inbox with preview/accept, and auto-sync user libraries across devices.
+- **IP Safety Enforcement**: User-original compositions retain custom lyrics and melody notes; catalog standards strip all lyrics and melody before generating share payloads.
