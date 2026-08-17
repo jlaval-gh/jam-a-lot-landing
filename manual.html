@@ -292,10 +292,11 @@
     /* Pro Tip Callout Box */
     .pro-tip-box {
       padding: 24px;
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(34, 211, 238, 0.08));
-      border: 1px solid rgba(34, 211, 238, 0.4);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.16), rgba(34, 211, 238, 0.10));
+      border: 1.5px solid rgba(34, 211, 238, 0.5);
       border-radius: var(--r-lg);
-      margin: 24px 0 32px;
+      margin: 16px 0 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     }
     .pro-tip-badge {
       display: inline-flex;
@@ -310,23 +311,42 @@
       color: var(--accent-2);
       border: 1px solid rgba(34, 211, 238, 0.4);
       border-radius: var(--r-pill);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .pro-tip-title {
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: #fff;
       margin-bottom: 8px;
     }
     .detected-tip-banner {
-      padding: 10px 14px;
-      background: rgba(34, 211, 238, 0.15);
-      border-left: 3px solid var(--accent-2);
+      padding: 12px 16px;
+      background: rgba(34, 211, 238, 0.18);
+      border-left: 4px solid var(--accent-2);
       border-radius: var(--r-md);
       font-weight: 600;
       color: var(--accent-2);
-      margin: 12px 0 16px;
-      font-size: 0.9rem;
+      margin: 14px 0 18px;
+      font-size: 0.95rem;
+    }
+    .browser-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .browser-card {
+      padding: 12px 14px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      font-size: 0.875rem;
+      color: #d1d5db;
+    }
+    .browser-card strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 4px;
     }
 
     @media (max-width: 900px) {
@@ -400,24 +420,42 @@
 
         <!-- Pro Tip: AI Browser Side Panel Companion -->
         <div class="pro-tip-box" id="ai-side-panel">
-          <span class="pro-tip-badge">💡 Pro Tip</span>
+          <span class="pro-tip-badge">💡 PRO TIP</span>
           <div class="pro-tip-title">Use Your Browser's AI Side Panel Companion</div>
           <p>
-            Did you know your browser's built-in AI Side Panel (like <strong>Gemini</strong> in Google Chrome, <strong>Copilot</strong> in Microsoft Edge, or <strong>Leo</strong> in Brave) can inspect Jam-a-Lot in real time, guide you step-by-step to find any setting, or even adjust controls for you?
+            Did you know your browser's built-in AI Side Panel (like <strong>Gemini</strong> or <strong>Claude</strong> in Google Chrome, <strong>Copilot</strong> in Microsoft Edge, or <strong>Leo</strong> in Brave) can inspect Jam-a-Lot in real time, guide you step-by-step to find any setting, or assist you while you practice?
           </p>
 
           <div id="detected-browser-tip" class="detected-tip-banner">
             💡 Browser AI Companion: Open your browser's AI sidebar to ask questions while you practice!
           </div>
 
-          <ul>
-            <li><strong>Google Chrome</strong>: Open the Chrome Side Panel and choose <strong>Gemini</strong>, <strong>Claude</strong>, <strong>Copilot</strong>, or <strong>ChatGPT</strong>. Ask: <em>"How do I change the drummer feel in Jam-a-Lot?"</em> or <em>"Help me set up trading 4s"</em>. The side panel reads the live page and guides you directly!</li>
-            <li><strong>Microsoft Edge</strong>: Click the <strong>Copilot</strong> icon in the Edge Sidebar. Copilot inspects your active Jam-a-Lot tab and walks you through mixer levels, SFZ imports, or rhythm styles.</li>
-            <li><strong>Brave Browser</strong>: Open <strong>Brave Leo AI</strong> in the sidebar for instant contextual answers and feature lookups without leaving your practice session.</li>
-            <li><strong>Firefox</strong>: Open the <strong>Firefox AI Chatbot Sidebar</strong> (supporting Claude, Gemini, or ChatGPT) for hands-free side-by-side assistance.</li>
-            <li><strong>Arc Browser</strong>: Use <strong>Arc Max</strong> / Ask AI in the sidebar to query your active chord chart or performance plan.</li>
-            <li><strong>Apple Safari</strong>: Safari on macOS / iOS integrates Apple Intelligence and Siri, but does not currently feature a persistent built-in side-panel chat sidebar like Chrome, Edge, or Brave. For an interactive side panel that stays visible next to Jam-a-Lot while you play, we recommend using Google Chrome, Microsoft Edge, or Brave.</li>
-          </ul>
+          <div class="browser-grid">
+            <div class="browser-card">
+              <strong>Google Chrome</strong>
+              Open Chrome Side Panel → choose Gemini, Claude, Copilot, or ChatGPT. Ask: <em>"How do I change the drummer feel?"</em> or <em>"Help me set up trading 4s"</em>. The side panel reads the live page and guides you directly!
+            </div>
+            <div class="browser-card">
+              <strong>Microsoft Edge</strong>
+              Click the Copilot icon in the Edge Sidebar. Copilot inspects your active Jam-a-Lot tab and walks you through mixer levels, SFZ imports, or rhythm styles.
+            </div>
+            <div class="browser-card">
+              <strong>Brave Browser</strong>
+              Open Brave Leo AI in the sidebar for instant contextual answers and feature lookups without leaving your practice session.
+            </div>
+            <div class="browser-card">
+              <strong>Firefox</strong>
+              Open the Firefox AI Chatbot Sidebar (Claude, Gemini, ChatGPT) for hands-free side-by-side assistance.
+            </div>
+            <div class="browser-card">
+              <strong>Arc Browser</strong>
+              Use Arc Max / Ask AI in the sidebar to query your active chord chart or performance plan.
+            </div>
+            <div class="browser-card">
+              <strong>Apple Safari</strong>
+              Safari on macOS/iOS integrates Apple Intelligence & Siri, but does not currently feature a persistent built-in side-panel chat sidebar like Chrome, Edge, or Brave. For a side-by-side AI panel while playing, we recommend Chrome, Edge, or Brave.
+            </div>
+          </div>
         </div>
       </header>
 
