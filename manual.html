@@ -289,58 +289,59 @@
       font-size: 0.925rem;
     }
 
-    /* Pro Tip Callout Box */
+    /* Pro Tip Callout Box (Compact Browser-Tailored) */
     .pro-tip-box {
-      padding: 24px;
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.16), rgba(34, 211, 238, 0.10));
-      border: 1.5px solid rgba(34, 211, 238, 0.5);
-      border-radius: var(--r-lg);
-      margin: 16px 0 24px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-    }
-    .pro-tip-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      background: var(--accent-dim);
-      color: var(--accent-2);
+      padding: 16px 20px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(34, 211, 238, 0.08));
       border: 1px solid rgba(34, 211, 238, 0.4);
-      border-radius: var(--r-pill);
-      margin-bottom: 10px;
+      border-radius: var(--r-md);
+      margin: 16px 0 24px;
+    }
+    .pro-tip-header-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
     }
     .pro-tip-title {
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 8px;
     }
-    .detected-tip-banner {
-      padding: 12px 16px;
-      background: rgba(34, 211, 238, 0.18);
-      border-left: 4px solid var(--accent-2);
-      border-radius: var(--r-md);
-      font-weight: 600;
+    .btn-toggle-browsers {
+      background: none;
+      border: none;
       color: var(--accent-2);
-      margin: 14px 0 18px;
-      font-size: 0.95rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 0;
+    }
+    .btn-toggle-browsers:hover { color: #fff; }
+    .detected-browser-content {
+      font-size: 0.925rem;
+      color: #e8e8ea;
+      line-height: 1.5;
+    }
+    .detected-browser-content strong {
+      color: var(--accent-2);
     }
     .browser-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 12px;
       margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
     }
     .browser-card {
       padding: 12px 14px;
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: var(--r-md);
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       color: #d1d5db;
     }
     .browser-card strong {
@@ -420,36 +421,36 @@
 
         <!-- Pro Tip: AI Browser Side Panel Companion -->
         <div class="pro-tip-box" id="ai-side-panel">
-          <span class="pro-tip-badge">💡 PRO TIP</span>
-          <div class="pro-tip-title">Use Your Browser's AI Side Panel Companion</div>
-          <p>
-            Did you know your browser's built-in AI Side Panel (like <strong>Gemini</strong> or <strong>Claude</strong> in Google Chrome, <strong>Copilot</strong> in Microsoft Edge, or <strong>Leo</strong> in Brave) can inspect Jam-a-Lot in real time, guide you step-by-step to find any setting, or assist you while you practice?
-          </p>
-
-          <div id="detected-browser-tip" class="detected-tip-banner">
-            💡 Browser AI Companion: Open your browser's AI sidebar to ask questions while you practice!
+          <div class="pro-tip-header-line">
+            <span class="pro-tip-badge">💡 PRO TIP</span>
+            <span class="pro-tip-title">Interactive AI Side Panel</span>
+            <button type="button" id="toggle-all-browsers" class="btn-toggle-browsers">Show all browsers</button>
           </div>
 
-          <div class="browser-grid">
+          <div id="detected-browser-content" class="detected-browser-content">
+            <!-- Populated dynamically by browser detection JS -->
+          </div>
+
+          <div id="all-browser-grid" class="browser-grid" style="display: none;">
             <div class="browser-card">
               <strong>Google Chrome</strong>
-              Open Chrome Side Panel → choose Gemini, Claude, Copilot, or ChatGPT. Ask: <em>"How do I change the drummer feel?"</em> or <em>"Help me set up trading 4s"</em>. The side panel reads the live page and guides you directly!
+              Open Chrome Side Panel → choose <strong>Gemini</strong>, <strong>Claude</strong>, <strong>Copilot</strong>, or <strong>ChatGPT</strong>. Ask: <em>"How do I change the drummer feel?"</em> or <em>"Help me set up trading 4s"</em>. The side panel reads the live page and guides you step-by-step!
             </div>
             <div class="browser-card">
               <strong>Microsoft Edge</strong>
-              Click the Copilot icon in the Edge Sidebar. Copilot inspects your active Jam-a-Lot tab and walks you through mixer levels, SFZ imports, or rhythm styles.
+              Click the <strong>Copilot</strong> icon in the Edge Sidebar. Copilot inspects your active Jam-a-Lot tab and walks you through mixer levels, SFZ imports, or rhythm styles.
             </div>
             <div class="browser-card">
               <strong>Brave Browser</strong>
-              Open Brave Leo AI in the sidebar for instant contextual answers and feature lookups without leaving your practice session.
+              Open <strong>Brave Leo AI</strong> in the sidebar for instant contextual answers and feature lookups without leaving your practice session.
             </div>
             <div class="browser-card">
               <strong>Firefox</strong>
-              Open the Firefox AI Chatbot Sidebar (Claude, Gemini, ChatGPT) for hands-free side-by-side assistance.
+              Open the <strong>Firefox AI Chatbot Sidebar</strong> (Claude, Gemini, ChatGPT) for hands-free side-by-side assistance.
             </div>
             <div class="browser-card">
               <strong>Arc Browser</strong>
-              Use Arc Max / Ask AI in the sidebar to query your active chord chart or performance plan.
+              Use <strong>Arc Max</strong> / Ask AI in the sidebar to query your active chord chart or performance plan.
             </div>
             <div class="browser-card">
               <strong>Apple Safari</strong>
@@ -716,23 +717,37 @@
       });
     });
 
-    // Detect Browser for Tailored AI Side Panel Pro Tip
-    const browserDetectEl = document.getElementById('detected-browser-tip');
-    if (browserDetectEl) {
+    // Detect Browser & display ONLY tailored instructions for detected browser
+    const contentEl = document.getElementById('detected-browser-content');
+    const toggleBtn = document.getElementById('toggle-all-browsers');
+    const allGrid = document.getElementById('all-browser-grid');
+
+    if (contentEl) {
       const ua = navigator.userAgent;
-      let detected = '💡 Browser AI Companion: Open your browser AI sidebar to ask questions while practicing!';
+      let html = '';
+
       if (ua.includes('Edg/')) {
-        detected = '💡 Detected Microsoft Edge: Click the Copilot icon in your Edge Sidebar for instant interactive guidance in Jam-a-Lot!';
-      } else if (ua.includes('Chrome/') && !ua.includes('Edg/')) {
-        detected = '💡 Detected Google Chrome: Open Chrome Side Panel (Gemini, Claude, or Copilot) for step-by-step Jam-a-Lot guidance!';
+        html = '⚡ <strong>Microsoft Edge Detected:</strong> Click the <strong>Copilot</strong> icon in your Edge Sidebar. Copilot inspects your active Jam-a-Lot tab and guides you step-by-step through controls, mixer levels, or arrangements!';
       } else if (ua.includes('Brave')) {
-        detected = '💡 Detected Brave Browser: Open Brave Leo AI in your sidebar for instant Jam-a-Lot practice assistance!';
+        html = '⚡ <strong>Brave Browser Detected:</strong> Open <strong>Brave Leo AI</strong> in your sidebar for instant contextual guidance and feature help while you practice!';
       } else if (ua.includes('Firefox/')) {
-        detected = '💡 Detected Mozilla Firefox: Try the Firefox AI Chatbot Sidebar (Claude/Gemini/ChatGPT) for interactive practice help!';
+        html = '⚡ <strong>Firefox Detected:</strong> Open the <strong>Firefox AI Chatbot Sidebar</strong> (Claude, Gemini, or ChatGPT) for hands-free side-by-side practice assistance!';
       } else if (ua.includes('Safari/') && !ua.includes('Chrome/')) {
-        detected = '💡 Detected Apple Safari: Safari features Apple Intelligence, but for a persistent AI side panel that stays open next to Jam-a-Lot while you play, try Google Chrome, Microsoft Edge, or Brave!';
+        html = '⚡ <strong>Apple Safari Detected:</strong> Safari offers Apple Intelligence, but lacks a persistent side-panel chat sidebar. For a dedicated AI panel that stays open next to Jam-a-Lot while playing, we recommend Google Chrome, Microsoft Edge, or Brave!';
+      } else {
+        // Default Google Chrome / Chromium
+        html = '⚡ <strong>Google Chrome Detected:</strong> Open your Chrome Side Panel and select <strong>Gemini</strong> or <strong>Claude</strong>. Ask: <em>"How do I change the drummer feel?"</em> or <em>"Help me set up trading 4s"</em>. The AI reads your live page and guides you step-by-step!';
       }
-      browserDetectEl.innerText = detected;
+
+      contentEl.innerHTML = html;
+
+      if (toggleBtn && allGrid) {
+        toggleBtn.addEventListener('click', () => {
+          const isHidden = allGrid.style.display === 'none';
+          allGrid.style.display = isHidden ? 'grid' : 'none';
+          toggleBtn.innerText = isHidden ? 'Hide other browsers' : 'Show all browsers';
+        });
+      }
     }
   </script>
 </body>
