@@ -289,6 +289,46 @@
       font-size: 0.925rem;
     }
 
+    /* Pro Tip Callout Box */
+    .pro-tip-box {
+      padding: 24px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(34, 211, 238, 0.08));
+      border: 1px solid rgba(34, 211, 238, 0.4);
+      border-radius: var(--r-lg);
+      margin: 24px 0 32px;
+    }
+    .pro-tip-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--accent-dim);
+      color: var(--accent-2);
+      border: 1px solid rgba(34, 211, 238, 0.4);
+      border-radius: var(--r-pill);
+      margin-bottom: 12px;
+    }
+    .pro-tip-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .detected-tip-banner {
+      padding: 10px 14px;
+      background: rgba(34, 211, 238, 0.15);
+      border-left: 3px solid var(--accent-2);
+      border-radius: var(--r-md);
+      font-weight: 600;
+      color: var(--accent-2);
+      margin: 12px 0 16px;
+      font-size: 0.9rem;
+    }
+
     @media (max-width: 900px) {
       .doc-sidebar { display: none; }
       .doc-content { padding: 24px; }
@@ -356,6 +396,28 @@
         <p class="doc-lead">Welcome to <strong>Jam-a-Lot</strong>, your browser-based jazz practice companion. Jam-a-Lot plays synthesized acoustic drums, double bass, and electric piano accompaniment over a jazz standard's chord changes while displaying a clean lead-sheet style chart.</p>
         <div class="ai-badge-bar">
           🤖 <strong>AI Agent Friendly:</strong> Browsing with Chrome Gemini or Copilot? This document contains semantic anchors & raw Markdown access via <a href="llms.txt" target="_blank">llms.txt</a> and <a href="llms-full.txt" target="_blank">llms-full.txt</a>.
+        </div>
+
+        <!-- Pro Tip: AI Browser Side Panel Companion -->
+        <div class="pro-tip-box" id="ai-side-panel">
+          <span class="pro-tip-badge">💡 Pro Tip</span>
+          <div class="pro-tip-title">Use Your Browser's AI Side Panel Companion</div>
+          <p>
+            Did you know your browser's built-in AI Side Panel (like <strong>Gemini</strong> in Google Chrome, <strong>Copilot</strong> in Microsoft Edge, or <strong>Leo</strong> in Brave) can inspect Jam-a-Lot in real time, guide you step-by-step to find any setting, or even adjust controls for you?
+          </p>
+
+          <div id="detected-browser-tip" class="detected-tip-banner">
+            💡 Browser AI Companion: Open your browser's AI sidebar to ask questions while you practice!
+          </div>
+
+          <ul>
+            <li><strong>Google Chrome</strong>: Open the Chrome Side Panel and choose <strong>Gemini</strong>, <strong>Claude</strong>, <strong>Copilot</strong>, or <strong>ChatGPT</strong>. Ask: <em>"How do I change the drummer feel in Jam-a-Lot?"</em> or <em>"Help me set up trading 4s"</em>. The side panel reads the live page and guides you directly!</li>
+            <li><strong>Microsoft Edge</strong>: Click the <strong>Copilot</strong> icon in the Edge Sidebar. Copilot inspects your active Jam-a-Lot tab and walks you through mixer levels, SFZ imports, or rhythm styles.</li>
+            <li><strong>Brave Browser</strong>: Open <strong>Brave Leo AI</strong> in the sidebar for instant contextual answers and feature lookups without leaving your practice session.</li>
+            <li><strong>Firefox</strong>: Open the <strong>Firefox AI Chatbot Sidebar</strong> (supporting Claude, Gemini, or ChatGPT) for hands-free side-by-side assistance.</li>
+            <li><strong>Arc Browser</strong>: Use <strong>Arc Max</strong> / Ask AI in the sidebar to query your active chord chart or performance plan.</li>
+            <li><strong>Apple Safari</strong>: Safari on macOS / iOS integrates Apple Intelligence and Siri, but does not currently feature a persistent built-in side-panel chat sidebar like Chrome, Edge, or Brave. For an interactive side panel that stays visible next to Jam-a-Lot while you play, we recommend using Google Chrome, Microsoft Edge, or Brave.</li>
+          </ul>
         </div>
       </header>
 
@@ -615,6 +677,25 @@
         }
       });
     });
+
+    // Detect Browser for Tailored AI Side Panel Pro Tip
+    const browserDetectEl = document.getElementById('detected-browser-tip');
+    if (browserDetectEl) {
+      const ua = navigator.userAgent;
+      let detected = '💡 Browser AI Companion: Open your browser AI sidebar to ask questions while practicing!';
+      if (ua.includes('Edg/')) {
+        detected = '💡 Detected Microsoft Edge: Click the Copilot icon in your Edge Sidebar for instant interactive guidance in Jam-a-Lot!';
+      } else if (ua.includes('Chrome/') && !ua.includes('Edg/')) {
+        detected = '💡 Detected Google Chrome: Open Chrome Side Panel (Gemini, Claude, or Copilot) for step-by-step Jam-a-Lot guidance!';
+      } else if (ua.includes('Brave')) {
+        detected = '💡 Detected Brave Browser: Open Brave Leo AI in your sidebar for instant Jam-a-Lot practice assistance!';
+      } else if (ua.includes('Firefox/')) {
+        detected = '💡 Detected Mozilla Firefox: Try the Firefox AI Chatbot Sidebar (Claude/Gemini/ChatGPT) for interactive practice help!';
+      } else if (ua.includes('Safari/') && !ua.includes('Chrome/')) {
+        detected = '💡 Detected Apple Safari: Safari features Apple Intelligence, but for a persistent AI side panel that stays open next to Jam-a-Lot while you play, try Google Chrome, Microsoft Edge, or Brave!';
+      }
+      browserDetectEl.innerText = detected;
+    }
   </script>
 </body>
 </html>
