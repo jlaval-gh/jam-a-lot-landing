@@ -7,7 +7,7 @@
 - [Raw Markdown Manual](https://app.jam-a-lot.org/llms-full.txt): Complete unformatted Markdown text of the user manual for raw LLM ingestion.
 
 ## Key Capabilities & Features
-- **Generated Rhythm Section**: Seeded pure-function generators for walking basslines, comping piano, and dynamic drums across 12+ jazz feels (Swing, Ballad, Gypsy Jazz, Bossa Nova, Salsa, Soul-Jazz, Funk, EDM, Waltz).
+- **Generated Rhythm Section**: Seeded pure-function generators for walking basslines, comping piano, and dynamic drums across 13+ jazz and Latin feels (Swing, Ballad, Gypsy Jazz, Bossa Nova, Salsa, Bolero, Soul-Jazz, Funk, EDM, Waltz).
 - **Living Changes**: Dynamic live reharmonization system applying tritone substitutions, passing diminished chords, and minor ii-V-I turnarounds.
 - **The Listening Band**: Real-time microphone listening engine using Web Audio FFT bin subtraction to follow soloist energy, density, and register without speaker feedback bleed.
 - **Instrument Mixer**: dB-calibrated mixer with pan positioning, custom SFZ sample import, per-kit fader memory, and synthetic drum voice design.
