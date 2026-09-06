@@ -532,6 +532,13 @@
           <li><strong>Vintage View</strong>: Amber monospace layout displaying full form without repeat folding.</li>
         </ul>
 
+        <h3 id="interactive-seeking-looping">Interactive Bar Seeking & Custom Range Looping</h3>
+        <ul>
+          <li><strong>Click to Play / Seek</strong>: Click any bar in the chord chart while stopped to start audition playback immediately from that bar without count-in delay. Click any bar while playing or paused to jump transport directly to that bar.</li>
+          <li><strong>Shift+Click & Drag Range Looping</strong>: Click a starting bar, then Shift+click an ending bar (or drag across bars) to highlight and continuously loop over that section.</li>
+          <li><strong>Loop Banner & Controls</strong>: Displays active loop range info with a <strong>✕ Clear</strong> button (or press <strong>Esc</strong>) to cleanly return to full form playback.</li>
+        </ul>
+
         <h3 id="section-color-coding">Section Color-Coding</h3>
         <ul>
           <li><strong>Section A</strong>: Sky-blue</li>
@@ -608,10 +615,12 @@
 
         <h3 id="user-tunes">User Tunes Collection & Fork-on-Edit</h3>
         <ul>
-          <li><strong>User Tunes Tab</strong>: Your personal compositions (<code>source: 'user'</code>), imported lead sheets, and custom versions live in the dedicated <strong>User Tunes</strong> collection tab.</li>
+          <li><strong>User Tunes &amp; Collections</strong>: Organize your tunes into custom folders or gig setlists. Your personal compositions (<code>source: 'user'</code>), imported lead sheets, and custom versions live in the dedicated <strong>User Tunes</strong> collection or any custom collection you create.</li>
+          <li><strong>Moving &amp; Copying Songs</strong>: Use the ⋯ menu on any song to move or copy it to an existing or new collection. Moving or copying a built-in or catalog standard automatically forks it into an independent User Tune under the target collection, keeping the pristine public standard untouched.</li>
+          <li><strong>Collection Management</strong>: Click the gear icon beside any custom collection to rename it across all songs, disband it safely (moving all songs to User Tunes without deleting them), or delete the collection and its songs.</li>
           <li><strong>Fork-on-Edit</strong>: Modifying any built-in catalog standard (re-keying, editing chords, changing section titles) automatically creates a personal user fork. The pristine original standard remains untouched in the catalog.</li>
           <li><strong>Reset to Original</strong>: Any forked catalog standard displays a <strong>Reset</strong> option in the text editor to discard custom edits and return to the catalog default.</li>
-          <li><strong>Cross-Device Cloud Sync</strong>: Your user tunes and edited catalog standards sync automatically across all your signed-in devices (laptop, tablet, phone).</li>
+          <li><strong>Cross-Device Cloud Sync</strong>: Your user tunes, collections, and edited catalog standards sync automatically across all your signed-in devices (laptop, tablet, phone).</li>
         </ul>
       </section>
 
@@ -634,6 +643,21 @@
           <li><strong>IP Safety Enforcement</strong>: User-original compositions retain custom lyrics and melody notes. Catalog standards automatically strip all lyrics and melody data before generating share payloads to preserve IP safety rules.</li>
         </ul>
 
+        <h3 id="typing-chords">Typing Chords &amp; Never Losing Work</h3>
+        <ul>
+          <li><strong>Shorthand is accepted</strong>: a lowercase root anywhere (<code>dm7</code> → <code>Dm7</code>, <code>bb7</code> → <code>Bb7</code>, <code>c/e</code> → <code>C/E</code>), the caret major seventh (<code>eb^7</code> → <code>Ebmaj7</code>), music-keyboard signs (<code>E♭7</code>, <code>C♯m</code>, <code>C–7</code>), and quality words in capitals (<code>DMAJ7</code>). A lowercase letter on its own is still <em>major</em> — write <code>cm</code> or <code>c-</code> for minor.</li>
+          <li><strong>Unreadable symbols are never dropped silently</strong>: a typo with no readable root is named in the status bar with its line number, in place of "Valid Chart", and saving asks first — the default is to go back and fix it, because saving would leave that bar empty.</li>
+          <li><strong>Unsaved text is kept</strong>: the editor saves your typing to the browser as you go and offers it back if you close, reload, or lose the tab before saving. An <strong>Undo save</strong> button restores the text as it stood before the last save.</li>
+        </ul>
+
+        <h3 id="bar-count">Half Bars &amp; Double Bars</h3>
+        <p>Two buttons in the Chord Editor toolbar change how many bars the same chords are spread over — the fix for a chart that came in with the wrong chord rhythm.</p>
+        <ul>
+          <li><strong>Double bars</strong>: Inserts a barline between the chords of every bar, so <code>| Dm7 G7 | Cmaj7 A7 |</code> becomes <code>| Dm7 | G7 | Cmaj7 | A7 |</code>. A bar holding a single chord keeps that chord across both new bars, so the form stretches to twice the bars with the same harmony. A four-chord bar becomes two bars of two.</li>
+          <li><strong>Half bars</strong>: The reverse — merges each pair of adjacent bars into one, so <code>| Dm7 | G7 |</code> becomes <code>| Dm7 G7 |</code>. Half the bars, same chords, two per bar. Asks for confirmation first; a final unpaired bar is left alone.</li>
+          <li>The two are inverses on a one-chord-per-bar chart, and repeat marks (<code>|: ... :|</code>) move with the bars they were drawn on.</li>
+        </ul>
+
         <h3 id="text-mode-editor">Text Mode Editor Shorthand</h3>
         <p>The Chord Editor opens in text mode by default. Universal lead-sheet syntax:</p>
         <table>
@@ -647,7 +671,7 @@
           <tbody>
             <tr><td><code>|</code></td><td>Single barline</td><td><code>| Cmaj7 | Dm7 G7 |</code></td></tr>
             <tr><td><code>||</code></td><td>Double section barline</td><td><code>| Cmaj7 | G7 ||</code></td></tr>
-            <tr><td><code>|: ... :|</code></td><td>Repeat section</td><td><code>|: Cmaj7 | Am7 | Dm7 | G7 :|</code></td></tr>
+            <tr><td><code>|: ... :|</code></td><td>Repeat the bars between the marks, wherever they sit in the section</td><td><code>| C | F |: Dm | G7 :| C |</code> plays 6 bars</td></tr>
             <tr><td><code>: | xN</code></td><td>Repeat N times</td><td><code>|: C | G7 :| x3</code></td></tr>
             <tr><td><code>[Section]</code></td><td>Section label</td><td><code>[A]</code> or <code>[Bridge]</code></td></tr>
             <tr><td><code>/</code> or <code>%</code></td><td>Hold previous bar chord</td><td><code>| Cmaj7 | / |</code></td></tr>
