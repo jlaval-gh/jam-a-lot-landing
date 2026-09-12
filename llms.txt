@@ -8,7 +8,7 @@
 
 ## Key Capabilities & Features
 - **Generated Rhythm Section**: Seeded pure-function generators for walking basslines, comping piano, and dynamic drums across 13+ jazz and Latin feels (Swing, Ballad, Gypsy Jazz, Bossa Nova, Salsa, Bolero, Soul-Jazz, Funk, EDM, Waltz).
-- **Living Changes**: Dynamic live reharmonization system applying tritone substitutions, passing diminished chords, and minor ii-V-I turnarounds.
+- **Live Changes**: Runtime-only reharmonization with strict blues/Rhythm Changes fingerprints plus destination-aware tritone, secondary-dominant, passing-diminished, and backdoor substitutions. Its optional high-surprise Coltrane cycle replaces a proven four-bar ii-V-I-I span without changing bar count, timing, or the final written tonic; same-root extensions are treated as color rather than substitutions.
 - **The Listening Band**: Real-time microphone listening engine using Web Audio FFT bin subtraction to follow soloist energy, density, and register without speaker feedback bleed.
 - **Instrument Mixer**: dB-calibrated mixer with pan positioning, custom SFZ sample import, per-kit fader memory, and synthetic drum voice design.
 - **Chord Chart Editors & User Tunes**: Visual grid editor and live text-mode editor supporting universal lead-sheet shorthand (`|:`, `:|`, `N.C.`, `x4`, section labels). Half bars / Double bars re-spread the same chords over half or twice the bars. Chord input accepts lowercase and hand-written shorthand, unreadable symbols are reported rather than dropped, and unsaved editor text is recoverable. Modifying catalog standards automatically forks a personal user tune.
