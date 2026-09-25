@@ -504,7 +504,7 @@
             </tr>
             <tr>
               <td><strong>Intro & Ending</strong></td>
-              <td>Intro/ending style pickers including Tonic Splash (land on tonic with single cymbal splash).</td>
+              <td>Intro/ending style pickers including Tonic Splash, Splash Bloom (cymbal swell and flutter), and Drum Cadenza (jazz drum fill release).</td>
             </tr>
             <tr>
               <td><strong>Arrangements</strong></td>
@@ -688,6 +688,9 @@
             <tr><td><code>{punches: 1, 2.5}</code> / <code>{punch: 3}</code></td><td>Custom beat punches</td><td><code>| Dm7 G7 {punch: 3} |</code></td></tr>
             <tr><td><code>:drums</code> / <code>:bass</code> / <code>:all</code></td><td>Punch instrument routing target</td><td><code>| Cmaj7 {charleston:drums} |</code></td></tr>
             <tr><td><code>tacet</code> + punches</td><td>Silence accompaniment while preserving the written figure</td><td><code>| C6 {punches:all: 1, 1.5, 2} tacet Fine |</code></td></tr>
+            <tr><td><code>fermata</code> / <code>hold</code></td><td>Hold the final chord of the bar (drop-bar accompaniment)</td><td><code>| Cmaj7 fermata |</code></td></tr>
+            <tr><td><code>hold-splash</code></td><td>Hold with splash bloom (crash/splash arrival + cymbal swell + flutter)</td><td><code>| Cmaj7 hold-splash |</code></td></tr>
+            <tr><td><code>cadenza</code> / <code>hold-fill</code></td><td>Hold with drum cadenza (virtuosic jazz drum cadenza/fill leading to cutoff)</td><td><code>| Cmaj7 cadenza |</code></td></tr>
             <tr><td><code>{setup}</code> / <code>fill</code></td><td>Drum setup fill cue leading to next bar</td><td><code>| G7 {setup} |</code></td></tr>
           </tbody>
         </table>
