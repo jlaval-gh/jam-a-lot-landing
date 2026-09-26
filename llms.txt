@@ -15,4 +15,4 @@
 - **Tune Sharing & Cloud Sync**: Send charts directly to `@handle`, share via links (`#share=code`) or QR code, manage an incoming Shared Tunes Inbox with preview/accept, and auto-sync user libraries across devices.
 - **IP Safety Enforcement**: User-original compositions retain custom lyrics and melody notes; catalog standards strip all lyrics and melody before generating share payloads.
 
-- Practice tab: generate temporary major/minor ii–V–I cadences, turnarounds, and dominant cycles across chosen keys and intervals (default: up one semitone), then return to the previous tune.
+- Practice icon: generate major/minor ii–V–I cadences, turnarounds, dominant cycles, and Coltrane Countdown changes across fixed or random key steps. Charts save in the Practice collection and use the normal Performance Plan, drum trading, and Living Changes controls.
