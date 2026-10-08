@@ -4,7 +4,7 @@ Welcome to **Jam-a-Lot**, your browser-based jazz practice companion. Jam-a-Lot 
 
 ---
 
-Bossa and Salsa fills use brief cross-stick/timbale cues, eighth-note chorus pickups, and spaced cadenza endings instead of rapid rolls.
+Bossa, Salsa and Bolero fills use brief cross-stick/timbale cues, eighth-note chorus pickups, and spaced cadenza endings instead of rapid rolls. Bolero uses two-stroke cues without doubles, and its section arrival replaces the existing timbale hit.
 
 ## 1. Playback & Live Performance Controls
 
