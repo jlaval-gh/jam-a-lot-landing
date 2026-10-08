@@ -4,6 +4,8 @@ Welcome to **Jam-a-Lot**, your browser-based jazz practice companion. Jam-a-Lot 
 
 ---
 
+Bossa and Salsa fills use brief cross-stick/timbale cues, eighth-note chorus pickups, and spaced cadenza endings instead of rapid rolls.
+
 ## 1. Playback & Live Performance Controls
 
 ### Transport Controls
