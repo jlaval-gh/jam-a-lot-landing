@@ -73,6 +73,9 @@ All three instruments play at a calibrated level in decibels (`dB`), where `0.0 
 - Toms: `R18`
 - Crash / Splash: `L42 / R38`
 
+### Mix & EQ Studio
+Toolbox → Mix & EQ Studio opens a panel below the chart that stays open until closed: live RTA spectrum or waterfall spectrogram with Peak/RMS/Crest meters, a 6-band master EQ with genre curves, bus levels/pan with a glue compressor, output textures and DJ filter, and a session-only Mono Check.
+
 ---
 
 ## 4. The Listening Band
