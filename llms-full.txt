@@ -77,7 +77,7 @@ All three instruments play at a calibrated level in decibels (`dB`), where `0.0 
 Faders are remembered per rhythm style as well as per drum kit: each style's band balance comes back when you return to it, an unadjusted style keeps the current faders, and Reset mixer clears them all.
 
 ### Mix & EQ Studio
-Toolbox → Mix & EQ Studio opens a panel below the chart that stays open until closed: live RTA spectrum or waterfall spectrogram with Peak/RMS/Crest meters, draggable 6-band EQ with scroll bandwidth and rotary knobs, a linear power-law profile (adjustable exponent, default Kolmogorov -5/3, approximately -5.02 dB/octave), bus levels/pan with a glue compressor, and independent DJ filter/echo/stutter tools with five timed macro pads. Spain merges into Punchy Funk & Groove; legacy textures are retired, and a session-only Mono Check.
+Toolbox → Mix & EQ Studio opens a panel below the chart that stays open until closed: live RTA spectrum or waterfall spectrogram with Peak/RMS/Crest meters, draggable 6-band EQ with scroll bandwidth and rotary knobs, a Linear preset (adjustable exponent, default Kolmogorov -5/3, approximately -5.02 dB/octave) with automatic level matching, stable zero slope and spectrum-aligned overlay, bus levels/pan with a glue compressor, and DJ filter/echo/stutter tools activated on tab selection, with six performance controls above the knobs. Spain merges into Punchy Funk & Groove; legacy textures are retired, and a session-only Mono Check.
 
 ---
 
