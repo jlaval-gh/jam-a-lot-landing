@@ -83,3 +83,6 @@ Toolbox → Mix & EQ Studio opens a panel below the chart that stays open until 
 
 ## 4. The Listening Band
 Open **Listening** in the header row to arm the microphone. The band listens in real time and adapts to your performance using frequency-bin audio subtraction.
+
+### Automatic trio balance
+All three built-in bass sounds and four comping sounds use phrase-level matching and sound-specific tone shaping across rhythm styles. The nylon guitar receives subsonic cleanup and pluck presence. Reviewed drum and Latin balances are retained, and mixer faders and master EQ stay adjustable.
