@@ -77,7 +77,7 @@ All three instruments play at a calibrated level in decibels (`dB`), where `0.0 
 Faders are remembered per rhythm style as well as per drum kit: each style's band balance comes back when you return to it, an unadjusted style keeps the current faders, and Reset mixer clears them all.
 
 ### Mix & EQ Studio
-Instrument FX adds separate bass/drums racks: drive with clean blend, low-pass, auto-wah, chorus, phaser, modulation rate, delay/time/feedback and output trim. Both start clean, have independent bypass/reset and persist globally in local audio preferences. Nordic Bass, Drum Echo and Floating Space are creative starting points inspired by e.s.t., not exact artist patches. Effects reach room sends, recordings and the listening reference; bypass also mutes delay tails. Chorus/phaser are creative additions.
+Instrument FX adds separate bass/drums racks: drive with clean blend, low-pass, auto-wah, chorus, phaser, modulation rate, delay/time/feedback and output trim. Both start clean, have independent bypass/reset and persist globally in local audio preferences. Nordic Bass, Drum Echo and Floating Space are creative presets inspired by e.s.t., not exact artist patches. Effects reach room sends, recordings and the listening reference; bypass also mutes delay tails. Chorus/phaser are creative additions.
 
 Toolbox → Mix & EQ Studio opens a panel below the chart that stays open until closed: live RTA spectrum or waterfall spectrogram with Peak/RMS/Crest meters, draggable 6-band EQ with scroll bandwidth and rotary knobs, a Linear preset (adjustable exponent, default Kolmogorov -5/3, approximately -5.02 dB/octave) with automatic level matching, stable zero slope, shortcut buttons for -1, -1/2, 0, +1/2 and +1, and spectrum-aligned overlay, bus levels/pan with a glue compressor, and DJ filter/echo/stutter tools activated on tab selection, with six performance controls above the knobs. Spain merges into Punchy Funk & Groove; legacy textures are retired, and a session-only Mono Check.
 
@@ -88,3 +88,5 @@ Open **Listening** in the header row to arm the microphone. The band listens in 
 
 ### Automatic trio balance
 All three built-in bass sounds and four comping sounds use phrase-level matching and sound-specific tone shaping across rhythm styles. The nylon guitar receives subsonic cleanup and pluck presence. Reviewed drum and Latin balances are retained, and mixer faders and master EQ stay adjustable.
+
+Desktop Toolbox: vertical toolbar centered at the left edge with all available tool icons; up to 1100 px retains the header menu. Hidden in full-screen performance. Neutral beta/guest styling. Instrument FX: Preset defaults to Clean / Reset, edits are marked, and New preset saves named current-rack snapshots in this browser, separately for bass and drums.
