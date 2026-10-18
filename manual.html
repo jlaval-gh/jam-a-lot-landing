@@ -684,6 +684,9 @@
           <li><strong>Unsaved text is kept</strong>: the editor saves your typing to the browser as you go and offers it back if you close, reload, or lose the tab before saving. An <strong>Undo save</strong> button restores the text as it stood before the last save.</li>
         </ul>
 
+        <h3 id="tune-meter">Tune Time Signature</h3>
+        <p>The Chord Editor toolbar’s <strong>Time signature</strong> selector sets the whole tune, including <strong>2/4</strong>, in text or grid mode. In text mode it updates the <code>Time:</code> header; click <strong>Save Changes</strong> to apply it. Grid changes preserve each chord’s share of its bar and keep explicit bar-level meters. Import previews show the parsed meter. In 2/4, count <strong>1 &amp; 2 &amp;</strong>; a punch at <code>2.5</code> is the &amp; of 2. Bossa Nova fits its full bass, drum and comping pattern into each two-beat bar, including its final pickup, at the displayed quarter-note tempo. Existing 4/4 playback is unchanged.</p>
+
         <h3 id="mixed-meter-bars">One Bar in Another Meter</h3>
         <p>In a 4/4 tune, write <code>| Cmaj7 | 3/4 C7 G7 | Fmaj7 |</code> to make only the middle bar three beats long. The following bar returns to 4/4. In the visual grid editor, use the meter selector beside that bar's number. For a two-beat C7 followed by a one-beat G7, write <code>| 3/4 C7 / G7 |</code>. Playback, seeking, metronome, notation and MusicXML export follow the shorter bar. Half bars and Double bars are unavailable while a bar has its own meter. Living Changes stays off on mixed-meter charts so fixed-length substitutions do not overwrite a short bar.</p>
 

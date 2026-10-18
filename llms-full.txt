@@ -6,6 +6,8 @@ Welcome to **Jam-a-Lot**, your browser-based jazz practice companion. Jam-a-Lot 
 
 Bossa, Salsa and Bolero fills use brief cross-stick/timbale cues, eighth-note chorus pickups, and spaced cadenza endings instead of rapid rolls. Bolero uses two-stroke cues without doubles, and its section arrival replaces the existing timbale hit.
 
+The Chord Editor’s Time signature selector includes 2/4 in text and grid modes. Text mode updates `Time:`; Save Changes applies it. Grid edits preserve chord proportions and explicit one-bar meter overrides. Import previews show the meter. Bossa Nova fits its full accompaniment and final pickup into each two-beat bar at the displayed quarter-note BPM; a punch at `2.5` means & of 2.
+
 ## 1. Playback & Live Performance Controls
 
 ### Transport Controls
