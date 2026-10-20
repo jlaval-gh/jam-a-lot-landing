@@ -8,6 +8,19 @@ Bossa, Salsa and Bolero fills use brief cross-stick/timbale cues, eighth-note ch
 
 The Chord Editor’s Time signature selector includes 2/4 in text and grid modes. Text mode updates `Time:`; Save Changes applies it. Grid edits preserve chord proportions and explicit one-bar meter overrides. Import previews show the meter. Bossa Nova fits its full accompaniment and final pickup into each two-beat bar at the displayed quarter-note BPM; a punch at `2.5` means & of 2.
 
+### Practice Video — slow down and repeat a phrase
+
+Open **Toolbox → Practice Video**, or **Song Info → Play Video**. In Song Resources, press **Play** on a saved or discovered YouTube version to open the same controls; saved links stay unloaded until you open them. Toolbox opens the saved video or canonical recording for the current tune; for an unlinked original, attach a YouTube link in the inline bar. Press **Play video** or the video's own Play button to begin.
+
+- **Speed**: choose a slower or faster rate from those reported by this video. **1× · Original** restores normal speed. The displayed selection follows YouTube's confirmed rate. YouTube provides pitch-preserving slowdown; audio quality at very slow speeds depends on its player and your browser.
+- **−5s / +5s**: replay or skip five seconds. These buttons turn phrase looping off so you can find another passage.
+- **Set A / Set B**: mark the current position as the phrase start/end. B must be at least half a second after A. Moving A beyond B clears B. Marker times show tenths of a second.
+- **Loop A–B**: toggle phrase repetition; enabling it jumps to A. Press Play if paused. **Go to A** returns to the marked start. **Clear A/B** removes both markers.
+- Markers and the last confirmed speed are saved **on this device, separately for each song and video**. Reopening restores them with looping off; it does not start playback automatically. Blocked browser storage leaves the controls usable for the current visit.
+- Starting a video pauses the band and other practice videos. Starting/resuming the band pauses videos. Closing Song Info or changing tunes releases its players.
+- YouTube controls availability, ads, and supported rates; phrase loops may have a short gap. If a recording cannot play in the embed, use **Open on YouTube ↗** or attach another version. Spotify keeps its provider player and does not gain these video controls.
+
+
 ## 1. Playback & Live Performance Controls
 
 ### Transport Controls
