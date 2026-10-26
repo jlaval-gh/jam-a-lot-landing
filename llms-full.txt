@@ -111,6 +111,10 @@ Instrument FX adds separate bass/drums racks: drive with clean blend, low-pass, 
 
 Toolbox → Mix & EQ Studio opens a panel below the chart that stays open until closed: live RTA spectrum or waterfall spectrogram with Peak/RMS/Crest meters, draggable 6-band EQ with scroll bandwidth and rotary knobs, a Linear preset (adjustable exponent, default Kolmogorov -5/3, approximately -5.02 dB/octave) with automatic level matching, stable zero slope, shortcut buttons for -1, -1/2, 0, +1/2 and +1, and spectrum-aligned overlay, bus levels/pan with a glue compressor, and DJ filter/echo/stutter tools activated on tab selection, with six performance controls above the knobs. Spain merges into Punchy Funk & Groove; legacy textures are retired, and a session-only Mono Check.
 
+### Harmonic Imagination (Human Feel)
+- **Chord families** (on): the piano, guitar and bass treat a symbol as a family and pick a member each pass. Major is C6, C6/9, Cmaj7, Cmaj9, Cadd9. Minor is Cm7, Cm9, Cm11, Cm6, Cm6/9, Cm(maj7), with no minor-major seventh on a ii. The unaltered dominants are 7, 9 and 13; the altered ones are 7♭9, 7♯9, 7♭13 and 7alt. A plain V goes altered when it resolves down a fifth: about 2 in 3 into minor, 1 in 4 into major. Line clichés and sus, ø, °, + and ♯11 chords stay as written. The chart always shows the written symbol.
+- **Modal minor (So What)** (30%): the So What voicing (three fourths and a major third on the root, 9th or 5th), a grip-then-step-down call and response (jazz feels), and a pedalling bass on minor vamps. Above 0 it reaches minor vamps, from 35% any whole-bar minor, and from 70% the ii of a ii–V. The salsa montuno is never affected.
+
 ---
 
 ## 4. The Listening Band
