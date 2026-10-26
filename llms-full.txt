@@ -10,7 +10,7 @@ The Chord Editor’s Time signature selector includes 2/4 in text and grid modes
 
 ### Practice Video — slow down and repeat a phrase
 
-Open **Toolbox → Practice Video**, or **Song Info → Play Video**. In Song Resources, press **Play** on a saved or discovered YouTube version to open the same controls; saved links stay unloaded until you open them. Toolbox opens the saved video or canonical recording for the current tune; for an unlinked original, attach a YouTube link in the inline bar. Press **Play video** or the video's own Play button to begin.
+Open **Song Info → Play Video**. In Song Resources, press **Play** on a saved or discovered YouTube version to open the same controls; saved links stay unloaded until you open them. Song Info opens the saved video or canonical recording for the current tune; for an unlinked original, attach a YouTube link in the inline bar. Press **Play video** or the video's own Play button to begin.
 
 - **Speed**: choose a slower or faster rate from those reported by this video. **1× · Original** restores normal speed. The displayed selection follows YouTube's confirmed rate. YouTube provides pitch-preserving slowdown; audio quality at very slow speeds depends on its player and your browser.
 - **−5s / +5s**: replay or skip five seconds. These buttons turn phrase looping off so you can find another passage.
