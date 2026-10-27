@@ -799,28 +799,31 @@
       </section>
       <section id="microrhythm-playground">
         <h2>Rhythm Lab: Microrhythm playground</h2>
-        <p>Open <strong>Toolbox → Rhythm Lab → Microrhythm</strong> (the uneven-pulse icon).
-        Choose from twenty evidence-labelled timing studies covering jazz, quintuplet/hip-hop,
-        samba, bossa exploration, Mandé, Sṭambēlī and other African and European timing families.
-        These are synthetic timing studies, not full traditional arrangements.</p>
-        <p>Linked vertical and horizontal <strong>Interpolation λ</strong> sliders mix editable
-        endpoint interval weights A and B. The red cross-section moves through the green onset
-        traces; percentages show interval lengths and L/S gives longest/shortest.
-        <strong>Pulse span</strong> is measured in quarter notes. Set <strong>Noise σ</strong>
-        and <strong>Odd/even ±</strong> per interval in percentage points, then adjust
-        <strong>Correlation ρ</strong> for independent noise, drift or anticorrelation across bars.
-        The positive intervals always sum to one pulse, so <strong>Realized μ / σ</strong>
-        shows the actual constrained statistics.</p>
-        <p><strong>Seed / New realization</strong> reproduces or redraws the 16-bar stack;
-        each row shows its first pulse, reused across that bar. While paused, press
-        <strong>Apply timing to band</strong>, then <strong>Play band</strong>. The local
-        Micro user style replaces the previous study and uses hi-hat timing, bass roots and
-        piano voicings over the active chord chart. The cycle loops after sixteen bars.
-        Reapply after editing. Disable Human Feel and arrangement variations for close timing
-        comparisons. Controls persist locally; the Pattern editor exports/imports the rendered
-        style using its existing JSON controls.</p>
-        <p>Each preset links its source and distinguishes measured values, screenshot examples,
-        illustrative studies and hypotheses. The research guide links all three parts of
+        <p>Open <strong>Toolbox → Rhythm Lab → Microrhythm</strong> with the uneven-pulse
+        icon. The Lab opens inline below the chart, like Mix &amp; EQ Studio, keeping the
+        chart and transport accessible.</p>
+        <p><strong>Playback foundation</strong> chooses an experimental copy of Swing or
+        Samba. Their original selections stay unchanged. Existing instruments, patterns,
+        rests, accents and energy gates survive; no hi-hat grid is added. Swing ride, or
+        Samba's pandeiro, tamborim, ganzá and caixa, follow the experimental timing shape.
+        Samba player groups share 80% of their interval realization and 20% separately
+        seeded variation. Bass, piano and low drum anchors keep their native timing.</p>
+        <p>Choose among twenty evidence-labelled <strong>Timing studies</strong>, edit
+        endpoint weights A/B, and mix them with linked vertical/horizontal
+        <strong>Interpolation λ</strong> sliders. Pulse span is in quarter notes; Samba
+        defaults to 2 in 4/4 and fits into 2/4 automatically. Noise σ defaults to
+        <strong>0 for the first interval and 0.5 percentage points for each remaining
+        interval</strong>. Odd/even offsets, across-bar correlation and Seed/New realization
+        control variation. The plot shows the lead player's 16-bar clock; realized statistics
+        account for positive intervals summing to one pulse.</p>
+        <p>Press <strong>Apply timing to band</strong> to select Micro Swing or Micro Samba.
+        After Apply, edits update subsequent generated bars during playback without restarting
+        the band. Play/Pause uses the main transport. Already queued audio stays intact.
+        Apply replaces that foundation's previous experiment and removes the obsolete synthetic
+        grid study. Controls persist locally; Pattern editor JSON export/import retains the
+        copied rhythm and its clock. Existing Human Feel and arrangement layers still apply.</p>
+        <p>The research guide distinguishes measured examples, illustrative studies and
+        hypotheses, with sources for
         <a href="https://sites.google.com/site/thepopdescriptivist/home/an-exploration-of-microrhythm">An Exploration of Microrhythm</a>.</p>
       </section>
     </main>
