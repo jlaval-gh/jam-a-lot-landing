@@ -797,6 +797,32 @@
         <h2>10. Background Audio Support</h2>
         <p>Jam-a-Lot keeps playing smoothly when you lock your screen or switch browser tabs, using Web Audio Web Worker timers for precision lookahead scheduling.</p>
       </section>
+      <section id="microrhythm-playground">
+        <h2>Rhythm Lab: Microrhythm playground</h2>
+        <p>Open <strong>Toolbox → Rhythm Lab → Microrhythm</strong> (the uneven-pulse icon).
+        Choose from twenty evidence-labelled timing studies covering jazz, quintuplet/hip-hop,
+        samba, bossa exploration, Mandé, Sṭambēlī and other African and European timing families.
+        These are synthetic timing studies, not full traditional arrangements.</p>
+        <p>Linked vertical and horizontal <strong>Interpolation λ</strong> sliders mix editable
+        endpoint interval weights A and B. The red cross-section moves through the green onset
+        traces; percentages show interval lengths and L/S gives longest/shortest.
+        <strong>Pulse span</strong> is measured in quarter notes. Set <strong>Noise σ</strong>
+        and <strong>Odd/even ±</strong> per interval in percentage points, then adjust
+        <strong>Correlation ρ</strong> for independent noise, drift or anticorrelation across bars.
+        The positive intervals always sum to one pulse, so <strong>Realized μ / σ</strong>
+        shows the actual constrained statistics.</p>
+        <p><strong>Seed / New realization</strong> reproduces or redraws the 16-bar stack;
+        each row shows its first pulse, reused across that bar. While paused, press
+        <strong>Apply timing to band</strong>, then <strong>Play band</strong>. The local
+        Micro user style replaces the previous study and uses hi-hat timing, bass roots and
+        piano voicings over the active chord chart. The cycle loops after sixteen bars.
+        Reapply after editing. Disable Human Feel and arrangement variations for close timing
+        comparisons. Controls persist locally; the Pattern editor exports/imports the rendered
+        style using its existing JSON controls.</p>
+        <p>Each preset links its source and distinguishes measured values, screenshot examples,
+        illustrative studies and hypotheses. The research guide links all three parts of
+        <a href="https://sites.google.com/site/thepopdescriptivist/home/an-exploration-of-microrhythm">An Exploration of Microrhythm</a>.</p>
+      </section>
     </main>
   </div>
 
