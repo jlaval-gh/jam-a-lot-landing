@@ -816,6 +816,10 @@
         <p>Jam-a-Lot keeps playing smoothly when you lock your screen or switch browser tabs, using Web Audio Web Worker timers for precision lookahead scheduling.</p>
       </section>
       <section id="rhythm-style-import">
+        <h2>Rhythm Lab: Blend</h2>
+        <p>Open <strong>Toolbox → Rhythm Lab → Blend</strong>, search the grouped <strong>Source A / Source B</strong> lists, and move <strong>Balance</strong>. A / Blend / B auditions compare the original endpoints and intermediate whole-band groove at the current tempo and instruments. Percentages describe algorithmic influence, not measured genre content. Advanced controls override Drums, Bass, Piano and Timing; untouched parts follow the main balance. Seed / Reroll chooses a repeatable realization. Name, Save and Use the recipe, reload a saved blend, or Export / Import JSON with both endpoint definitions. Changes reach upcoming unscheduled bars.</p>
+        <p>This prototype supports compatible native meters across families: Funk ↔ Swing, Funk ↔ Soul Jazz/R&amp;B, Bossa ↔ Samba (including 2/4), Salsa ↔ Tresillo and Jazz Waltz ↔ Soul Waltz. Unsupported compound-cell, half-time electronic, saved microrhythm and cross-meter phrase-fit conversions are explained; BPM and chart meter are never changed implicitly. The onset preview shows authored drum material. Definitions are <strong>local plus JSON-portable</strong>; tune sync carries only an ID, and a missing definition is shown until imported. Timing studies retain their own provenance and are separate from complete styles.</p>
+
         <h2>Rhythm Lab: importing styles</h2>
         <p>In <strong>Toolbox → Rhythm Lab</strong>, the <strong>Import JSON</strong> panel has an <strong>Import files…</strong> button. Pick one or more rhythm style files — a single style, or one file holding several (for example every groove cloned from a recording, <em>all-grooves.json</em>). Each becomes one of your own rhythm styles; choose it as the tune's rhythm style or per section. If any file is invalid, nothing is imported and the panel says which style failed. Pasting JSON still works, and also accepts a list of styles.</p>
       </section>
