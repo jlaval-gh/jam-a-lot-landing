@@ -3,37 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jam-a-Lot — Your practice band, in the browser</title>
-  <meta name="description" content="A real-time rhythm section over 1,382 jazz standards. It listens to you play and follows. Try 3 tunes free as a guest, or join the free Beta — the whole app, no charge, in exchange for your feedback." />
-  <meta property="og:title" content="Jam-a-Lot — Your practice band, in the browser" />
-  <meta property="og:description" content="1,382 tunes, twelve feels, a band that listens through your mic and follows. Free Beta — the whole app in exchange for your feedback. Or try 3 tunes as a guest." />
+  <title>Jam-a-Lot — Your live practice band for Jazz, Latin, Brazilian, Funk &amp; Soul</title>
+  <meta name="description" content="A real-time rhythm section over 1,000+ tunes across Jazz, Latin, Salsa, Bolero, Bossa Nova, Samba batucada, Funk, R&amp;B, and Soul. It listens through your mic and follows. Free Beta or try 3 tunes as a guest." />
+  <meta property="og:title" content="Jam-a-Lot — Your live practice band for Jazz, Latin, Brazilian &amp; Funk" />
+  <meta property="og:description" content="1,000+ tunes, 24 rhythm styles across Jazz, Latin, Brazilian, Funk &amp; Soul, and a band that listens through your mic. Free Beta — or try 3 tunes as a guest." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/icon.png" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Ambient glow and static backdrop behind the app -->
   <div class="ambient-glow" aria-hidden="true"></div>
 
-  <!-- ───────────────────────── Sticky header ───────────────────────── -->
+  <!-- ───────────────────────── Focused Sticky Header (4 Links + CTA) ───────────────────────── -->
   <header class="site-header" id="top">
     <a class="brand" href="#top">
-      <img class="brand-mark-icon" src="assets/icon.png" alt="" width="40" height="40" />
+      <img class="brand-mark-icon" src="assets/icon.png" alt="" width="36" height="36" />
       <span class="brand-name">Jam-a-Lot</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#compare">Why Jam-a-Lot</a>
-      <a href="#listens">It listens</a>
-      <a href="#library">Library</a>
-      <a href="#live">Live performance</a>
+      <a href="#whats-new">What's New <span class="nav-new-badge">v0.2</span></a>
       <a href="#features">Features</a>
-      <a href="#faq">FAQ</a>
-      <a href="#beta">Free Beta</a>
       <a href="manual.html">Manual</a>
       <a href="https://www.youtube.com/channel/UCF0CeuwZWx5VH7cScojvmkQ" target="_blank" rel="noopener">Video Tutorials</a>
     </nav>
@@ -43,80 +37,256 @@
   </header>
 
   <main>
-    <!-- ───────────────────────── Hero ───────────────────────── -->
+    <!-- ───────────────────────── Hero + 8 Logged-In Feature Screenshots ───────────────────────── -->
     <div class="hero-wrap">
-    <section class="hero">
-      <div class="hero-copy">
-        <span class="pill"><span class="pulse-dot" aria-hidden="true"></span> Free Beta — no charge, ever, during beta</span>
-        <h1 class="hero-title font-serif">
-          1,382 tunes. <span class="text-gradient">Twelve feels.</span><br />
-          A band that <em>hears you.</em>
-        </h1>
-        <p class="lede">
-          Jam-a-Lot generates a real-time rhythm section — phrased bass, comping piano,
-          and a feel-aware drummer — over 1,382 open-source standards. It hears
-          you through your mic, follows your dynamics and phrasing, and drives your practice
-          session with zero installs or sample downloads.
-        </p>
-        <div class="hero-ctas">
-          <a class="btn btn-accent glow-accent-sm" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">▶ Join the Free Beta</a>
-          <a class="btn btn-ghost" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">Or try 3 tunes as a guest</a>
-          <a class="btn btn-ghost" href="https://www.youtube.com/channel/UCF0CeuwZWx5VH7cScojvmkQ" target="_blank" rel="noopener">📺 Video Tutorials</a>
-        </div>
-        <p class="micro-note">
-          <strong class="micro-strong">The Beta is free and always will be during beta</strong> — the whole
-          app, in exchange for telling us what's working and what isn't. No card, no trial clock.
-          Prefer to look around first? Guest mode plays 3 demo tunes with the full band, no sign-up.
-        </p>
-      </div>
-
-      <!-- Real screenshots of the app -->
-      <div class="shots reveal" id="shots" aria-roledescription="carousel" aria-label="Screenshots of Jam-a-Lot">
-        <div class="shots-frame">
-          <div class="shots-track" id="shots-track">
-            <figure class="shot" role="group" aria-roledescription="slide" aria-label="1 of 5">
-              <img src="assets/shots/01-play.webp" width="1200" height="857"
-                   alt="The Jam-a-Lot app playing Au Privave: the animated bandstand above a chord chart, with the current bar highlighted and reharmonized chords shown in green." />
-              <figcaption><strong>Play any tune.</strong> The band follows the chart bar by bar — and Live Changes reharmonizes as you go.</figcaption>
-            </figure>
-            <figure class="shot" role="group" aria-roledescription="slide" aria-label="2 of 5">
-              <img src="assets/shots/02-fullscreen.webp" width="1200" height="857" loading="lazy"
-                   alt="Jam-a-Lot's full-screen performance view: a large, uncluttered chord chart with the current bar boxed and the transport at the bottom." />
-              <figcaption><strong>Full-screen for the music stand.</strong> Just the chart, the bar you're on, and the transport.</figcaption>
-            </figure>
-            <figure class="shot" role="group" aria-roledescription="slide" aria-label="3 of 5">
-              <img src="assets/shots/03-mixer.webp" width="1200" height="857" loading="lazy"
-                   alt="The Live Mixer: sound pickers including a tight kick with smoother quiet strokes, levels in decibels, stereo pan positions and mute controls." />
-              <figcaption><strong>A real mixer.</strong> Levels in decibels, a sound per instrument, and a pan position that puts each player on the stage.</figcaption>
-            </figure>
-            <figure class="shot" role="group" aria-roledescription="slide" aria-label="4 of 5">
-              <img src="assets/shots/04-listening.webp" width="1200" height="857" loading="lazy"
-                   alt="The Listening Band panel: input, intensity, density and register meters, speaker calibration, and sliders for how strongly the band responds." />
-              <figcaption><strong>The band listens.</strong> Meters for what it hears, and sliders for how hard it reacts to you.</figcaption>
-            </figure>
-            <figure class="shot" role="group" aria-roledescription="slide" aria-label="5 of 5">
-              <img src="assets/shots/05-plan.webp" width="1200" height="857" loading="lazy"
-                   alt="The Performance Plan panel: intro, head, solo round, bass solo, piano solo, trading fours, last head and ending, each with a chorus count." />
-              <figcaption><strong>Plan the whole performance.</strong> Head, solos, trading fours, out head — or reroll it and see what happens. Written endings close at a quieter energy. Click any displayed intro or ending bar to begin right there.</figcaption>
-            </figure>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="hero-tag">
+            <strong>v0.2 Beta</strong> · Free during beta · Zero install
           </div>
+          <h1 class="hero-title font-serif">
+            1,000+ tunes. <span class="highlight">24 grooves.</span><br />
+            A band that <em>hears you.</em>
+          </h1>
+          <p class="lede">
+            Jam-a-Lot generates a real-time rhythm section — phrased bass, Steinway, Rhodes or
+            nylon-string guitar comping, and a feel-aware drummer &amp; percussion section — across
+            Jazz, Latin, Brazilian, Funk, Soul, Pop/Rock, and World grooves. It hears you through
+            your room mic and follows your dynamics live.
+          </p>
+          <div class="genre-strip" aria-label="Supported musical families">
+            <span class="genre-chip">Jazz &amp; Swing</span>
+            <span class="genre-chip">Salsa, Bolero &amp; Tresillo</span>
+            <span class="genre-chip">Bossa &amp; Samba Batucada</span>
+            <span class="genre-chip">Funk, R&amp;B &amp; Soul 6/8</span>
+            <span class="genre-chip">Blues, Rock &amp; EDM</span>
+          </div>
+          <div class="hero-ctas">
+            <a class="btn btn-accent" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">▶ Join the Free Beta</a>
+            <a class="btn btn-ghost" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">Try 3 tunes as a guest</a>
+            <a class="btn btn-ghost" href="#whats-new">What's New in v0.2</a>
+          </div>
+          <p class="micro-note">
+            <strong class="micro-strong">Free throughout beta</strong> — unlock all 1,000+ tunes and every studio tool in exchange for telling us what works and what doesn't. No card, no trial clock.
+          </p>
         </div>
 
-        <button class="shots-nav prev" id="shots-prev" type="button" aria-label="Previous screenshot">‹</button>
-        <button class="shots-nav next" id="shots-next" type="button" aria-label="Next screenshot">›</button>
-        <div class="shots-dots" id="shots-dots" role="tablist" aria-label="Choose a screenshot"></div>
-      </div>
-    </section>
+        <!-- 8 Logged-In Screenshots of the App -->
+        <div class="shots reveal" id="shots" aria-roledescription="carousel" aria-label="Screenshots of Jam-a-Lot">
+          <div class="shots-frame">
+            <div class="shots-track" id="shots-track">
+              <figure class="shot" role="group" aria-roledescription="slide" aria-label="1 of 8">
+                <img src="assets/shots/01-play.webp" width="1024" height="939"
+                     alt="Logged-in Jam-a-Lot playing Au Privave: unlocked Tune Library on the left, animated bandstand, Re-harm Level 38 Bold, chord chart, and Up Next queue." />
+                <figcaption>
+                  <span class="shot-counter">01 / 08 · Bandstand &amp; Live Reharmonization</span>
+                  <strong>Play any tune across Jazz, Latin &amp; Funk.</strong> 1,000+ tunes unlocked, with the 0–100 Re-harm slider, animated bandstand, and an always-on 15-song Up Next queue.
+                </figcaption>
+              </figure>
+
+              <figure class="shot" role="group" aria-roledescription="slide" aria-label="2 of 8">
+                <img src="assets/shots/02-rhythm-blend.webp" width="1024" height="939" loading="lazy"
+                     alt="Rhythm Style Lab on the Blend tab: Play blend button, Main balance slider, Continuous sweep, Drum Kit &amp; Instrument Blend card, and per-part overrides." />
+                <figcaption>
+                  <span class="shot-counter">02 / 08 · Rhythm Blend Lab</span>
+                  <strong>Morph two grooves across choruses.</strong> Blend Funk ↔ Swing, Bossa ↔ Samba, Salsa ↔ Tresillo, or Soul 6/8 ↔ 4/4 with continuous sweeps and mixed acoustic, Latin, and Groovebox kits.
+                </figcaption>
+              </figure>
+
+              <figure class="shot" role="group" aria-roledescription="slide" aria-label="3 of 8">
+                <img src="assets/shots/03-microrhythm.webp" width="1024" height="939" loading="lazy"
+                     alt="Microrhythm Lab with Samba ensemble: 8-player Percussion Band voice selectors, sub-beat timing diagram, and vertical lambda slider." />
+                <figcaption>
+                  <span class="shot-counter">03 / 08 · Microrhythm &amp; Percussion Band</span>
+                  <strong>Dial empirical sub-beat feel.</strong> Customize a 19-voice Percussion Band (pandeiro, tamborim, cuíca, congas, bells), warp 26 timing studies with the λ slider, or play African and Réunion ensembles.
+                </figcaption>
+              </figure>
+
+              <figure class="shot" role="group" aria-roledescription="slide" aria-label="4 of 8">
+                <img src="assets/shots/04-staff-view.webp" width="1024" height="939" loading="lazy"
+                     alt="5-Line Staff Chart View on Au Privave with Samba Swingue slider and Staff shows source bar (Melody, Solo transcription, Band: bass, Band: piano, Hits only)." />
+                <figcaption>
+                  <span class="shot-counter">04 / 08 · 5-Line Staff Chart View</span>
+                  <strong>Read hits, melodies, or bass lines on the chart.</strong> Switch any chart to a 5-line staff showing big-band rhythm slashes, Brazilian/Latin breaks, private tune melodies, or live bass and piano parts.
+                </figcaption>
+              </figure>
+
+              <figure class="shot" role="group" aria-roledescription="slide" aria-label="5 of 8">
+                <img src="assets/shots/05-solo-transcription.webp" width="1024" height="939" loading="lazy"
+                     alt="Unified Staff Editor window showing Transcription, Melody, and Bass patterns tabs, engraved score for Au Privave, Requantize, and playback speed controls." />
+                <figcaption>
+                  <span class="shot-counter">05 / 08 · Staff Editor &amp; AI Solo Transcription</span>
+                  <strong>One staff editor for solos, melodies &amp; bass patterns.</strong> Transcribe local piano recordings onto a beat-tracked score that follows rubato, edit with MuseScore shortcuts, and export PDF or MusicXML.
+                </figcaption>
+              </figure>
+
+              <figure class="shot" role="group" aria-roledescription="slide" aria-label="6 of 8">
+                <img src="assets/shots/06-mix-eq-studio.webp" width="1024" height="939" loading="lazy"
+                     alt="Mix &amp; EQ Studio showing the 72-band RTA Spectrum + Parametric EQ curve, floating Chord Changes bar, and Bass/Drums Instrument FX racks." />
+                <figcaption>
+                  <span class="shot-counter">06 / 08 · Mix &amp; EQ Studio + Instrument FX</span>
+                  <strong>Shape your sound like a record.</strong> Drag 6-band EQ dots over a 72-band RTA spectrum and dial e.s.t.-inspired Bass &amp; Drum FX racks (<em>Nordic Bass</em>, <em>Drum Echo</em>, <em>Floating Space</em>).
+                </figcaption>
+              </figure>
+
+              <figure class="shot" role="group" aria-roledescription="slide" aria-label="7 of 8">
+                <img src="assets/shots/07-listening-band.webp" width="1024" height="939" loading="lazy"
+                     alt="The Listening Band panel showing Input, Intensity, Density, and Register meters, 30-second Energy graph, Set my range, Speaker calibration, and 5s Response Time." />
+                <figcaption>
+                  <span class="shot-counter">07 / 08 · The Listening Band</span>
+                  <strong>The band listens through speakers or headphones.</strong> One-click <em>Set my range</em> calibrates your mic, tracks your energy from 0 to 5 on a live graph, answers phrase gaps, and catches repeated motifs.
+                </figcaption>
+              </figure>
+
+              <figure class="shot" role="group" aria-roledescription="slide" aria-label="8 of 8">
+                <img src="assets/shots/08-plan-mixer.webp" width="1024" height="939" loading="lazy"
+                     alt="Performance Plan panel open beside the bandstand and Repeats chart: Use plan toggle, Ramp solo intensity from 2 to 5, Intro, Head, Solo round, Trading 4s, Last head, and Tonic Splash ending." />
+                <figcaption>
+                  <span class="shot-counter">08 / 08 · Performance Plan &amp; Form</span>
+                  <strong>Plan the whole performance.</strong> Set intros, solo energy ramps, trading fours, out heads, and Basie or Tonic Splash endings—or reroll the session in one click.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <button class="shots-nav prev" id="shots-prev" type="button" aria-label="Previous screenshot">‹</button>
+          <button class="shots-nav next" id="shots-next" type="button" aria-label="Next screenshot">›</button>
+          <div class="shots-dots" id="shots-dots" role="tablist" aria-label="Choose a screenshot"></div>
+        </div>
+      </section>
     </div>
 
-    <!-- ───────────────────────── Comparison block (the differentiator) ───────────────────────── -->
+    <!-- ───────────────────────── What's New in Version 0.2 Beta (Tabbed Section) ───────────────────────── -->
+    <section id="whats-new" class="section section-alt">
+      <div>
+        <header class="section-head">
+          <span class="eyebrow">Release Highlights</span>
+          <h2 class="font-serif">What’s new in Version 0.2 Beta.</h2>
+          <p>
+            Explore the latest capabilities across Latin, Brazilian, Funk, and Jazz grooves, 5-line staff notation, AI solo transcription, and the audio workbench.
+          </p>
+        </header>
+
+        <div class="whatsnew-shell reveal">
+          <div class="whatsnew-tablist" role="tablist" aria-label="What's new in v0.2 Beta categories">
+            <button type="button" class="whatsnew-tab" role="tab" id="wn-tab-blend" aria-selected="true" data-wn-tab="blend">
+              Rhythm Blend &amp; Microrhythm
+            </button>
+            <button type="button" class="whatsnew-tab" role="tab" id="wn-tab-grooves" aria-selected="false" data-wn-tab="grooves">
+              Latin, Brazilian &amp; 24 Styles
+            </button>
+            <button type="button" class="whatsnew-tab" role="tab" id="wn-tab-staff" aria-selected="false" data-wn-tab="staff">
+              Staff View &amp; Solo Transcription
+            </button>
+            <button type="button" class="whatsnew-tab" role="tab" id="wn-tab-mix" aria-selected="false" data-wn-tab="mix">
+              Mix Studio &amp; FX Racks
+            </button>
+            <button type="button" class="whatsnew-tab" role="tab" id="wn-tab-live" aria-selected="false" data-wn-tab="live">
+              Video Looper &amp; Live Controls
+            </button>
+          </div>
+
+          <!-- Tab 1 -->
+          <div role="tabpanel" id="wn-panel-blend" aria-labelledby="wn-tab-blend">
+            <div class="whatsnew-panel-body">
+              <div>
+                <span class="eyebrow">Rhythm Lab → Blend &amp; Microrhythm</span>
+                <h3 class="font-serif">Morph whole-band grooves and sub-beat timing.</h3>
+                <p>
+                  Combine compatible native-meter grooves across families—such as Funk ↔ Swing, Bossa ↔ Samba, Salsa ↔ Tresillo, Electronic ↔ Acoustic, or Soul 6/8 ↔ Swing in 4/4 via Phrase Fit—or explore empirical timing studies in the Microrhythm Playground.
+                </p>
+                <a class="btn btn-ghost btn-sm" href="manual.html">Read Rhythm Lab Manual →</a>
+              </div>
+              <ul class="whatsnew-spec-list">
+                <li><strong>Continuous Chorus Sweep:</strong> Double-click main balance to sweep A → B → A over ¼ to 16 choruses (default 1), retaining phase across pauses and tempo changes, with a non-destructive preview slot and named Save/Load recipes.</li>
+                <li><strong>Multi-Kit Drum Blending:</strong> Combines Groovebox synth, acoustic kit, and Latin percussion (congas, timbales, clave, cowbell, pandeiro) while preserving each hit's native sound.</li>
+                <li><strong>Microrhythm λ &amp; Traditional Bands:</strong> Interpolate 26 timing studies over 1–128 bars, customize a 19-voice Percussion Band, pair with Walking or borrowed Style bass, or play Mandé, Khasonka, Gnawa, and Maloya ensembles.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div role="tabpanel" id="wn-panel-grooves" aria-labelledby="wn-tab-grooves" hidden="until-found">
+            <div class="whatsnew-panel-body">
+              <div>
+                <span class="eyebrow">15 Selectable Feels · 24 Built-in Styles</span>
+                <h3 class="font-serif">Samba batucada, Salsa, Bolero, Soul 6/8 &amp; Nylon Guitar.</h3>
+                <p>
+                  Jam-a-Lot goes far beyond swing: play authentic Brazilian batucada, Afro-Cuban Salsa and Bolero, contemporary Soul Waltz and Soul 6/8 pockets, 16th-swung Funk/R&amp;B, and Bossa Nova with default nylon-string guitar comping.
+                </p>
+              </div>
+              <ul class="whatsnew-spec-list">
+                <li><strong>Rio Samba Batucada &amp; Swingue Knob:</strong> 40 CC0 recordings (pandeiro, tamborim teleco-teco, ganzá, caixa, agogô, cuíca, surdo) with a 0–200% Swingue knob and Brazilian breaks (<code>breque</code>, <code>convenção</code>, <code>chamada</code>, <code>virada</code>).</li>
+                <li><strong>Salsa, Bolero &amp; Tresillo:</strong> Section-level Salsa bell drive, 8-bar developing Bolero piano statements, Bolero Modern (&amp; of 2 kick/snare/bass punch), 3+3+2 Tresillo, and restrained Latin fills.</li>
+                <li><strong>Soul Waltz, Soul 6/8 &amp; Nylon Guitar:</strong> Modern funk/neo-soul pockets in 3/4 and 6/8 (plus Soul 6/8 Brushes with an 8-cell bass energy ladder), 2/4 Bossa fitting, and a sub-octaved <strong>Deep Kick</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div role="tabpanel" id="wn-panel-staff" aria-labelledby="wn-tab-staff" hidden="until-found">
+            <div class="whatsnew-panel-body">
+              <div>
+                <span class="eyebrow">5-Line Staff &amp; AI Transcription</span>
+                <h3 class="font-serif">Read hits and melodies on the chart; transcribe rubato recordings.</h3>
+                <p>
+                  Switch any chart to the 5-line Staff View to read big-band slash notation, private tune melodies, saved solo studies, or live generated bass and piano parts—all backed by one unified Staff Editor.
+                </p>
+              </div>
+              <ul class="whatsnew-spec-list">
+                <li><strong>Unified Staff Editor:</strong> Author private tune melodies (on any tune), edit solo studies, or write 1–4 bar bass patterns in C that transpose across every chord root.</li>
+                <li><strong>Beat-Tracked Piano Transcription:</strong> Local 6-source piano separation + Transkun/Basic Pitch (up to 3 min) tracks the band's beats so barlines follow tempo drift, with per-bar Half/Normal/Double length corrections.</li>
+                <li><strong>MuseScore Shortcuts &amp; Export:</strong> Requantize (1/8, 1/16, Swing 8ths), split/join/tie, slowed-down selection loops, and letter-size PDF or MusicXML export.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 4 -->
+          <div role="tabpanel" id="wn-panel-mix" aria-labelledby="wn-tab-mix" hidden="until-found">
+            <div class="whatsnew-panel-body">
+              <div>
+                <span class="eyebrow">Toolbox → Mix &amp; EQ Studio</span>
+                <h3 class="font-serif">72-band RTA spectrum, 6-band EQ &amp; e.s.t.-inspired FX racks.</h3>
+                <p>
+                  Open the inline Mix &amp; EQ Studio below the chart to sculpt tone with a real-time RTA or waterfall spectrogram, per-rhythm-style fader memory, and dedicated insert racks for bass and drums.
+                </p>
+              </div>
+              <ul class="whatsnew-spec-list">
+                <li><strong>Draggable Parametric EQ &amp; Linear Slopes:</strong> 6-band master EQ with scroll bandwidth, level-matched Linear tilt shortcuts (default −5/3), bus compressor, Mono check, and DJ filter/stutter pads.</li>
+                <li><strong>Bass &amp; Drum Instrument FX:</strong> Drive, low-pass, auto-wah, chorus, phaser, and delay with named presets (<em>Nordic Bass</em>, <em>Drum Echo</em>, <em>Floating Space</em>).</li>
+                <li><strong>Mobile Wi-Fi Sample Guard:</strong> Phones preload a streamlined ~32 MB bundle with a 0 MB Data-Saver Synth option and on-demand Wi-Fi confirmation for extra banks.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 5 -->
+          <div role="tabpanel" id="wn-panel-live" aria-labelledby="wn-tab-live" hidden="until-found">
+            <div class="whatsnew-panel-body">
+              <div>
+                <span class="eyebrow">Practice Video &amp; Live Bandstand</span>
+                <h3 class="font-serif">Waveform A/B video loops, 0.5×–3× clock &amp; Live Changes.</h3>
+                <p>
+                  Study reference videos with hundredth-second loop handles and local waveform alignment, or drive the band live with time multipliers, calibrated mic listening, and phrase-planned reharmonization.
+                </p>
+              </div>
+              <ul class="whatsnew-spec-list">
+                <li><strong>Practice Video Waveform Looper:</strong> Pitch-kept YouTube slowdown, flat A/B timeline trim handles with 0.01s/0.10s/1.00s nudges, 1×–32× local waveform alignment modal, and a tap/span BPM calculator.</li>
+                <li><strong>Live Controls &amp; Re-harm Slider:</strong> 2-feel, Double, and a 0.5×–3× time multiplier on every rhythm (Plan off), one-click Trade 4s &amp; End, Basie Ending tag, and a 0–100 Re-harm slider with Chord Families &amp; <em>So What</em> modal minor grips.</li>
+                <li><strong>Listening Band &amp; Up Next Queue:</strong> One-click <em>Set my range</em> saved per mic, Response Time in seconds with a live Energy graph, collapsible long charts, and an always-on 15-song <strong>Up Next</strong> queue.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Comparison Block ───────────────────────── -->
     <section id="compare" class="section">
       <header class="section-head">
         <span class="eyebrow">Why Jam-a-Lot</span>
         <h2 class="font-serif">Built for how musicians actually practice.</h2>
         <p>
-          No robotic quantized MIDI, no rigid pre-recorded stems, no 90s software bloat.
-          Jam-a-Lot gives you an interactive, humanized rhythm section in your browser, including section-level Salsa bell drive for slow-tempo flexibility and restrained Bossa, Salsa and Bolero fills and endings.
+          Whether you play Jazz, Salsa, Bossa Nova, Samba, Bolero, Funk, or Neo-Soul — get an interactive, humanized rhythm section in your browser with zero robotic MIDI or rigid stems.
         </p>
       </header>
 
@@ -127,10 +297,10 @@
             <span class="compare-badge">Browser Native · Free Beta</span>
           </header>
           <ul class="compare-list">
-            <li><strong>Generative humanized band:</strong> Walking bass, comping piano &amp; feel-aware drums that groove live &mdash; with a nylon-string guitar comping the bossa nova and balanced bass/comping sounds across rhythms.</li>
-            <li><strong>Mic response:</strong> Band hears your volume, phrasing, and repeated figures in real time.</li>
-            <li><strong>Live performance control:</strong> Switch feels, trade bars, adjust dynamics &amp; reharmonize on the fly.</li>
-            <li><strong>Zero install &amp; downloads:</strong> Instant load in your browser with zero multi-gigabyte sample downloads.</li>
+            <li><strong>Multi-genre humanized band:</strong> Acoustic &amp; electric bass, Steinway, Rhodes &amp; nylon guitar, plus jazz kit, Latin percussion &amp; Groovebox across 24 styles.</li>
+            <li><strong>Mic response:</strong> Hears your volume, phrasing, and repeated motifs through room speakers.</li>
+            <li><strong>Live performance control:</strong> Blend grooves, trade fours, shift time 0.5×–3× &amp; reharmonize on the fly.</li>
+            <li><strong>Zero install:</strong> Instant browser load with a 5-line Staff View and AI Solo Transcription.</li>
           </ul>
         </article>
 
@@ -140,9 +310,9 @@
             <span class="compare-badge">Quantized MIDI</span>
           </header>
           <ul class="compare-list">
-            <li>Rigid, robotic MIDI playback with artificial timing and static velocities.</li>
+            <li>Rigid, repetitive MIDI playback with artificial timing and static velocities.</li>
             <li>No real-time microphone response or listening band capability.</li>
-            <li>Static accompaniment with limited live performance dynamics.</li>
+            <li>No live groove blending, trading fours, or staff/transcription tools.</li>
           </ul>
         </article>
 
@@ -152,7 +322,7 @@
             <span class="compare-badge">Pre-recorded Stems</span>
           </header>
           <ul class="compare-list">
-            <li>Fixed pre-recorded audio stems — cannot edit charts or insert extra solo choruses.</li>
+            <li>Fixed audio stems — cannot edit chord charts or insert extra solo choruses.</li>
             <li>Audio artifacts and pitch-shift distortion when transposing keys.</li>
             <li>No live feel changes, trading fours, or real-time reharmonization.</li>
           </ul>
@@ -172,249 +342,253 @@
       </div>
     </section>
 
-    <!-- ───────────────────────── The listening band (mic interaction right after Why Jam-a-Lot) ───────────────────────── -->
+    <!-- ───────────────────────── The Listening Band ───────────────────────── -->
     <section id="listens" class="section section-alt">
-      <header class="section-head">
-        <span class="eyebrow">Mic interaction</span>
-        <h2 class="font-serif">Turn on your mic.<br />The band starts listening.</h2>
-        <p>
-          Jam-a-Lot subtracts its own speaker sound from your mic per frequency bin, then adapts
-          the band's intensity, phrasing, and voicings to your solo.
-        </p>
-      </header>
-
-      <div class="live-grid">
-        <article class="live-card reveal">
-          <div class="live-num">01</div>
-          <h3>Dynamic energy tracking</h3>
+      <div>
+        <header class="section-head">
+          <span class="eyebrow">Listening band</span>
+          <h2 class="font-serif">Turn on your mic.<br />The band starts listening.</h2>
           <p>
-            Play softer and the band comes down; build and the band builds with you. Integrated
-            frequency-selective speaker leakage suppression lets you play through room speakers.
+            Jam-a-Lot subtracts its own speaker sound from your mic per frequency bin, then adapts
+            the band's intensity, phrasing, and voicings to your solo.
           </p>
-          <ul class="live-bullets">
-            <li>Live intensity, onset density &amp; register meters</li>
-            <li>Play with headphones or room speakers</li>
-          </ul>
-        </article>
+        </header>
 
-        <article class="live-card reveal">
-          <div class="live-num">02</div>
-          <h3>Phrase-gap answers</h3>
-          <p>
-            Leave a gap at phrase ends and the band responds. Piano comping voicings shift register
-            to match your pitch height and comping density.
-          </p>
-          <ul class="live-bullets">
-            <li>Onset-based phrase-gap detection</li>
-            <li>Register-aware piano voicings &amp; drum fills</li>
-          </ul>
-        </article>
+        <div class="live-grid">
+          <article class="live-card reveal">
+            <div class="live-num">01 · Dynamic Calibration</div>
+            <h3>One-click Set my range &amp; Energy 0–5</h3>
+            <p>
+              Calibrate your softest and loudest playing once per mic. Play softer and the band drops down; build and the rhythm section climbs with you.
+            </p>
+            <ul class="live-bullets">
+              <li>Speaker leakage suppression works with room speakers or headphones</li>
+              <li>Adjustable Response Time in seconds with a live Energy graph</li>
+            </ul>
+          </article>
 
-        <article class="live-card reveal">
-          <div class="live-num">03</div>
-          <h3>Motif catch</h3>
-          <p>
-            Repeat a rhythmic figure twice and the drummer locks on, playing it with you through the section
-            and resolving it cleanly into the section fill.
-          </p>
-          <ul class="live-bullets">
-            <li>Quantized to the active feel's swing grid</li>
-            <li>Locks on 1-bar or 2-bar repeated figures</li>
-          </ul>
-        </article>
+          <article class="live-card reveal">
+            <div class="live-num">02 · Conversational Comping</div>
+            <h3>Phrase-gap answers</h3>
+            <p>
+              Leave a gap at phrase ends and the band responds. Piano and guitar comping voicings shift register to match your pitch height and density.
+            </p>
+            <ul class="live-bullets">
+              <li>Onset-based phrase-gap detection</li>
+              <li>Register-aware voicings &amp; conversational drum fills</li>
+            </ul>
+          </article>
 
-        <article class="live-card reveal">
-          <div class="live-num">04</div>
-          <h3>Section &amp; chorus cues</h3>
-          <p>
-            Section boundaries are announced with jazz setup figures, melodic toms, and downbeat crashes. Chorus arrivals
-            are clearly stated so you never lose your place in the form.
-          </p>
-          <ul class="live-bullets">
-            <li>Phrase-locked trade re-entries on the "and of 4"</li>
-            <li>Distinct chorus vs section downbeat emphasis</li>
-          </ul>
-        </article>
+          <article class="live-card reveal">
+            <div class="live-num">03 · Rhythmic Lock</div>
+            <h3>Motif catch</h3>
+            <p>
+              Repeat a rhythmic figure twice and the drummer locks on, playing it with you through the section and resolving it cleanly into the turnaround.
+            </p>
+            <ul class="live-bullets">
+              <li>Quantized to the active feel's swing, Latin, or funk grid</li>
+              <li>Locks on 1-bar or 2-bar repeated figures</li>
+            </ul>
+          </article>
+
+          <article class="live-card reveal">
+            <div class="live-num">04 · Form Awareness</div>
+            <h3>Section &amp; chorus cues</h3>
+            <p>
+              Section boundaries are announced with jazz setup figures, melodic toms, or restrained Latin timbale and cross-stick cues so you never lose the form.
+            </p>
+            <ul class="live-bullets">
+              <li>Phrase-locked trade re-entries on the "and of 4"</li>
+              <li>Distinct chorus vs. section downbeat emphasis</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ───────────────────────── Library / breadth ───────────────────────── -->
-    <section id="library" class="section">
-      <header class="section-head">
-        <span class="eyebrow">The library</span>
-        <h2 class="font-serif">One app, every open source.</h2>
-        <p>
-          Jam-a-Lot aggregates open-source chord collections — a 1,382-tune jazz-standards
-          corpus, academic chord datasets, community lead-sheet archives, and public-domain imports.
-          Search once, play immediately.
-        </p>
-      </header>
-
-      <div class="source-grid">
-        <article class="source reveal">
-          <div class="source-icon" aria-hidden="true">🎷</div>
-          <h3>Jazz standards</h3>
-          <p>1,382 jazz standards — bebop, modal, swing, ballads, bossa, latin, waltz, and songbook classics.</p>
-        </article>
-        <article class="source reveal">
-          <div class="source-icon" aria-hidden="true">🎸</div>
-          <h3>Pop &amp; rock changes</h3>
-          <p>Open academic chord datasets — practice over familiar progressions and popular tunes.</p>
-        </article>
-        <article class="source reveal">
-          <div class="source-icon" aria-hidden="true">🎻</div>
-          <h3>Lead sheets &amp; scores</h3>
-          <p>Public-domain lead sheets import straight in, with full MusicXML and text chart support.</p>
-        </article>
-        <article class="source reveal">
-          <div class="source-icon" aria-hidden="true">✍️</div>
-          <h3>User Tunes &amp; standards</h3>
-          <p>Paste a text chart with repeat and Coda directions, plus separate forms for solos and the last head. Your saved text keeps its section order and spacing, and written intros and endings play as one-shot sections. Set the tune’s time signature, including 2/4 with a complete Bossa Nova groove. Edit bar by bar with beat-accurate punch figures and one-bar meter changes such as 3/4 inside a 4/4 tune. Edits to catalog standards stay in Jazz Standards; original and explicitly copied songs live in User Tunes.</p>
-        </article>
-        <article class="source reveal">
-          <div class="source-icon" aria-hidden="true">📲</div>
-          <h3>Direct sharing &amp; cloud sync</h3>
-          <p>Send charts to @handles, share via QR codes or links, and auto-sync your library across all devices.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ───────────────────────── LIVE PERFORMANCE (the differentiator) ───────────────────────── -->
-    <section id="live" class="section section-alt">
+    <!-- ───────────────────────── Live Performance ───────────────────────── -->
+    <section id="live" class="section">
       <header class="section-head">
         <span class="eyebrow">Shape the band</span>
         <h2 class="font-serif">Static tracks play on loop.<br />A band responds live.</h2>
         <p>
-          Generated on the fly bar by bar — giving you real-time control over chorus dynamics,
-          trading, feel switches, and reharmonization while you play.
+          Generated bar by bar — giving you real-time control over groove switches, time multipliers, trading, and reharmonization while you play.
         </p>
       </header>
 
       <div class="live-grid">
         <article class="live-card reveal">
-          <div class="live-num">01</div>
-          <h3>Live dynamics &amp; chorus control</h3>
+          <div class="live-num">01 · Live Time &amp; Dynamics</div>
+          <h3>0.5×–3× time multiplier &amp; chorus control</h3>
           <p>
-            Shape the next chorus without stopping. Double time into the out-head, drop to half-time
-            for the bass solo, or dial drummer intensity (1–5) at phrase boundaries.
+            Shape the groove without stopping. Drop into 2-feel, jump to Double time, run any Latin, Brazilian, or Funk rhythm at 0.5× to 3× speed, or dial energy (0–5).
           </p>
           <ul class="live-bullets">
-            <li><span class="kbd">Next chorus:</span> double time, half time, or feel switch</li>
-            <li><span class="kbd">Drummer intensity:</span> 1–5 density profiles on the fly</li>
+            <li><span class="kbd">Live clock:</span> 2-feel, Double, or 0.5×–3× on every feel</li>
+            <li><span class="kbd">Band energy:</span> 0–5 dynamic profiles on the fly</li>
           </ul>
         </article>
 
         <article class="live-card reveal">
-          <div class="live-num">02</div>
+          <div class="live-num">02 · Call &amp; Response</div>
           <h3>Trade bars with the drummer</h3>
           <p>
-            Press trade to exchange fours, eights, or full choruses. The drummer solos with comping
-            behind you and hands off with phrase-locked cymbal splashes.
+            Press trade to exchange fours, eights, or full choruses. The drummer solos over the form and hands off with phrase-locked setups.
           </p>
           <ul class="live-bullets">
             <li><span class="kbd">Trade 4s / 8s / choruses</span> with phrase alignment</li>
-            <li>Seamless re-entry kicks and downbeat markers</li>
+            <li>One-button live Trade 4s and armed Final Round ending</li>
           </ul>
         </article>
 
         <article class="live-card reveal">
-          <div class="live-num">03</div>
+          <div class="live-num">03 · Harmonic Motion</div>
           <h3>Live Changes reharmonization</h3>
           <p>
-            Phrase-planned Coltrane cycles, Bird Blues, turnaround and bridge families, tritone ii-Vs,
-            secondary dominants, back-door turns, and a major-seventh turnaround — with at most two generated chords per bar above 180 BPM.
+            Dial the 0–100 Re-harm slider for phrase-planned Coltrane cycles, Bird Blues, tritone ii–Vs, back-door turns, Chord Families, and <em>So What</em> modal minor voicings.
           </p>
           <ul class="live-bullets">
-            <li>Substitutions display live on chart &amp; bass line</li>
-            <li>Every generic change proves its written arrival and preserves form timing</li>
-            <li>100% session-only — original chart stays untouched</li>
-            <li>Chord families (C6 = Cmaj7, Cm7 = Cm11) and So What modal minor voicings</li>
+            <li>Substitutions display live on the chart &amp; floating chord bar</li>
+            <li>Preserves written arrivals and keeps your original chart untouched</li>
           </ul>
         </article>
 
         <article class="live-card reveal">
-          <div class="live-num">04</div>
-          <h3>12 Feels &amp; instant transposition</h3>
+          <div class="live-num">04 · Multi-Genre Palette</div>
+          <h3>15 Feels, 24 Styles &amp; instant transposition</h3>
           <p>
-            Switch feels mid-performance, transpose &plusmn;1 semitone instantly, or loop sections
-            until clean. Computed from absolute beat clocks with zero timing drift.
+            Switch between Jazz, Latin, Brazilian, Funk, Soul, Rock, and EDM mid-session, transpose by semitone instantly, or loop any section until clean.
           </p>
           <ul class="live-bullets">
-            <li>Swing, bossa, latin, gypsy jazz, soul-jazz, funk, blues shuffle, rock, EDM...</li>
+            <li>Swing, Bossa, Samba, Salsa, Bolero, Tresillo, Soul 6/8, Funk, R&amp;B, EDM…</li>
             <li>Instant semitone transposition &amp; clean section looping</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <!-- ───────────────────────── Features ───────────────────────── -->
-    <section id="features" class="section">
+    <!-- ───────────────────────── Core Studio Features (Concise, Balanced Cards + SVG Icons) ───────────────────────── -->
+    <section id="features" class="section section-alt">
+      <div>
+        <header class="section-head">
+          <span class="eyebrow">Core Studio</span>
+          <h2 class="font-serif">A complete practice studio in one tab.</h2>
+          <p>Every tool stays one click away on the left-edge desktop toolbar without cluttering the chart.</p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="9" y1="4" x2="9" y2="20"/><line x1="15" y1="4" x2="15" y2="20"/></svg>
+            </div>
+            <h3>Editable charts &amp; Staff View</h3>
+            <p>Edit in grid or text shorthand with repeats, Codas, odd meters, and Basie endings—or switch to the 5-line Staff View for rhythm hits, melodies, and bass lines.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <h3>Jazz, Latin, Brazilian &amp; Funk</h3>
+            <p>24 built-in styles across 15 feels: Swing, Bossa (4/4 &amp; 2/4 nylon guitar), Rio Samba batucada with Swingue knob, Salsa, Bolero, Tresillo, Soul 6/8, Funk, and EDM.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/></svg>
+            </div>
+            <h3>Rhythm Blend &amp; Microrhythm</h3>
+            <p>Morph compatible grooves with continuous chorus sweeps and multi-kit drum blending, or dial empirical timing with 26 λ studies and Traditional ensembles.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+            </div>
+            <h3>Mix &amp; EQ Studio + FX Racks</h3>
+            <p>dB-calibrated faders with per-style memory, 72-band RTA &amp; waterfall spectrum, draggable 6-band EQ, DJ pads, and e.s.t.-inspired Bass &amp; Drum FX racks.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <h3>AI Solo Transcription &amp; Editor</h3>
+            <p>Isolate piano locally and transcribe passages onto a beat-tracked grand staff that follows tempo rubato, with MuseScore shortcuts and PDF/MusicXML export.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="icon-box" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <h3>Practice Video Waveform Looper</h3>
+            <p>Slow down YouTube videos with pitch preserved, trim A/B phrase loops to 0.01s, align against a zoomed local audio waveform, and tap or measure BPM.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── The Library (Balanced 5-Card Row) ───────────────────────── -->
+    <section id="library" class="section">
       <header class="section-head">
-        <span class="eyebrow">Core Studio</span>
-        <h2 class="font-serif">A complete practice studio.</h2>
-        <p>Everything you need to woodshed a standard in one clean browser tab.</p>
+        <span class="eyebrow">The library</span>
+        <h2 class="font-serif">1,000+ tunes across Jazz, Latin, Pop &amp; your own charts.</h2>
+        <p>
+          Search open-source songbooks and academic chord datasets, queue an automatic 15-song Up Next playlist, or write and share your own arrangements.
+        </p>
       </header>
 
-      <div class="feature-grid">
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">🎼</div>
-          <h3>Editable chord chart</h3>
-          <p>In-place editing with root × quality × extension pickers, text mode, stable numbered-ending routes, reharm suggestions, and a roadmap strip.</p>
+      <div class="source-grid">
+        <article class="source reveal">
+          <h3>Jazz, Latin &amp; Brazilian</h3>
+          <p>1,000+ tunes spanning bebop, swing, ballads, bossa nova, samba, salsa, bolero, waltzes, and songbook standards.</p>
         </article>
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">🎸</div>
-          <h3>Generative rhythm section</h3>
-          <p>Seeded walking bass, phrase-aware comping piano, and feel-aware drums that groove deterministically without fixed loops—including eight-bar Bolero piano statements that develop across the chorus.</p>
+        <article class="source reveal">
+          <h3>Pop, Rock, Funk &amp; Soul</h3>
+          <p>Open chord datasets and contemporary progressions ready to play over Funk, R&amp;B, Soul 6/8, Blues Shuffle, or Rock grooves.</p>
         </article>
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">🎛️</div>
-          <h3>Live mixer &amp; stage plot</h3>
-          <p>Decibel faders, voice mutes, and per-instrument stereo panning. Mix &amp; EQ Studio adds draggable EQ dots, scroll bandwidth, rotary knobs, a level-matched Linear preset with slope shortcuts (default −5/3), DJ filter, echo, stutter and sweep pads, plus separate bass/drum Instrument FX racks for drive, wah, chorus, phaser and delay, with named presets, one-click reset and compact bypassed racks. A desktop toolbar puts every practice tool at the left edge, with descriptive tooltips and distinct piano-key and EQ icons.</p>
+        <article class="source reveal">
+          <h3>User Tunes &amp; standards</h3>
+          <p>Paste text charts with repeats, Codas, odd meters, and separate solo forms. Edits to standards stay in Jazz Standards; originals live in User Tunes.</p>
         </article>
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">🥁</div>
-          <h3>12 Feels &amp; Style Lab</h3>
-          <p>Acoustic jazz kit, Latin percussion, and a groovebox synth. Soul Waltz brings a modern funk groove to 3/4, and Soul 6/8 plays the neo-soul / Afro 6/8 pocket felt in two. Samba brings a real batucada — pandeiro, tamborim, ganzá, agogô and cuíca over a kick surdo — with the samba swingue: the third and fourth sixteenths of every beat land early, at every tempo, with a Swingue knob to set how deep. Tresillo and Bolero modern layer kit drums with hand percussion; Bolero modern brings the standard kit forward, accenting the &amp; of 2 with bass, kick and snare. Build and audition custom accompaniment styles in the lab; Microrhythm combines its plots, supports draggable uncertainty, auto-applies edits, offers a small-kit Minimal groove with coordinated bass and comping, includes an experimental Bossa Nova copy, adds a Traditional base that plays African and Réunion patterns on an approximation of their own ensembles, filters timing patterns for Swing/Samba/Bossa compatibility, places a vertical λ slider beside the first diagram, simulates 1–128 bars (default 16), and places affected players at the bottom, highlights the exact affected players, gives Samba the same whole-band timing scope as Swingue, includes measured Waaju and other four-onset studies, and extrapolates λ beyond A/B on an extended shaded diagram. When the chart and stage scroll out of view, a floating Chord changes panel keeps the stage’s rolling playback chords visible, with Play/Pause and tempo; long charts collapse sections to their first line except the one playing.</p>
+        <article class="source reveal">
+          <h3>Practice &amp; Up Next</h3>
+          <p>Generate ii–V–I, turnaround, and Coltrane workouts across keys, or open the always-on 15-song Up Next autoplay queue.</p>
         </article>
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">🎼</div>
-          <h3>Live notation &amp; MusicXML</h3>
-          <p>Generated bass lines render on readable staff notation. Review after Stop, print, or export directly to MusicXML.</p>
-        </article>
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">📚</div>
-          <h3>Knowledge base &amp; embeds</h3>
-          <p>In-app wiki covering rhythm style structures, plus integrated Spotify and YouTube reference embeds for context. Song Info → Play Video adds supported speed controls with YouTube’s pitch correction, grouped playback controls and A/B phrase loops with an optional local-recording waveform popup (zoom, video offset and click-to-place markers), a draggable trim timeline, editable hundredth-second timestamps and fine nudge controls, saved local markers and a manual BPM calculator using taps or counted A/B spans, with playback-speed correction. Soul 6/8 Brushes combines a bass energy ladder from alternate-bar roots to phrases with late pickups and pauses, soft snare rolls and light shaker motion. Solo Transcription separates piano locally before detecting both hands across the full keyboard, with up to three-minute passages, an isolated piano player and WAV download, Both hands or Melody only staff/PDF views, adjustable downbeat alignment, readable tied notation, direct editing with MuseScore-style keyboard shortcuts, swing notation, requantize, split/join/tie and copy-paste, slowed-down selection loops, MusicXML export, undo/redo, synchronized audition and private study files. Online piano separation requires the local helper. Separate agent-assisted reference groove development uses a local audible review before a new style is authored; see the manual.</p>
-          <p>Solo Transcription remembers original recordings privately on this device for playback after reopening, and Detect follows the beat in the original recording so barlines and chords keep up with a band that speeds up or slows down. Per-bar Half/Normal/Double corrections fit compressed or held measures in the recording without changing the tune chart.</p>
+        <article class="source reveal">
+          <h3>Direct sharing &amp; sync</h3>
+          <p>Send charts to @handles, share via QR codes or links, and auto-sync your library across all devices.</p>
         </article>
       </div>
     </section>
 
-    <!-- ───────────────────────── How it works ───────────────────────── -->
+    <!-- ───────────────────────── How It Works ───────────────────────── -->
     <section class="section section-alt">
-      <header class="section-head">
-        <span class="eyebrow">How it works</span>
-        <h2 class="font-serif">Three clicks to a chorus.</h2>
-        <p>Zero install, zero sample downloads. Open a tab and start playing.</p>
-      </header>
+      <div>
+        <header class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2 class="font-serif">Three clicks to a chorus.</h2>
+          <p>Zero install, zero multi-gigabyte sample downloads. Open a tab and start playing.</p>
+        </header>
 
-      <ol class="steps">
-        <li class="step reveal">
-          <span class="step-num">1</span>
-          <h3>Pick a tune</h3>
-          <p>3 demo tunes open instantly; 1,379 more unlock with a free Beta account. Color-coded chart renders instantly.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">2</span>
-          <h3>Set tempo &amp; feel</h3>
-          <p>Choose a rhythm style, dial tempo, transpose keys, set per-chorus performance plans, and practice ii–V–I cadences, turnarounds, dominant cycles, or Coltrane changes through fixed or random key steps.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">3</span>
-          <h3>Play &amp; drive the band</h3>
-          <p>Count in and jam. Adjust chorus dynamics, trade fours, or turn on mic listening live while you play.</p>
-        </li>
-      </ol>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <h3>Pick a tune or paste your own</h3>
+            <p>3 demo tunes open instantly; 1,000+ more unlock with a free Beta account, or paste any plain-text lead sheet.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">2</span>
+            <h3>Choose feel, blend &amp; tempo</h3>
+            <p>Select from 24 Jazz, Latin, Brazilian, Funk, or Soul grooves—or blend two styles across choruses—and set your form plan.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">3</span>
+            <h3>Play &amp; drive the band</h3>
+            <p>Count in and jam. Adjust chorus dynamics, trade fours, or turn on room-mic listening live while you play.</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
     <!-- ───────────────────────── FAQ Section ───────────────────────── -->
@@ -426,31 +600,27 @@
 
       <div class="faq-grid">
         <article class="faq-card reveal">
-          <h3>Is Jam-a-Lot really free?</h3>
+          <h3>Is Jam-a-Lot only for jazz?</h3>
           <p>
-            Yes! During open Beta, the complete app is 100% free in exchange for your feedback.
-            There is no credit card required and no trial timer. Guest mode lets you test 3 tunes with zero sign-up.
+            Not at all. Alongside Swing, Ballad, and Gypsy Jazz, Jam-a-Lot includes authentic Salsa, Bolero, Bolero Modern, Tresillo, Bossa Nova (with nylon-string guitar), Rio Samba batucada, Funk, Soul-Jazz, R&amp;B / Neo-Soul, Soul Waltz, Soul 6/8, Blues Shuffle, Rock, EDM, and African/Réunion ensembles—plus a Rhythm Blend Lab to combine them.
           </p>
         </article>
         <article class="faq-card reveal">
-          <h3>Do I need to install software or download samples?</h3>
+          <h3>Is Jam-a-Lot really free?</h3>
           <p>
-            No. Jam-a-Lot is completely browser-native. There are no desktop installers and zero multi-gigabyte
-            sample packs to download. It runs smoothly on any modern desktop or tablet browser.
+            Yes. During open Beta, the complete app is 100% free in exchange for your feedback. There is no credit card required and no trial timer. Guest mode lets you test 3 tunes with zero sign-up.
           </p>
         </article>
         <article class="faq-card reveal">
           <h3>Can I play through room speakers, or do I need headphones?</h3>
           <p>
-            Both work! Jam-a-Lot includes frequency-selective band leakage suppression that subtracts the backing band
-            from your mic input in real time. You can play through room speakers or headphones seamlessly.
+            Both work. Jam-a-Lot includes frequency-selective band leakage suppression that subtracts the backing band from your mic input in real time, plus one-click <em>Set my range</em> calibration.
           </p>
         </article>
         <article class="faq-card reveal">
-          <h3>Can I import, edit, and export chord charts?</h3>
+          <h3>Can I import charts, read staff notation, and transcribe solos?</h3>
           <p>
-            Yes. You can edit chord symbols with live validation, paste plain-text lead sheets, sketch original compositions,
-            and export your generated bass lines and chord charts to MusicXML or neutral JSON formats.
+            Yes. You can paste plain-text lead sheets, switch any chart to the 5-line Staff View (for rhythm hits, melodies, or bass lines), and transcribe local piano recordings onto a beat-tracked grand staff with PDF and MusicXML export.
           </p>
         </article>
       </div>
@@ -458,86 +628,87 @@
 
     <!-- ───────────────────────── Pricing / Beta Access ───────────────────────── -->
     <section id="beta" class="section section-alt">
-      <header class="section-head">
-        <span class="eyebrow">Two ways in</span>
-        <h2 class="font-serif">Free during Beta.<br />Free in exchange for feedback.</h2>
-        <p>
-          Jam-a-Lot is in open beta with nothing to pay. All we ask in return is your honest feedback
-          to help us improve the band. Prefer to try it first? Guest mode plays 3 demo tunes with the full band, no sign-up.
+      <div>
+        <header class="section-head">
+          <span class="eyebrow">Two ways in</span>
+          <h2 class="font-serif">Free during Beta.<br />Free in exchange for feedback.</h2>
+          <p>
+            Jam-a-Lot is in open beta with nothing to pay. All we ask in return is your honest feedback
+            to help us improve the band. Prefer to try it first? Guest mode plays 3 demo tunes with the full band, no sign-up.
+          </p>
+        </header>
+
+        <div class="pricing-grid pricing-grid-two">
+          <!-- Guest -->
+          <article class="price-card reveal">
+            <header class="price-head">
+              <h3>Guest</h3>
+              <div class="price-amount"><span class="currency">$</span><span class="amount">0</span><span class="per">3 tunes · no sign-up</span></div>
+              <p class="price-tag">Hear the band before you decide anything.</p>
+            </header>
+            <a class="btn btn-ghost btn-block" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">Try 3 tunes now</a>
+            <ul class="price-features">
+              <li>✓ <strong>Blues in F, Oleo, Mr. P.C.</strong> — full generated band, nothing held back</li>
+              <li>✓ Every Jazz, Latin, Brazilian, Funk &amp; Soul feel, tempo, and mixer control</li>
+              <li>✓ Live dynamics, trading, Live Changes, and the listening band</li>
+              <li class="muted">— The rest of the 1,000+ tune library is locked</li>
+              <li class="muted">— No chart editing, custom tunes, or imports</li>
+              <li class="muted">— Lives in this single browser</li>
+            </ul>
+          </article>
+
+          <!-- Beta (highlighted) -->
+          <article class="price-card price-featured reveal">
+            <span class="price-badge">Free · feedback for access</span>
+            <header class="price-head">
+              <h3>Beta Member</h3>
+              <div class="price-amount"><span class="currency">$</span><span class="amount">0</span><span class="per">everything, no card</span></div>
+              <p class="price-tag">The entire app. All we ask for in return is your honest feedback.</p>
+            </header>
+            <a class="btn btn-accent btn-block" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">▶ Join the Free Beta</a>
+            <ul class="price-features">
+              <li>✓ <strong>1,000+ tunes</strong> across Jazz, Latin, Brazilian, Pop &amp; open chord collections</li>
+              <li>✓ <strong>Full chart &amp; 5-line Staff editor</strong> — write your own, paste text charts, read hits &amp; melodies</li>
+              <li>✓ <strong>Rhythm Blend &amp; Microrhythm Labs</strong> — morph grooves, customize percussion bands &amp; microtiming</li>
+              <li>✓ <strong>AI Solo Transcription &amp; Mix Studio</strong> — beat-tracked grand staff, 72-band RTA &amp; FX racks</li>
+              <li>✓ <strong>Cloud sync &amp; direct sharing</strong> across every browser and device you use</li>
+              <li>✓ Everything in Guest, on every tune</li>
+            </ul>
+          </article>
+        </div>
+        <p class="pricing-foot">
+          Sign up with Google or an email address in fifteen seconds.
+          Public catalog content stores only chord symbols and song form — never melody, never lyrics,
+          never proprietary formats.
         </p>
-      </header>
-
-      <div class="pricing-grid pricing-grid-two">
-        <!-- Guest -->
-        <article class="price-card reveal">
-          <header class="price-head">
-            <h3>Guest</h3>
-            <div class="price-amount"><span class="currency">$</span><span class="amount">0</span><span class="per">3 tunes · no sign-up</span></div>
-            <p class="price-tag">Hear the band before you decide anything.</p>
-          </header>
-          <a class="btn btn-ghost btn-block" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">Try 3 tunes now</a>
-          <ul class="price-features">
-            <li>✓ <strong>Blues in F, Oleo, Mr. P.C.</strong> — full generated band, nothing held back</li>
-            <li>✓ Every feel, tempo, transposition and mixer control</li>
-            <li>✓ Live dynamics, trading, Live Changes, the listening band</li>
-            <li class="muted">— The other 1,379 tunes are locked</li>
-            <li class="muted">— No chart editing, no custom tunes, no imports</li>
-            <li class="muted">— Lives in this single browser</li>
-          </ul>
-        </article>
-
-        <!-- Beta (highlighted) -->
-        <article class="price-card price-featured reveal">
-          <span class="price-badge">Free · feedback for access</span>
-          <header class="price-head">
-            <h3>Beta Member</h3>
-            <div class="price-amount"><span class="currency">$</span><span class="amount">0</span><span class="per">everything, no card</span></div>
-            <p class="price-tag">The entire app. All we ask for in return is your honest feedback.</p>
-          </header>
-          <a class="btn btn-accent glow-accent-sm btn-block" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">▶ Join the Free Beta</a>
-          <ul class="price-features">
-            <li>✓ <strong>All 1,382 jazz standards</strong> &amp; open chord database</li>
-            <li>✓ <strong>Full chart editor</strong> — write your own, paste text charts, import</li>
-            <li>✓ <strong>Rhythm Style Lab</strong> — build and save your own grooves; parameterize experimental Swing and Samba copies with live microtiming controls</li>
-            <li>✓ <strong>Cloud sync</strong> across every browser and device you use</li>
-            <li>✓ Saved arrangements and per-tune performance defaults</li>
-            <li>✓ Everything in Guest, on every tune</li>
-          </ul>
-        </article>
       </div>
-      <p class="pricing-foot">
-        Sign up with Google or an email address in fifteen seconds.
-        Jam-a-Lot stores only chord symbols and song form; never melody, never lyrics,
-        never proprietary formats.
-      </p>
     </section>
 
     <!-- ───────────────────────── Final CTA ───────────────────────── -->
     <section class="cta-band">
       <div class="cta-inner">
         <h2 class="font-serif">Ready to shed?</h2>
-        <p>Pick a tune. Shape the band. Play. Then tell us how it went.</p>
+        <p>Pick a tune. Choose Jazz, Latin, Brazilian, or Funk. Play — then tell us how it went.</p>
         <div class="hero-ctas cta-ctas">
-          <a class="btn btn-accent btn-lg glow-accent" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">▶ Join the Free Beta</a>
+          <a class="btn btn-accent btn-lg" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">▶ Join the Free Beta</a>
           <a class="btn btn-ghost btn-lg" href="https://app.jam-a-lot.org/" target="_blank" rel="noopener">Try 3 tunes as a guest</a>
         </div>
       </div>
     </section>
-  <section class="section" id="rhythm-blend"><h2>Explore a whole-band rhythm blend</h2><p>Rhythm Lab → Blend combines compatible native-meter grooves across families, including Funk ↔ Swing. The starting pair follows the chart meter, with compatible partner selection and recovery for saved pairs from another meter. Use the colored Play blend button at the top, choose sources at either end of the balance slider, double-click the balance for a continuous sweep with ¼–16 choruses per transition (default 1), shape bass, drums, comping and timing independently, and use Save blend to name a recipe and Load blend to recall it locally or carry it by JSON. The Drum Kit &amp; Instrument Blend card shows how electronic, acoustic and Latin percussion combine, with individual hits retaining their native sounds. Audition and edit without adding saved rhythms or changing the tune’s saved default; only Save or Import adds a blend to the main rhythm menu. Explicit Phrase fit brings Soul 6/8 ↔ Swing into 4/4 with an onset preview. Electronic ↔ acoustic blending in 4/4 preserves the electronic half-time groove. The “Which rhythms can blend?” guide lists usable partners and explains unavailable combinations. Saved microrhythm and other meter conversions remain unavailable.</p></section>
-</main>
+  </main>
 
   <!-- ───────────────────────── Footer ───────────────────────── -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img class="brand-mark-icon sm" src="assets/icon.png" alt="" width="30" height="30" />
+        <img class="brand-mark-icon sm" src="assets/icon.png" alt="" width="28" height="28" />
         <span>Jam-a-Lot</span>
       </div>
       <p class="footer-note">
-        Browser-based practice band · Built with TypeScript, React &amp; Tone.js. · <a href="manual.html" style="color: var(--accent-2); text-decoration: underline;">User Manual</a> · <a href="https://www.youtube.com/channel/UCF0CeuwZWx5VH7cScojvmkQ" target="_blank" rel="noopener" style="color: var(--accent-2); text-decoration: underline;">YouTube Tutorials</a> · <a href="llms.txt" style="color: var(--muted); text-decoration: underline;">llms.txt</a>
+        Browser-based practice band · Built with TypeScript, React &amp; Tone.js · <a href="manual.html" style="color: var(--accent); text-decoration: underline;">User Manual</a> · <a href="https://www.youtube.com/channel/UCF0CeuwZWx5VH7cScojvmkQ" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">YouTube Tutorials</a> · <a href="llms.txt" style="color: var(--muted); text-decoration: underline;">llms.txt</a>
       </p>
       <p class="footer-ip">
-        Aggregates open-source chord collections. Stores only chord symbols and song
+        Aggregates open-source chord collections. Public catalog stores only chord symbols and song
         form — never melody, never lyrics, never proprietary formats.
       </p>
     </div>
