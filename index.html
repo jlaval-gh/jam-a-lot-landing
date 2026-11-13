@@ -8,8 +8,9 @@
   <meta property="og:title" content="Jam-a-Lot — Your live practice band for Jazz, Latin, Brazilian &amp; Funk" />
   <meta property="og:description" content="1,000+ tunes, 24 rhythm styles across Jazz, Latin, Brazilian, Funk &amp; Soul, and a band that listens through your mic. Free Beta — or try 3 tunes as a guest." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/icon.png" />
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <meta property="og:image" content="assets/strawman-bass.svg" />
+  <link rel="icon" href="assets/strawman-bass.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="assets/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,10 +20,49 @@
 <body>
   <div class="ambient-glow" aria-hidden="true"></div>
 
+  <!-- Reusable Vector Strawman Stick-Figure Bassist Definitions (recreated from BandstandPopup.tsx drawBassist) -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <defs>
+      <radialGradient id="sbStageGlow" cx="52%" cy="54%" r="50%">
+        <stop offset="0%" stop-color="#d4a359" stop-opacity="0.22" />
+        <stop offset="100%" stop-color="#14161a" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- Standard Strawman Bassist (Brand & Stage Core) -->
+      <g id="strawman-bassist-core">
+        <ellipse cx="112" cy="196" rx="76" ry="13" fill="#1d222b" opacity="0.88" />
+        <!-- Upright Bass Body (-11.5 deg tilt) -->
+        <g transform="translate(132 132) rotate(-11.5)">
+          <ellipse cx="0" cy="0" rx="35" ry="57" fill="#402a18" stroke="#d4a359" stroke-width="5.5" />
+        </g>
+        <!-- Bass Neck & 3 Strings -->
+        <line x1="140" y1="118" x2="180" y2="18" stroke="#8b5a2b" stroke-width="11.5" stroke-linecap="round" />
+        <line x1="136" y1="118" x2="176" y2="18" stroke="#f5d7a6" stroke-width="1.4" stroke-linecap="round" />
+        <line x1="141" y1="118" x2="181" y2="18" stroke="#f5d7a6" stroke-width="1.4" stroke-linecap="round" />
+        <line x1="146" y1="118" x2="186" y2="18" stroke="#f5d7a6" stroke-width="1.4" stroke-linecap="round" />
+        <!-- Soundhole -->
+        <circle cx="128" cy="128" r="8.5" fill="#14161a" stroke="#9aa0a8" stroke-width="2.2" />
+        <!-- Stick Figure Head, Torso, Shoulders, Legs, Fretting & Plucking Arms -->
+        <circle cx="82" cy="38" r="19" fill="#e8e8ea" stroke="#9aa0a8" stroke-width="2.4" />
+        <line x1="82" y1="76" x2="78" y2="134" stroke="#e8e8ea" stroke-width="7.5" stroke-linecap="round" />
+        <line x1="64" y1="85" x2="100" y2="85" stroke="#e8e8ea" stroke-width="5.5" stroke-linecap="round" />
+        <line x1="74" y1="134" x2="56" y2="194" stroke="#e8e8ea" stroke-width="5.5" stroke-linecap="round" />
+        <line x1="89" y1="134" x2="116" y2="197" stroke="#e8e8ea" stroke-width="5.5" stroke-linecap="round" />
+        <line x1="98" y1="86" x2="160" y2="66" stroke="#e8e8ea" stroke-width="5.5" stroke-linecap="round" />
+        <circle cx="160" cy="66" r="6.2" fill="#e8e8ea" stroke="#9aa0a8" stroke-width="2" />
+        <line x1="69" y1="86" x2="122" y2="139" stroke="#e8e8ea" stroke-width="5.5" stroke-linecap="round" />
+      </g>
+    </defs>
+  </svg>
+
   <!-- ───────────────────────── Focused Sticky Header (4 Links + CTA) ───────────────────────── -->
   <header class="site-header" id="top">
     <a class="brand" href="#top">
-      <img class="brand-mark-icon" src="assets/icon.png" alt="" width="36" height="36" />
+      <svg class="brand-mark-svg" viewBox="0 0 220 220" role="img" aria-label="Jam-a-Lot strawman bassist logo">
+        <rect width="220" height="220" rx="36" fill="#14161a" />
+        <circle cx="114" cy="118" r="96" fill="url(#sbStageGlow)" />
+        <use href="#strawman-bassist-core" />
+      </svg>
       <span class="brand-name">Jam-a-Lot</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
@@ -160,6 +200,15 @@
     <section id="whats-new" class="section section-alt">
       <div>
         <header class="section-head">
+          <div class="strawman-badge strawman-anim" aria-hidden="true">
+            <svg viewBox="0 0 220 220" fill="none">
+              <use href="#strawman-bassist-core" />
+              <!-- Soundhole acoustic resonance rings -->
+              <circle cx="128" cy="128" r="22" stroke="#d4a359" stroke-width="2" stroke-dasharray="5 5" opacity="0.75" />
+              <circle cx="128" cy="128" r="36" stroke="#6ee7b7" stroke-width="1.8" stroke-dasharray="4 6" opacity="0.55" />
+            </svg>
+          </div>
+          <br />
           <span class="eyebrow">Release Highlights</span>
           <h2 class="font-serif">What’s new in Version 0.2 Beta.</h2>
           <p>
@@ -283,6 +332,14 @@
     <!-- ───────────────────────── Comparison Block ───────────────────────── -->
     <section id="compare" class="section">
       <header class="section-head">
+        <div class="strawman-badge strawman-anim" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none">
+            <!-- Bandstand rolling chord tile under bassist -->
+            <polygon points="36,204 188,204 168,180 56,180" fill="rgba(135, 206, 250, 0.16)" stroke="#d4a359" stroke-width="2" />
+            <use href="#strawman-bassist-core" />
+          </svg>
+        </div>
+        <br />
         <span class="eyebrow">Why Jam-a-Lot</span>
         <h2 class="font-serif">Built for how musicians actually practice.</h2>
         <p>
@@ -292,9 +349,14 @@
 
       <div class="compare-grid">
         <article class="compare-col compare-col-featured reveal">
-          <header class="compare-head">
-            <h3>Jam-a-Lot</h3>
-            <span class="compare-badge">Browser Native · Free Beta</span>
+          <header class="compare-head compare-head-row">
+            <div>
+              <h3>Jam-a-Lot</h3>
+              <span class="compare-badge">Browser Native · Free Beta</span>
+            </div>
+            <svg class="strawman-mini" viewBox="0 0 220 220" aria-hidden="true">
+              <use href="#strawman-bassist-core" />
+            </svg>
           </header>
           <ul class="compare-list">
             <li><strong>Multi-genre humanized band:</strong> Acoustic &amp; electric bass, Steinway, Rhodes &amp; nylon guitar, plus jazz kit, Latin percussion &amp; Groovebox across 24 styles.</li>
@@ -346,6 +408,19 @@
     <section id="listens" class="section section-alt">
       <div>
         <header class="section-head">
+          <div class="strawman-badge strawman-anim" aria-hidden="true">
+            <svg viewBox="0 0 220 220" fill="none">
+              <!-- Incoming room-mic acoustic waves (sage emerald) -->
+              <path d="M18 62 A 28 28 0 0 1 18 16" stroke="#6ee7b7" stroke-width="3" stroke-linecap="round" />
+              <path d="M32 70 A 40 40 0 0 1 32 8" stroke="#6ee7b7" stroke-width="2.5" stroke-linecap="round" opacity="0.75" />
+              <path d="M46 78 A 52 52 0 0 1 46 2" stroke="#d4a359" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+              <use href="#strawman-bassist-core" />
+              <!-- Climax sweat drops (from drawSweat in BandstandPopup.tsx) -->
+              <circle cx="56" cy="24" r="3" fill="#6ee7b7" />
+              <circle cx="106" cy="20" r="2.8" fill="#d4a359" />
+            </svg>
+          </div>
+          <br />
           <span class="eyebrow">Listening band</span>
           <h2 class="font-serif">Turn on your mic.<br />The band starts listening.</h2>
           <p>
@@ -409,6 +484,14 @@
     <!-- ───────────────────────── Live Performance ───────────────────────── -->
     <section id="live" class="section">
       <header class="section-head">
+        <div class="strawman-badge strawman-anim" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none">
+            <use href="#strawman-bassist-core" />
+            <!-- Windmill right-hand trading arc (from BandstandPopup.tsx tradingPhase === 'drums') -->
+            <circle cx="122" cy="112" r="32" stroke="#d4a359" stroke-width="2.2" stroke-dasharray="6 5" opacity="0.85" />
+          </svg>
+        </div>
+        <br />
         <span class="eyebrow">Shape the band</span>
         <h2 class="font-serif">Static tracks play on loop.<br />A band responds live.</h2>
         <p>
@@ -471,6 +554,18 @@
     <section id="features" class="section section-alt">
       <div>
         <header class="section-head">
+          <div class="strawman-badge strawman-anim" aria-hidden="true">
+            <svg viewBox="0 0 220 220" fill="none">
+              <!-- 5-line notation staff behind strawman bassist -->
+              <line x1="12" y1="145" x2="208" y2="145" stroke="#3a404c" stroke-width="1.5" />
+              <line x1="12" y1="155" x2="208" y2="155" stroke="#3a404c" stroke-width="1.5" />
+              <line x1="12" y1="165" x2="208" y2="165" stroke="#3a404c" stroke-width="1.5" />
+              <line x1="12" y1="175" x2="208" y2="175" stroke="#3a404c" stroke-width="1.5" />
+              <line x1="12" y1="185" x2="208" y2="185" stroke="#3a404c" stroke-width="1.5" />
+              <use href="#strawman-bassist-core" />
+            </svg>
+          </div>
+          <br />
           <span class="eyebrow">Core Studio</span>
           <h2 class="font-serif">A complete practice studio in one tab.</h2>
           <p>Every tool stays one click away on the left-edge desktop toolbar without cluttering the chart.</p>
@@ -531,6 +626,14 @@
     <!-- ───────────────────────── The Library (Balanced 5-Card Row) ───────────────────────── -->
     <section id="library" class="section">
       <header class="section-head">
+        <div class="strawman-badge strawman-anim" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none">
+            <use href="#strawman-bassist-core" />
+            <circle cx="42" cy="54" r="5" fill="#d4a359" />
+            <line x1="47" y1="54" x2="47" y2="28" stroke="#d4a359" stroke-width="2.5" />
+          </svg>
+        </div>
+        <br />
         <span class="eyebrow">The library</span>
         <h2 class="font-serif">1,000+ tunes across Jazz, Latin, Pop &amp; your own charts.</h2>
         <p>
@@ -566,6 +669,17 @@
     <section class="section section-alt">
       <div>
         <header class="section-head">
+          <div class="strawman-badge strawman-anim" aria-hidden="true">
+            <svg viewBox="0 0 220 220" fill="none">
+              <!-- Bandstand 4 count-off indicator lights above bassist -->
+              <circle cx="24" cy="18" r="4.5" fill="#d4a359" />
+              <circle cx="42" cy="18" r="4.5" fill="#d4a359" />
+              <circle cx="60" cy="18" r="4.5" fill="#d4a359" />
+              <circle cx="78" cy="18" r="4.5" fill="#6ee7b7" />
+              <use href="#strawman-bassist-core" />
+            </svg>
+          </div>
+          <br />
           <span class="eyebrow">How it works</span>
           <h2 class="font-serif">Three clicks to a chorus.</h2>
           <p>Zero install, zero multi-gigabyte sample downloads. Open a tab and start playing.</p>
@@ -594,6 +708,12 @@
     <!-- ───────────────────────── FAQ Section ───────────────────────── -->
     <section id="faq" class="section">
       <header class="section-head">
+        <div class="strawman-badge strawman-anim" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none">
+            <use href="#strawman-bassist-core" />
+          </svg>
+        </div>
+        <br />
         <span class="eyebrow">Frequently Asked Questions</span>
         <h2 class="font-serif">Everything you need to know.</h2>
       </header>
@@ -630,6 +750,13 @@
     <section id="beta" class="section section-alt">
       <div>
         <header class="section-head">
+          <div class="strawman-badge strawman-anim" aria-hidden="true">
+            <svg viewBox="0 0 220 220" fill="none">
+              <circle cx="114" cy="118" r="92" fill="url(#sbStageGlow)" />
+              <use href="#strawman-bassist-core" />
+            </svg>
+          </div>
+          <br />
           <span class="eyebrow">Two ways in</span>
           <h2 class="font-serif">Free during Beta.<br />Free in exchange for feedback.</h2>
           <p>
@@ -661,7 +788,12 @@
           <article class="price-card price-featured reveal">
             <span class="price-badge">Free · feedback for access</span>
             <header class="price-head">
-              <h3>Beta Member</h3>
+              <div class="compare-head-row">
+                <h3>Beta Member</h3>
+                <svg class="strawman-mini" viewBox="0 0 220 220" aria-hidden="true">
+                  <use href="#strawman-bassist-core" />
+                </svg>
+              </div>
               <div class="price-amount"><span class="currency">$</span><span class="amount">0</span><span class="per">everything, no card</span></div>
               <p class="price-tag">The entire app. All we ask for in return is your honest feedback.</p>
             </header>
@@ -687,6 +819,12 @@
     <!-- ───────────────────────── Final CTA ───────────────────────── -->
     <section class="cta-band">
       <div class="cta-inner">
+        <div class="strawman-badge strawman-badge-lg strawman-anim" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none">
+            <circle cx="114" cy="118" r="92" fill="url(#sbStageGlow)" />
+            <use href="#strawman-bassist-core" />
+          </svg>
+        </div>
         <h2 class="font-serif">Ready to shed?</h2>
         <p>Pick a tune. Choose Jazz, Latin, Brazilian, or Funk. Play — then tell us how it went.</p>
         <div class="hero-ctas cta-ctas">
@@ -701,7 +839,11 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img class="brand-mark-icon sm" src="assets/icon.png" alt="" width="28" height="28" />
+        <svg class="brand-mark-svg sm" viewBox="0 0 220 220" role="img" aria-label="Jam-a-Lot strawman bassist logo">
+          <rect width="220" height="220" rx="36" fill="#14161a" />
+          <circle cx="114" cy="118" r="96" fill="url(#sbStageGlow)" />
+          <use href="#strawman-bassist-core" />
+        </svg>
         <span>Jam-a-Lot</span>
       </div>
       <p class="footer-note">
