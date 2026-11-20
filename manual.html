@@ -11,7 +11,9 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="Jam-a-Lot User Manual">
   <meta property="og:description" content="Official user manual for Jam-a-Lot jazz practice app. Features, controls, and AI agent documentation.">
-  <meta property="og:url" content="https://jamalong.app/manual.html">
+  <meta property="og:url" content="https://jam-a-lot.org/manual.html">
+  <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Jam-a-Lot AI Documentation (Markdown)">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="Jam-a-Lot AI Documentation Index">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -396,6 +398,7 @@
           <div class="toc-title">Table of Contents</div>
           <ul class="toc-list" id="toc-nav">
             <li class="toc-item"><a href="#playback-controls" class="toc-link">1. Playback & Performance</a></li>
+            <li class="toc-item"><a href="#staff-editor-guide" class="toc-link">Staff Editor Guide</a></li>
             <li class="toc-item"><a href="#chord-chart-views" class="toc-link">2. Chord Chart Views</a></li>
             <li class="toc-item"><a href="#instrument-mixer" class="toc-link">3. Instrument Mixer</a></li>
             <li class="toc-item"><a href="#rhythm-styles" class="toc-link">4. Rhythm Styles & Lab</a></li>
@@ -537,6 +540,26 @@
         </ul>
         <p>YouTube controls availability, ads and supported speeds; loops may have a short gap. An unavailable recording offers <strong>Open on YouTube ↗</strong>; you can also attach another version. Spotify keeps its existing provider player.</p>
 
+        <h3 id="staff-editor-guide">Staff Editor — Step-by-Step Melody &amp; Note Editing Guide</h3>
+        <p>The <strong>Staff Editor</strong> (<strong>Toolbox → Staff Editor</strong>, or <strong>Write melody</strong> in Staff View) edits three documents from one score interface: <strong>Melody</strong> (lead-sheet melody), <strong>Transcription</strong> (private solo transcriptions), and <strong>Bass patterns</strong> (1/2/4-bar bass cells in C). Click the <strong>i</strong> (Quick Guide) button in the top-right header of any workstation editor (Staff Editor, Chord Editor, Rhythm Style Lab, Mix &amp; EQ Studio) for an inline guide, full manual link, and one-click AI sidebar context.</p>
+        <table>
+          <thead>
+            <tr><th>Task</th><th>Step-by-Step Recipe</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Add a note</strong></td><td>Press <kbd>N</kbd> (or click the <strong>+</strong> Add tool), pick a length with <kbd>3</kbd>–<kbd>7</kbd> (<kbd>3</kbd>=16th, <kbd>4</kbd>=8th, <kbd>5</kbd>=quarter, <kbd>6</kbd>=half, <kbd>7</kbd>=whole), then click the staff at the desired pitch and beat. Press <kbd>Esc</kbd> or <kbd>N</kbd> to return to Select.</td></tr>
+            <tr><td><strong>Delete a note or range</strong></td><td>Click a note (or extend a range with <kbd>⇧→</kbd> / <kbd>⇧←</kbd>) and press <kbd>Delete</kbd> / <kbd>Backspace</kbd> (the selection advances to the next note). Or pick the <strong>Eraser</strong> tool and click notes directly.</td></tr>
+            <tr><td><strong>Replace a group of notes</strong></td><td>Click the first note of the phrase, extend across the group with <kbd>⇧→</kbd> (or <kbd>⇧←</kbd>), press <kbd>Delete</kbd> to remove it, then either press <kbd>N</kbd> + <kbd>3</kbd>–<kbd>7</kbd> to click-add new notes or press <kbd>⌘V</kbd> to paste a copied phrase at the cursor. To keep the rhythm and change only pitches, step note-by-note with <kbd>→</kbd> and type <kbd>A</kbd>–<kbd>G</kbd> (nearest letter in key) or <kbd>↑</kbd>/<kbd>↓</kbd>.</td></tr>
+            <tr><td><strong>Change pitch, octave, or staff</strong></td><td>Select note(s) and press <kbd>↑</kbd>/<kbd>↓</kbd> (semitone), <kbd>⌘↑</kbd>/<kbd>⌘↓</kbd> or <kbd>⇧↑</kbd>/<kbd>⇧↓</kbd> (octave), <kbd>A</kbd>–<kbd>G</kbd> (focus note to nearest letter in key signature), <kbd>⌥↑</kbd>/<kbd>⌥↓</kbd> (move between treble and bass staves in <em>Both hands</em> mode), or drag vertically.</td></tr>
+            <tr><td><strong>Change length, dots, and timing</strong></td><td>Select note(s) and press <kbd>3</kbd>–<kbd>7</kbd> (16th–whole) and <kbd>.</kbd> (toggle dot); nudge timing with <kbd>⌘←</kbd>/<kbd>⌘→</kbd> or <kbd>⌥←</kbd>/<kbd>⌥→</kbd> (½ beat; hold <kbd>⇧</kbd> for ¼ beat), drag horizontally, or type exact values in the footer <strong>Bar</strong>, <strong>Beat</strong>, and <strong>Length</strong> fields.</td></tr>
+            <tr><td><strong>Split, Join, Tie &amp; Requantize</strong></td><td><kbd>/</kbd> splits the selected note at the cursor (or in half); select 2+ notes (<kbd>⇧→</kbd>) and press <kbd>J</kbd> to join into one note; <kbd>+</kbd> ties to the next note of the same pitch; <kbd>Q</kbd> requantizes the selection (or all notes when nothing is selected) to the toolbar grid.</td></tr>
+            <tr><td><strong>Copy, Cut &amp; Paste phrases</strong></td><td>Select a phrase (<kbd>⇧→</kbd>), press <kbd>⌘C</kbd> (copy) or <kbd>⌘X</kbd> (cut), click a note or set the cursor to the destination beat, and press <kbd>⌘V</kbd> to paste in rhythm.</td></tr>
+            <tr><td><strong>Triplets</strong></td><td>Eighth-note triplets render with a <code>3</code> bracket and can be clicked/edited directly. To enter or adjust triplet positions and lengths manually, type decimal values in the footer <strong>Beat</strong> (<code>1</code>, <code>1.33</code>, <code>1.67</code>) and <strong>Length</strong> (<code>0.33</code>) inputs, or import via Text Chart <code>Melody:</code> or Keyboard recording.</td></tr>
+            <tr><td><strong>Intro / Pickup bars</strong></td><td>Written intros and active session intros automatically appear at the start of the <strong>Melody</strong> editor and save back to the tune's chart.</td></tr>
+            <tr><td><strong>Playback, Loop &amp; Save</strong></td><td><kbd>Space</kbd> plays/pauses, <kbd>L</kbd> loops the selection, <kbd>⌘Z</kbd> / <kbd>⇧⌘Z</kbd> undo/redo (50 steps), and <kbd>⌘S</kbd> saves locally in this browser.</td></tr>
+          </tbody>
+        </table>
+
         <h3 id="solo-transcription">Solo Transcription — Private Improvisation Drafts</h3>
         <p>Open <strong>Toolbox → Staff Editor</strong> and choose <strong>Transcription</strong> in its header (the one Staff Editor icon also holds <strong>Melody</strong> and <strong>Bass patterns</strong>, and reopens on the one you used last), or the local-recording shortcut beside a Practice Video (it copies the video's A/B times into <strong>From / To</strong>). The panel is one window — header, a single toolbar, the score and a slim footer — and the header's <strong>Full screen</strong> button enlarges it to the whole browser window.</p>
         <p><strong>New transcription</strong> (microphone icon, open automatically when a tune has no draft): <strong>Choose recording…</strong> — your own recording or an authorized file, up to 75 MB / 15 minutes, kept in the browser — then set <strong>From / To</strong> to a 2–180 second passage and the concert-pitch <strong>Range</strong>, and press <strong>Transcribe</strong>. Audio is never extracted from YouTube.</p>
@@ -577,6 +600,7 @@
           <li><strong>Staff View</strong>: Every bar on a five-line staff, like a big-band chart. Bars with punches or breaks show the hits in real rhythm notation (slash noteheads, rests, ties, accents, triplets), with x noteheads for drums-only calls; other bars show time slashes, and chord symbols sit over their beat. Any melody you write or record appears on the same staff as a lead sheet, with any hits kept as accent marks under it; it is kept privately on your device on any tune, and only synced or shared for tunes you composed. The <strong>Staff shows</strong> bar below it switches the staff between the melody, a saved solo transcription (chorus by chorus), the band's live bass or piano part, or hits only, and opens the tool that fills each one: the melody editor (the same score editor as Solo Transcription, with a Tune melody / Solo study switch), the keyboard recorder, or Solo Transcription.</li>
         </ul>
         <p><strong>Collapsible sections</strong>: on long charts (over 32 bars) each section shows only its first line of bars, except the section being played (or the first one when stopped), which opens by itself. Use <strong>Show all N bars</strong> / <strong>Collapse</strong> under a section to open or close it. Choose Long charts, Always or Never under Settings &rarr; Look &amp; Stage &rarr; Chart &amp; Notation &rarr; <strong>Collapse sections</strong>.</p>
+        <p><strong>Chart Font &amp; Quick Display Menu</strong>: Right-click anywhere in the chart area (with edit mode off) to adjust <strong>Chart width</strong>, <strong>Chord font size</strong>, and <strong>Chart font</strong> — including <strong>Sans (default)</strong>, <strong>Real Book (Petaluma)</strong>, <strong>Jazz Handwritten (MuseJazz)</strong>, <strong>Serif</strong>, <strong>Monospace</strong>, and <strong>Rounded</strong>. All three choices also live under Settings &rarr; Look &amp; Stage &rarr; Chart &amp; Notation. Complex workstation editors (<strong>Staff Editor</strong>, <strong>Chord Editor</strong>, <strong>Rhythm Style Lab</strong>, and <strong>Mix &amp; EQ Studio</strong>) include an <strong>i</strong> quick-guide button in their header with step-by-step recipes, deep links to this manual, and embedded context for browser AI sidebars.</p>
 
         <h3 id="interactive-seeking-looping">Interactive Bar Seeking & Custom Range Looping</h3>
         <ul>
