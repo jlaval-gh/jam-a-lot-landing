@@ -148,3 +148,7 @@ Rhythm Lab → Blend combines compatible native-meter whole-band rhythms across 
 ## Acoustic drum-kit recovery
 
 Selecting or restoring a non-Latin acoustic rhythm returns an inherited Latin percussion kit to Standard. You can still choose Latin percussion explicitly in the mixer after selecting that rhythm.
+
+## Automatic YouTube Music recordings
+
+Song Info → Song resources → Automatically find YouTube Music recordings is on by default. While the app is open and visible, lookup checks the selected tune, then loaded personal collections and Featured tunes. Only title and creator are sent; no Google login, API key or pasted link is needed. Up to three confident suggestions offer Play and Save. Saved playable links take priority. Copy/Page labels share results; uncertain titles and tunes without creators remain unresolved. Suggestions stay in this browser. Successful searches refresh after 30 days, unresolved searches after seven days, and failures after an hour. Turning lookup off keeps existing suggestions. Playback requires pressing Play and depends on YouTube availability.
